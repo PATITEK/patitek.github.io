@@ -6,62 +6,159 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Patitek</title>
 </head>
 
 <body>
-    <header>
-        <div class="menu-content">
-            <div class="menu-left">
-                <ul class="list-menu-left">
-                    <li class="menu-item">
-                        <a class="link-menu active-menu" href="Về chúng tôi">TRANG CHỦ</a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="link-menu" href="Sản Phẩm">VỀ CHÚNG TÔI</a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="link-menu" href="Liên hệ">SẢN PHẨM</a>
-                    </li>
-                </ul>
+    <div id="fullpage">
+        <header class="">
+            <div class="menu-content">
+                <div class="menu-left">
+                    <ul class="list-menu-left">
+                        <li class="menu-item">
+                            <a class="link-menu active-menu" href="Về chúng tôi">TRANG CHỦ</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="link-menu" href="Sản Phẩm">VỀ CHÚNG TÔI</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="link-menu" href="Liên hệ">SẢN PHẨM</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <img src="./img/logo1.png" alt="" srcset="" />
+                </div>
+                <div class="menu-right">
+                    <ul class="list-menu-right">
+                        <li class="menu-item">
+                            <a class="link-menu" href="Về chúng tôi">GIẢI PHÁP</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="link-menu" href="Sản Phẩm">TUYỂN DỤNG</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="link-menu" href="Liên hệ">BLOGS</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="logo">
-                <img src="./img/logo1.png" alt="" srcset="" />
+        </header>
+        <div id="home" class="section">
+            <video width="100%" height="100%" controls autoplay>
+                <source src="./img/World - 1992.gif" type="video/mp4">
+                <!-- <source src="movie.ogg" type="video/ogg"> -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Intro -->
+        <div id="intro" class="info container section">
+            <div class="info-main">
+                <div class="img-info">
+                    <img src="./img/img-1.svg" alt="" srcset="" />
+                </div>
+                <div class="content-info">
+                    <h2>Giới thiệu về <img class="logo-text" src="./img/logo-text.svg" alt="" srcset=""></h2>
+                   
+                    <p class="content">
+                        PATITEK là công ty phần mềm chuyên về ứng dụng web và di động. Với
+                        trình độ chuyên biệt và đội ngũ kỹ thuật cao, PATITEK luôn luôn cung
+                        cấp cho khách hàng giải pháp sáng tạo và tối ưu. Việc này không những
+                        giảm chi phí phát triển, triển khai mà chất lượng của sản phẩm và dịch
+                        vụ luôn luôn được đảm bảo tốt nhất.
+                    </p>
+                </div>
+               
             </div>
-            <div class="menu-right">
-                <ul class="list-menu-right">
-                    <li class="menu-item">
-                        <a class="link-menu" href="Về chúng tôi">GIẢI PHÁP</a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="link-menu" href="Sản Phẩm">TUYỂN DỤNG</a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="link-menu" href="Liên hệ">BLOGS</a>
-                    </li>
-                </ul>
+            <div class="info-detail">
+                <div class=" list-box-info">
+                    <div class="box-item">
+                        <div class="box-left">
+
+                        </div>
+                        <div class="box-right">
+
+                        </div>
+                        <div class="box-content">
+                            <p class="text-box">21%</p>
+                        </div>
+                        <div class="tam-giac">
+
+                        </div>
+                    </div>
+                <div class="box-item bg1">
+                    <p class="text-info">10+ Dự án hoàn thành</p>
+                </div>
+                <div class="box-item bg1">
+                    <p class="text-info">99% Khách hàng hài lòng</p>
+                </div>
+                </div>
             </div>
         </div>
-    </header>
-    <!-- Intro -->
-    <div class="info container section">
-        <div class="info-main">
-            <div class="img-info">
-                <img src="./img/img-1.svg" alt="" srcset="" />
-            </div>
-            <div class="content-info">
-                <h2>Giới thiệu về PATITEK</h2>
-                <div class="wrap"></div>
-                <p class="content">
-                    PATITEK là công ty phần mềm chuyên về ứng dụng web và di động. Với
-                    trình độ chuyên biệt và đội ngũ kỹ thuật cao, PATITEK luôn luôn cung
-                    cấp cho khách hàng giải pháp sáng tạo và tối ưu. Việc này không những
-                    giảm chi phí phát triển, triển khai mà chất lượng của sản phẩm và dịch
-                    vụ luôn luôn được đảm bảo tốt nhất.
-                </p>
+        <!-- Solution -->
+        <div id="solution" class="section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg')">
+                        <h1 class="text-title">Giải pháp quản lý thông tin số (VDR)</h1>
+                        <div class="list-language">
+                            <div class="language-item">
+                                <img src="./img/angular.png" alt="">
+                            </div>
+                            <div class="language-item">
+                                <img src="./img/nodejs.png" alt="">
+                            </div>
+                        </div>
+                        <button class="btn-contact">Liên Hệ</button>
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg')">
+                        <h1 class="text-title">Giải pháp quản lý thông tin số (VDR)</h1>
+                        <div class="list-language">
+                            <div class="language-item">
+                                <img src="./img/vue.png" alt="">
+                            </div>
+                            <div class="language-item">
+                                <img src="./img/react.png" alt="">
+                            </div>
+                        </div>
+                        <button class="btn-contact">Liên Hệ</button>
+                    </div>
+                  
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
+
 </body>
+<script src="./js/fullpage.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var myFullpage = new fullpage('#fullpage', {
+
+        scrollBar: true
+    });
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
 
 </html>
