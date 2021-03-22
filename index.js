@@ -1,4 +1,9 @@
-
+$('.counter').counterUp({
+    delay: 10,
+    time: 2000
+});
+$('.counter').addClass('animated fadeInDownBig');
+$('.text-bot').addClass('animated fadeIn');
 var menu=false;
 function clickMenuBar(){
     if(menu==false)
@@ -28,6 +33,7 @@ window.onscroll = function () {
     }
 };
 $(function () {
+    
     var $clientslider = $('#clientlogo');
     var clients = $clientslider.children().length;
     var clientwidth = (clients * 220);
@@ -41,7 +47,9 @@ $(function () {
         },
         mouseleave: function () {
             rotating = true;
-        }
+        },
+        
+        
     }, '#ourclients');
     function rotateClients() {
         if (rotating != false) {
@@ -56,4 +64,5 @@ $(function () {
             });
         }
     }
+    
 });
