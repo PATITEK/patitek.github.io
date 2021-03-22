@@ -79,6 +79,7 @@ header {
     padding-bottom: 0;
     transition: all 0.3s linear;
 }
+
 .menu-content .menu-left {
     padding: 0 5px;
     text-align: center;
@@ -165,6 +166,41 @@ header {
     width: 100%;
     transform: translateY(100px);
     color: black;
+    
+}
+/* 
+
+    MENU MOBILE 
+*/
+.menu-mobile{
+display: none;
+position: fixed;
+}
+.menu-mobile .icon-menu{
+    color: white;
+    margin: 20px 20px;
+    z-index: 8;
+    font-size: 40px;
+    position: absolute;
+}
+.menu-mobile .menu-content-mobile{
+    position: fixed;
+    width: 0vw;
+    background: #0a0909;
+    height: 100vh;
+    top: 0;
+    z-index: 6;
+    padding: 0 15px;
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+.menu-mobile .menu-content-mobile .list-menu{
+    margin-top: 5rem;
+}
+.menu-mobile .menu-content-mobile .list-menu .menu-item{
+    color: #fdf7f7;
+    text-align: left;
 }
 /* HOME */
 
@@ -217,14 +253,17 @@ Intro
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
 }
+
 .info .info-detail .list-box-info .box-item {
     width: 200px;
     height: 200px;
     margin: 20px;
     display: flex;
     position: relative;
-       box-shadow: 5px 5px 10px rgb(0 0 0 / 19%);
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 19%);
     /* transform: rotate(-5deg) */
 }
 .info .info-detail .list-box-info .box-item .text-info {
@@ -257,9 +296,28 @@ Intro
     width: 70%;
     height: 70%;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.info .info-detail .list-box-info .box-item .box-content .text-box {
-}.info .info-detail .list-box-info .box-item .tam-giac {
+.info .info-detail .list-box-info .box-item .box-content .text-number {
+    font-size: 52px;
+    color: #69cad7;
+    font-weight: 700;
+    text-align: center;
+}
+
+.info .info-detail .list-box-info .box-item .box-content .text-content .sysbol {
+    font-size: 53px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    transform: translateY(100%);
+}
+.info .info-detail .list-box-info .box-item .box-content .text-content .text-bot{
+margin-top: 15px;
+}
+.info .info-detail .list-box-info .box-item .tam-giac {
     background-color: #69cad7;
     position: absolute;
     right: 0;
@@ -269,16 +327,25 @@ Intro
     transform: translate(50%, -50%) rotate(45deg);
     width: 40px;
     height: 40px;
-       box-shadow:5px -8px 10px rgb(0 0 0 / 19%);;
+    box-shadow: 5px -8px 10px rgb(0 0 0 / 19%);
 }
+
 .bg1 {
     background: linear-gradient(#33c8c1 0%, #119bd2 100%);
 }
 .bg2 {
-    background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
+    background: #FFCB5F!important;
 }
 .bg3 {
-    background: linear-gradient(#361cc1 0%, #2e82ef 100%);
+    background: #31AFE1!important;
+}
+.text-color2{
+    color: #FFCB5F!important;
+    
+}
+.text-color3{
+    color: #31AFE1!important;
+    
 }
 /* Solution */
 .swiper-container {
@@ -331,7 +398,58 @@ Intro
 #solution .btn-contact:hover {
     background: #e00849;
 }
-video::-webkit-media-controls-panel {
-    display: none !important;
-    opacity: 1 !important;
+
+/* REPONSIVE MENU MOBIE */
+@media (max-width: 813px) {
+   .menu-content{
+       display: none;
+   } 
+   .section{
+       margin: 10px;
+   }
+   .menu-mobile{
+       display: block;
+   }
+   .menu-content-mobile{
+       width: 60vw!important;
+   }
+}
+/* reponsie intro */
+@media (max-width: 813px) {
+    #intro{
+        padding: 10px 0;
+    }
+    .info .info-main .content-info h2{
+        font-size: 20pt;
+        line-height: 35px;
+    }
+    .info .info-main .content-info .content{
+        margin: 5px 0 0 0;
+    }
+    .info .info-detail .list-box-info .box-item{
+        height: 100px;
+    }
+    .info .info-detail .list-box-info .box-item .box-content .text-number {
+        font-size: 25px;
+    }
+    .img-info img{
+        max-width: 80%;
+    }
+    .info .info-detail .list-box-info .box-item{
+        width: 137px;
+    }
+    .info .info-detail .list-box-info .box-item .box-content{
+        top: 8%;
+        width: 80%;
+        height: 80%;
+    }
+    .info .info-detail .list-box-info .box-item .box-content .text-content .sysbol{
+        font-size: 25px;
+        transform: translate(0);
+        right: 20px;
+    }
+    .info .info-detail .list-box-info .box-item .box-content .text-content .text-bot{
+        margin-top: 5px;
+        text-align: center;
+    }
 }
