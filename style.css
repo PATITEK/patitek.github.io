@@ -27,7 +27,6 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden;
-
 }
 img {
     max-width: 100%;
@@ -951,7 +950,7 @@ REPONSIVE SOLUTION
 
 /* footer */
 #footer {
-    padding-top:8rem;
+    padding-top: 8rem;
 }
 #footer .footer-main {
     padding: 0 120px;
@@ -1008,14 +1007,726 @@ REPONSIVE SOLUTION
     transform: translateY(80%);
     transition: all 0.3s linear;
 }
-.content-footer{
+.content-footer {
     height: 200px;
     width: 100%;
-    background: #FFFFFF;
+    background: #ffffff;
     position: absolute;
     bottom: 0;
-    
 }
-.btn-submit:hover{
+.btn-submit:hover {
     background: #006adc;
+}
+/* Products */
+
+/* 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+} */
+
+@keyframes polygon-item-1 {
+    0% {
+        -webkit-transform: none;
+        transform: none;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes polygon-item-2 {
+    0%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    25% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes egov-pwave {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(8);
+        opacity: 0;
+    }
+}
+
+@keyframes cf4FadeInOut {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.fp-tableCell {
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.product-menu {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    height: 100vh;
+}
+
+.product-menu.table {
+    margin: 0;
+    height: 100vh;
+}
+
+.table {
+    display: table;
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+@media screen and (max-height: 500px) {
+    .product .content-pro {
+        width: 60%;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .product .content-pro {
+        width: 60%;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .product .name {
+        height: 25px;
+    }
+}
+.product-menu .menu {
+    text-align: right;
+    padding-right: 11px;
+}
+
+.product-menu .menu .item {
+    cursor: pointer;
+    margin: 50px 0;
+    letter-spacing: 1px;
+}
+
+.product-menu .menu .item {
+    margin: 25px 0;
+    color: #75848e !important;
+    justify-content: center;
+    font-size: 10pt;
+}
+.product-menu .menu .item:hover,
+.janeto-app a:hover {
+    color: #121043 !important;
+}
+.product-menu .menu .active .line {
+    width: 35px;
+    border-top: 1px solid #ff421f;
+    right: 0;
+    position: absolute;
+    margin-top: -20px;
+    margin-right: 12px;
+}
+
+.product-menu .menu .active p {
+    font-weight: 700;
+    margin-right: 45px;
+}
+
+.product {
+    background-size: 100% 100%;
+    background-position: left top;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.product .showw {
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
+    height: 100%;
+}
+.product .hiddenn {
+    opacity: 0;
+    height: 0;
+}
+
+.product .showw .container,
+.product .showw .container .table {
+    height: 100%;
+}
+
+@media screen and (max-height: 500px) {
+    .product .image-container {
+        width: 40%;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .product .image-container {
+        width: 40%;
+    }
+}
+
+.product .image-test {
+    background-size: auto 60vh;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.table .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.product .content-pro {
+    position: relative;
+    display: inline-block;
+    flex-basis: 55%;
+    width: 65%;
+    transform: translateX(-100%);
+    transition: all 0.8s ease-in-out;
+}
+.product .content-pro.on-show {
+    transform: translateX(0);
+}
+
+.product .content-pro {
+    width: 60%;
+}
+
+.product .content-inside {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.product h2.label-name {
+    margin: 0;
+    font-weight: 700;
+}
+
+.product .name {
+    background-repeat: no-repeat;
+    height: 50px;
+}
+
+.product .description {
+    margin-top: 30px;
+}
+
+.product .download {
+    padding-right: 15px;
+}
+
+.product .download img {
+    width: 100px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.product .class-btn {
+    margin-top: 30px;
+}
+
+.product .class-btn a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.product .btn-review {
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: 1px solid red;
+    box-shadow: 0 -2px 37px rgb(255 0 0 / 50%);
+    padding: 4px 40px;
+    border-radius: 100px;
+    color: #000434;
+    background-color: rgba(240, 146, 6, 0.911);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: box-shadow 0.5s ease-in;
+}
+
+.button-animation {
+    position: relative;
+}
+
+.product .image-container {
+    width: 40%;
+    flex-basis: 45%;
+    display: inline-block;
+    position: relative;
+    text-align: right;
+}
+
+/* Responsive */
+@media screen and (max-height: 500px) {
+    .wowkids-wrapper,
+    .wowkids-wrapper .main-image {
+        width: 300px;
+        height: 287px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .leaf-1 {
+        width: 40px;
+    }
+}
+@media screen and (max-height: 700px) {
+    .product .description p {
+        font-size: 11pt;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .product .description p {
+        font-size: 8pt;
+        margin-top: 15px;
+    }
+}
+
+/* Wowkids */
+.wowkids-wrapper {
+    width: 447px;
+    height: 427px;
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+}
+@media screen and (max-height: 500px) {
+    .leaf-1 {
+        width: 40px;
+    }
+}
+@keyframes leaf-1 {
+    0% {
+        -webkit-transform: none;
+        transform: none;
+    }
+    15%,
+    75% {
+        -webkit-transform: rotate3d(0, 0, 1, 2deg);
+        transform: rotate3d(0, 0, 1, 2deg);
+    }
+    30%,
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 2deg);
+        transform: rotate3d(0, 0, 1, 2deg);
+    }
+    45% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.leaf-1 {
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    left: 34%;
+    width: 65px;
+    transform-origin: 100% 100%;
+}
+.product .showw .leaf-1 {
+    animation: leaf-1 5s infinite;
+}
+
+.product .showw .leaf-2 {
+    animation: leaf-2 7s infinite;
+}
+@media screen and (max-height: 500px) {
+    .leaf-2 {
+        width: 35px;
+    }
+}
+@keyframes leaf-2 {
+    0% {
+        -webkit-transform: none;
+        transform: none;
+    }
+    15%,
+    75% {
+        -webkit-transform: rotate3d(0, 0, 1, -7deg);
+        transform: rotate3d(0, 0, 1, -7deg);
+    }
+    30%,
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 7deg);
+        transform: rotate3d(0, 0, 1, 7deg);
+    }
+    45% {
+        -webkit-transform: rotate3d(0, 0, 1, -15deg);
+        transform: rotate3d(0, 0, 1, -15deg);
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.leaf-2 {
+    position: absolute;
+    z-index: 1;
+    top: 59%;
+    left: 48%;
+    width: 55px;
+    transform-origin: 0 100%;
+}
+
+@media screen and (max-height: 500px) {
+    .wowkids-wrapper .front-image {
+        width: 75px;
+    }
+}
+
+.wowkids-wrapper .front-image {
+    position: absolute;
+    top: 83%;
+    left: 36%;
+    width: 100px;
+    z-index: 2;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 15px;
+    right: 100px;
+    height: 70px;
+    width: 70px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+.product .modal {
+    display: block;
+    left: auto;
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    transition: all 1s ease-in-out;
+    width: 0;
+}
+
+.product .modal .youtube-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+}
+iframe {
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+/* Polygon */
+
+@media screen and (max-height: 500px) {
+    .polygon-wrapper,
+    .polygon-wrapper .main-image {
+        width: 300px;
+        height: 328px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .polygon-wrapper,
+    .wowkids-wrapper {
+        margin: auto;
+    }
+}
+.polygon-wrapper {
+    width: 406px;
+    height: 445px;
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+}
+.polygon-wrapper,
+.polygon-wrapper .main-image {
+    width: 300px;
+    height: 328px;
+}
+.product .showw .polygon-wrapper .item-1 {
+    animation: polygon-item-1 5s infinite;
+}
+.product .showw .polygon-wrapper .item-2 {
+    animation: polygon-item-2 7s infinite;
+}
+
+.polygon-wrapper .item-1 {
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    z-index: 1;
+}
+.polygon-wrapper .item-2 {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    z-index: 1;
+}
+/* eGDv */
+
+@media screen and (max-height: 650px) {
+    .image-wrap .wrapper {
+        width: 80%;
+        display: block;
+    }
+}
+.image-wrap {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-wrap .wrapper {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+}
+.image-wrap .wrapper img {
+    max-width: 100%;
+}
+
+.product-flash {
+    content: "";
+    position: absolute;
+    background-color: #f58022;
+    z-index: 1;
+    border: 2px solid #f58022;
+    border-radius: 100%;
+}
+
+.product.showw .product-flash.o1 {
+    -webkit-animation: egov-pwave 1.5s infinite;
+    -moz-animation: egov-pwave 1.5s infinite;
+    -o-animation: egov-pwave 1.5s infinite;
+    animation: egov-pwave 1.5s infinite;
+}
+
+.product.showw .product-flash.o2 {
+    -webkit-animation: egov-pwave 1.5s 1s infinite;
+    -moz-animation: egov-pwave 1.5s 1s infinite;
+    -o-animation: egov-pwave 1.5s 1s infinite;
+    animation: egov-pwave 1.5s 1s infinite;
+}
+.product .showw .product-flash.o3 {
+    -webkit-animation: egov-pwave 1.5s 0.5s infinite;
+    -moz-animation: egov-pwave 1.5s 0.5s infinite;
+    -o-animation: egov-pwave 1.5s 0.5s infinite;
+    animation: egov-pwave 1.5s 0.5s infinite;
+}
+
+.product .showw .product-flash.o4 {
+    -webkit-animation: egov-pwave 1.5s 0.25s infinite;
+    -moz-animation: egov-pwave 1.5s 0.25s infinite;
+    -o-animation: egov-pwave 1.5s 0.25s infinite;
+    animation: egov-pwave 1.5s 0.25s infinite;
+}
+
+.product .showw .product-flash.o5 {
+    -webkit-animation: egov-pwave 1.5s 0.75s infinite;
+    -moz-animation: egov-pwave 1.5s 0.75s infinite;
+    -o-animation: egov-pwave 1.5s 0.75s infinite;
+    animation: egov-pwave 1.5s 0.75s infinite;
+}
+.product .showw .product-flash.o6 {
+    -webkit-animation: egov-pwave 1.5s 0.1s infinite;
+    -moz-animation: egov-pwave 1.5s 0.1s infinite;
+    -o-animation: egov-pwave 1.5s 0.1s infinite;
+    animation: egov-pwave 1.5s 0.1s infinite;
+}
+.product .showw .product-flash.o7 {
+    -webkit-animation: egov-pwave 1.5s 0.4s infinite;
+    -moz-animation: egov-pwave 1.5s 0.4s infinite;
+    -o-animation: egov-pwave 1.5s 0.4s infinite;
+    animation: egov-pwave 1.5s 0.4s infinite;
+}
+.product .showw .product-flash.o8 {
+    -webkit-animation: egov-pwave 1.5s 0.6s infinite;
+    -moz-animation: egov-pwave 1.5s 0.6s infinite;
+    -o-animation: egov-pwave 1.5s 0.6s infinite;
+    animation: egov-pwave 1.5s 0.6s infinite;
+}
+.product .showw .product-flash.o9 {
+    -webkit-animation: egov-pwave 1.5s 0.8s infinite;
+    -moz-animation: egov-pwave 1.5s 0.8s infinite;
+    -o-animation: egov-pwave 1.5s 0.8s infinite;
+    animation: egov-pwave 1.5s 0.8s infinite;
+}
+.product .showw .product-flash.o10 {
+    -webkit-animation: egov-pwave 1.5s 0.9s infinite;
+    -moz-animation: egov-pwave 1.5s 0.9s infinite;
+    -o-animation: egov-pwave 1.5s 0.9s infinite;
+    animation: egov-pwave 1.5s 0.9s infinite;
+}
+.product-flash.o1 {
+    top: 24%;
+    right: 63.5%;
+}
+
+.product-flash.o2 {
+    top: 33.2%;
+    right: 28.7%;
+}
+
+.product-flash.o3 {
+    top: 73%;
+    right: 49.5%;
+}
+
+.product-flash.o4 {
+    top: 55.5%;
+    right: 70%;
+}
+
+.product-flash.o5 {
+    top: 51.7%;
+    right: 13%;
+}
+
+.product-flash.o6 {
+    top: 38.5%;
+    right: 78.5%;
+}
+
+.product-flash.o7 {
+    top: 8.5%;
+    right: 21%;
+}
+
+.product-flash.o8 {
+    top: 82%;
+    right: 12.5%;
+}
+
+.product-flash.o9 {
+    top: 75%;
+    right: 77.2%;
+}
+
+.product-flash.o10 {
+    top: 59%;
+    right: 99%;
+}
+
+/* Lap trinh vien.io */
+
+.ltv img:nth-of-type(1) {
+    animation-delay: 10s;
+}
+.ltv img:nth-of-type(2) {
+    animation-delay: 8s;
+}
+
+.ltv img:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+.ltv img:nth-of-type(4) {
+    animation-delay: 4s;
+}
+
+.ltv img:nth-of-type(5) {
+    animation-delay: 2s;
+}
+
+.ltv img {
+    max-width: 100%;
+    -webkit-animation: cf4FadeInOut 10s ease-in-out infinite;
+    animation: cf4FadeInOut 10s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 0 15px;
+    transform: translateY(-50%);
 }
