@@ -907,9 +907,15 @@ Intro
 }
 @media (max-width: 415px) {
     #customer .grid-item .name-customer {
-        font-size: 15px;
+        font-size: 13px;
         line-height: 16px;
         top: 80% !important;
+    }
+    #customer .grid-item{
+        flex-basis: calc(100% / 4);
+    }
+    #customer .grid-item .name-customer{
+            padding: 0 15px;
     }
 }
 @media (max-width: 321px) {
@@ -919,3 +925,4 @@ Intro
         top: 80% !important;
     }
 }
+
