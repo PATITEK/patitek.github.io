@@ -1,3 +1,4 @@
+$('.preloader').delay(1500).fadeOut(500);
 $('.counter').counterUp({
     delay: 10,
     time: 2000
