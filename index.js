@@ -106,8 +106,12 @@ function onclickP(e) {
 		}
 	}
 }
+var checkAuto = false;
 function autoPlay() {
-	document.getElementById("modal").style.width = "1366px";
+	checkAuto = !checkAuto;
+	if (checkAuto)
+		document.getElementById("modal").style.width = "1366px";
+	else closeYoutube();
 }
 
 function closeYoutube() {

@@ -1,1350 +1,1812 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+			crossorigin="anonymous"
+		/>
+		<title>Patitek</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>Patitek</title>
-</head>
+	<body>
+		<div class="preloader">
+			<div class="loader">
+				<div class="ytp-spinner">
+					<div
+						class="ytp-spinner-container"
+					>
+						<div
+							class="ytp-spinner-rotator"
+						>
+							<div
+								class="ytp-spinner-left"
+							>
+								<div
+									class="ytp-spinner-circle"
+								></div>
+							</div>
+							<div
+								class="ytp-spinner-right"
+							>
+								<div
+									class="ytp-spinner-circle"
+								></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="fullpage">
+			<header class="">
+				<div class="menu-content">
+					<div class="menu-left">
+						<ul
+							class="list-menu-left"
+						>
+							<li
+								class="menu-item"
+							>
+								<a
+									class="link-menu active-menu"
+									href="Về chúng tôi"
+									>TRANG
+									CHỦ</a
+								>
+							</li>
+							<li
+								class="menu-item"
+							>
+								<a
+									class="link-menu"
+									href="Sản Phẩm"
+									>VỀ
+									CHÚNG
+									TÔI</a
+								>
+							</li>
+							<li
+								class="menu-item"
+							>
+								<a
+									class="link-menu"
+									href="Liên hệ"
+									>SẢN
+									PHẨM</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="logo">
+						<img
+							src="./img/logo1.png"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="menu-right">
+						<ul
+							class="list-menu-right"
+						>
+							<li
+								class="menu-item"
+							>
+								<a
+									class="link-menu"
+									href="Về chúng tôi"
+									>GIẢI
+									PHÁP</a
+								>
+							</li>
+							<li
+								class="menu-item"
+							>
+								<a
+									class="link-menu"
+									href="Sản Phẩm"
+									>TUYỂN
+									DỤNG</a
+								>
+							</li>
+							<li
+								class="menu-item"
+							>
+								<a
+									class="link-menu"
+									href="Liên hệ"
+									>BLOGS</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- MENU MOBIE -->
+				<div class="menu-mobile">
+					<i
+						class="fal fa-bars icon-menu"
+						onclick="clickMenuBar()"
+					></i>
+					<div
+						class="menu-content-mobile"
+					>
+						<ul
+							class="list-menu"
+						>
+							<li
+								class="menu-item"
+							>
+								Về
+								chúng
+								tôi
+							</li>
+							<li
+								class="menu-item"
+							>
+								Sản
+								Phẩm
+							</li>
+							<li
+								class="menu-item"
+							>
+								Về
+								chúng
+								tôi
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<div id="home" class="section">
+				<img
+					class="img-home"
+					src="./img/earth.gif"
+					alt=""
+				/>
+			</div>
+			<!-- Intro -->
+			<div id="intro" class="info container section">
+				<div class="info-main">
+					<div class="img-info">
+						<img
+							src="./img/img-1.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="content-info">
+						<h2>
+							Giới thiệu
+							về
+							<img
+								class="logo-text"
+								src="./img/logo-text.svg"
+								alt=""
+								srcset=""
+							/>
+						</h2>
 
-<body>
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="fullpage">
-        <header class="">
-            <div class="menu-content">
-                <div class="menu-left">
-                    <ul class="list-menu-left">
-                        <li class="menu-item">
-                            <a class="link-menu active-menu" href="Về chúng tôi">TRANG CHỦ</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="link-menu" href="Sản Phẩm">VỀ CHÚNG TÔI</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="link-menu" href="Liên hệ">SẢN PHẨM</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="logo">
-                    <img src="./img/logo1.png" alt="" srcset="" />
-                </div>
-                <div class="menu-right">
-                    <ul class="list-menu-right">
-                        <li class="menu-item">
-                            <a class="link-menu" href="Về chúng tôi">GIẢI PHÁP</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="link-menu" href="Sản Phẩm">TUYỂN DỤNG</a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="link-menu" href="Liên hệ">BLOGS</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- MENU MOBIE -->
-            <div class="menu-mobile">
-                <i class="fal fa-bars icon-menu" onclick="clickMenuBar()"></i>
-                <div class="menu-content-mobile">
-                    <ul class="list-menu">
-                        <li class="menu-item">
-                            Về chúng tôi
-                        </li>
-                        <li class="menu-item">
-                            Sản Phẩm
-                        </li>
-                        <li class="menu-item">
-                            Về chúng tôi
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <div id="home" class="section">
-            <img class="img-home" src="./img/earth.gif" alt="">
-        </div>
-        <!-- Intro -->
-        <div id="intro" class="info container section">
-            <div class="info-main">
-                <div class="img-info">
-                    <img src="./img/img-1.svg" alt="" srcset="" />
-                </div>
-                <div class="content-info">
-                    <h2>Giới thiệu về <img class="logo-text" src="./img/logo-text.svg" alt="" srcset=""></h2>
-
-                    <p class="content">
-                        PATITEK là công ty phần mềm chuyên về ứng dụng web và di động. Với
-                        trình độ chuyên biệt và đội ngũ kỹ thuật cao, PATITEK luôn luôn cung
-                        cấp cho khách hàng giải pháp sáng tạo và tối ưu. Việc này không những
-                        giảm chi phí phát triển, triển khai mà chất lượng của sản phẩm và dịch
-                        vụ luôn luôn được đảm bảo tốt nhất.
-                    </p>
-                </div>
-
-            </div>
-            <div class="info-detail">
-                <div class=" list-box-info">
-                    <div class="box-item">
-                        <div class="box-left">
-
-                        </div>
-                        <div class="box-right">
-
-                        </div>
-                        <div class="box-content">
-                            <div class="text-content">
-                                <div class="text-number ">
-                                    <span class="counter">21</span>
-                                    <p class="sysbol">+</p>
-                                </div>
-                                <p class="text-bot">Lập trình viên</p>
-                            </div>
-                        </div>
-                        <div class="triangle">
-
-                        </div>
-                    </div>
-                    <div class="box-item">
-                        <div class="box-left">
-
-                        </div>
-                        <div class="box-right bg2">
-
-                        </div>
-                        <div class="box-content">
-                            <div class="text-content">
-                                <div class="text-number text-color2">
-                                    <span class="counter">99</span>
-                                    <p class="sysbol">%</p>
-                                </div>
-                                <p class="text-bot">Khách hàng hài lòng</p>
-                            </div>
-                        </div>
-                        <div class="triangle bg2">
-
-                        </div>
-                    </div>
-                    <div class="box-item">
-                        <div class="box-left">
-
-                        </div>
-                        <div class="box-right bg3">
-
-                        </div>
-                        <div class="box-content">
-                            <div class="text-content">
-                                <div class="text-number text-color3">
-                                    <span class="counter">10</span>
-                                    <p class="sysbol">+</p>
-                                </div>
-                                <p class="text-bot">Dự án hoàn thành</p>
-                            </div>
-                        </div>
-                        <div class="triangle bg3">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Solution -->
-        <div id="solution" class="section">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"
-                        style="background-image:url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg')">
-                        <h1 class="text-title">Giải pháp quản lý thông tin số (VDR)</h1>
-                        <div class="list-language">
-                            <div class="language-item">
-                                <img src="./img/angular.png" alt="">
-                            </div>
-                            <div class="language-item">
-                                <img src="./img/nodejs.png" alt="">
-                            </div>
-                        </div>
-                        <button class="btn-contact">Liên Hệ</button>
-                    </div>
-                    <div class="swiper-slide"
-                        style="background-image:url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg')">
-                        <h1 class="text-title">Giải pháp quản lý thông tin số (VDR)</h1>
-                        <div class="list-language">
-                            <div class="language-item">
-                                <img src="./img/vue.png" alt="">
-                            </div>
-                            <div class="language-item">
-                                <img src="./img/react.png" alt="">
-                            </div>
-                        </div>
-                        <button class="btn-contact">Liên Hệ</button>
-                    </div>
-
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-        <section id="product" class="section">
-            <div class="product-menu">
-                <div class="table">
-                    <div
-                        class="table-cell"
-                    >
-                        <div
-                            class="menu"
-                        >
-                            <div
-                                class="item"
-                                id="1"
-                            >
-                                <p
-                                    onclick="onclickP(event)"
-                                >
-                                    Wowkids
-                                </p>
-                                <div
-                                    class="line"
-                                ></div>
-                            </div>
-                            <div
-                                class="item"
-                                id="2"
-                            >
-                                <p
-                                    onclick="onclickP(event)"
-                                >
-                                    POLYGON
-                                </p>
-                                <div
-                                    class="line"
-                                ></div>
-                            </div>
-                            <div
-                                class="item"
-                                id="3"
-                            >
-                                <p
-                                    onclick="onclickP(event)"
-                                >
-                                    eGOV
-                                </p>
-                                <div
-                                    class="line"
-                                ></div>
-                            </div>
-                            <div
-                                class="item"
-                                id="4"
-                            >
-                                <p
-                                    onclick="onclickP(event)"
-                                >
-                                    laptrinhvien.io
-                                </p>
-                                <div
-                                    class="line"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div
-                    class="item hiddenn"
-                    style="
-                        position: relative;
-                    "
-                >
-                    <div
-                        class="container image-test"
-                    >
-                        <div
-                            class="table"
-                        >
-                            <div
-                                class="table-cell"
-                            >
-                                <div
-                                    style="
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                    "
-                                >
-                                    <!-- on show id them content-pro -->
-                                    <div
-                                        class="content-pro"
-                                    >
-                                        <div
-                                            class="content-inside"
-                                        >
-                                            <div
-                                                class="name"
-                                                style="
-                                                    background-image: url('https://janeto.com/wp-content/uploads/2018/06/product_wowkids_text.png');
-                                                    background-size: contain;
-                                                "
-                                            ></div>
-                                            <div
-                                                class="description"
-                                            >
-                                                <p>
-                                                    –
-                                                    Đây
-                                                    là
-                                                    game
-                                                    theo
-                                                    dạng
-                                                    nhanh
-                                                    tay
-                                                    nhanh
-                                                    mắt.
-                                                    Bạn
-                                                    phải
-                                                    tìm
-                                                    kiếm
-                                                    một
-                                                    hình
-                                                    đa
-                                                    giác
-                                                    giống
-                                                    như
-                                                    đề
-                                                    bài
-                                                    cho
-                                                    trong
-                                                    1
-                                                    khoảng
-                                                    thời
-                                                    gian
-                                                    10s.
-                                                    Các
-                                                    hình
-                                                    rất
-                                                    giống
-                                                    nhau.
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Đây
-                                                    là
-                                                    game
-                                                    đầu
-                                                    tiên
-                                                    của
-                                                    chúng
-                                                    tôi
-                                                    phát
-                                                    triển.
-                                                    Hi
-                                                    vọng
-                                                    các
-                                                    bạn
-                                                    thích
-                                                    và
-                                                    ủng
-                                                    hộ
-                                                    chúng
-                                                    tôi.
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Hỗ
-                                                    trợ
-                                                    tăng
-                                                    độ
-                                                    khó
-                                                    trong
-                                                    khi
-                                                    chơi
-                                                    bằng
-                                                    ràng
-                                                    buộc
-                                                    thời
-                                                    gian
-                                                    đối
-                                                    với
-                                                    các
-                                                    em
-                                                    từ
-                                                    6
-                                                    tuổi
-                                                    trở
-                                                    lên.
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Hãy
-                                                    ủng
-                                                    hộ
-                                                    chúng
-                                                    tôi
-                                                    bằng
-                                                    cách
-                                                    sử
-                                                    dụng
-                                                    ứng
-                                                    dụng
-                                                </p>
-                                            </div>
-                                            <div
-                                                style="
-                                                    margin-top: 15px;
-                                                "
-                                            >
-                                                <a
-                                                    href="https://itunes.apple.com/us/app/polygon-matching/id955002405"
-                                                    class="download"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <img
-                                                        src="https://janeto.com/wp-content/themes/blogs/asset/img/App_Store.png"
-                                                        alt="DOWNLOAD POLYGON FROM APP STORE"
-                                                    />
-                                                </a>
-                                                <a
-                                                    href="https://play.google.com/store/apps/details?id=com.janeto.game.polygonxpro"
-                                                    class="download"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <img
-                                                        src="https://janeto.com/wp-content/themes/blogs/asset/img/Google_Play.png"
-                                                        alt="DOWNLOAD POLYGON FROM GOOGLE PLAY"
-                                                    />
-                                                </a>
-                                            </div>
-                                            <div
-                                                class="class-btn"
-                                            >
-                                                <a
-                                                    href="http://wowkids.janeto.com"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    class=""
-                                                >
-                                                    <span
-                                                        class="button-animation btn-review"
-                                                        >Chi
-                                                        tiết<span
-                                                            class="arrow-right-button"
-                                                        ></span
-                                                    ></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="image-container"
-                                    >
-                                        <div
-                                            class="wowkids-wrapper"
-                                        >
-                                            <img
-                                                class="main-image"
-                                                src="https://janeto.com/wp-content/themes/blogs/asset/img/product/wowkids-main-image.png"
-                                                alt="Wowkids"
-                                            />
-                                            <img
-                                                class="leaf-1"
-                                                src="https://janeto.com/wp-content/themes/blogs/asset/img/product/wowkids-leaf-1.png"
-                                                alt="Wowkids leaf 1"
-                                            />
-                                            <img
-                                                class="leaf-2"
-                                                src="https://janeto.com/wp-content/themes/blogs/asset/img/product/wowkids-leaf-2.png"
-                                                alt="Wowkids leaf 2"
-                                            />
-                                            <img
-                                                class="front-image"
-                                                src="https://janeto.com/wp-content/themes/blogs/asset/img/product/wowkids-front-image.png"
-                                                alt="Wowkids"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <svg
-                        class="play-button"
-                        onclick="autoPlay()"
-                        width="200"
-                        height="200"
-                        viewBox="0 0 200 200"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <circle
-                            cx="100"
-                            cy="100"
-                            r="90"
-                            fill="none"
-                            stroke-width="12"
-                            stroke-linejoin="round"
-                            stroke="#237DAD"
-                            style="
-                                filter: opacity(
-                                        100%
-                                    )
-                                    drop-shadow(
-                                        rgb(
-                                                27,
-                                                27,
-                                                27
-                                            )
-                                            0px
-                                            0px
-                                            3px
-                                    );
-                            "
-                        ></circle>
-                        <polygon
-                            points="73, 55 73, 148 148, 100"
-                            stroke-width="5"
-                            stroke-linejoin="round"
-                            stroke="#237DAD"
-                            fill="#237DAD"
-                            style="
-                                filter: opacity(
-                                        100%
-                                    )
-                                    drop-shadow(
-                                        rgb(
-                                                27,
-                                                27,
-                                                27
-                                            )
-                                            0px
-                                            0px
-                                            3px
-                                    );
-                            "
-                        ></polygon>
-                    </svg>
-                    <div
-                        class="modal"
-                        id="modal"
-                        style="
-                            height: 370px;
-                        "
-                        onclick="closeYoutube()"
-                    >
-                        <div
-                            class="youtube-video"
-                        >
-                            <iframe
-                                title="Wowkids Trailer"
-                                id="wowkids-video"
-                                width="560"
-                                height="315"
-                                src="https://www.youtube.com/embed/af8Txgatkcg?enablejsapi=1?autoplay=1"
-                                allowfullscreen
-                            ></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="item hiddenn"
-                    style="
-                        position: relative;
-                    "
-                >
-                    <div
-                        class="container image-test"
-                    >
-                        <div
-                            class="table"
-                        >
-                            <div
-                                class="table-cell"
-                            >
-                                <div
-                                    style="
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                    "
-                                >
-                                    <!-- on show id them content-pro -->
-                                    <div
-                                        class="content-pro"
-                                    >
-                                        <div
-                                            class="content-inside"
-                                        >
-                                            <div
-                                                class="name"
-                                                style="
-                                                    background-image: url('https://janeto.com/wp-content/uploads/2018/06/product_polygon.png');
-                                                    background-size: contain;
-                                                "
-                                            ></div>
-                                            <div
-                                                class="description"
-                                            >
-                                                <p>
-                                                    –
-                                                    Đây
-                                                    là
-                                                    game
-                                                    theo
-                                                    dạng
-                                                    nhanh
-                                                    tay
-                                                    nhanh
-                                                    mắt.
-                                                    Bạn
-                                                    phải
-                                                    tìm
-                                                    kiếm
-                                                    một
-                                                    hình
-                                                    đa
-                                                    giác
-                                                    giống
-                                                    như
-                                                    đề
-                                                    bài
-                                                    cho
-                                                    trong
-                                                    1
-                                                    khoảng
-                                                    thời
-                                                    gian
-                                                    10s.
-                                                    Các
-                                                    hình
-                                                    rất
-                                                    giống
-                                                    nhau.
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Đây
-                                                    là
-                                                    game
-                                                    đầu
-                                                    tiên
-                                                    của
-                                                    chúng
-                                                    tôi
-                                                    phát
-                                                    triển.
-                                                    Hi
-                                                    vọng
-                                                    các
-                                                    bạn
-                                                    thích
-                                                    và
-                                                    ủng
-                                                    hộ
-                                                    chúng
-                                                    tôi.
-                                                </p>
-                                            </div>
-                                            <div
-                                                style="
-                                                    margin-top: 15px;
-                                                "
-                                            >
-                                                <a
-                                                    href="https://itunes.apple.com/us/app/polygon-matching/id955002405"
-                                                    class="download"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <img
-                                                        src="https://janeto.com/wp-content/themes/blogs/asset/img/App_Store.png"
-                                                        alt="DOWNLOAD POLYGON FROM APP STORE"
-                                                    />
-                                                </a>
-                                                <a
-                                                    href="https://play.google.com/store/apps/details?id=com.janeto.game.polygonxpro"
-                                                    class="download"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <img
-                                                        src="https://janeto.com/wp-content/themes/blogs/asset/img/Google_Play.png"
-                                                        alt="DOWNLOAD POLYGON FROM GOOGLE PLAY"
-                                                    />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="image-container"
-                                    >
-                                        <div
-                                            class="polygon-wrapper"
-                                        >
-                                            <img
-                                                class="main-image"
-                                                src="https://janeto.com/wp-content/themes/blogs/asset/img/product/polygon-main-image.png"
-                                                alt="Polygon"
-                                            />
-                                            <img
-                                                class="item-1"
-                                                src="https://janeto.com/wp-content/themes/blogs/asset/img/product/polygon-item-1.png"
-                                                alt="Polygon Item 1"
-                                            />
-                                            <img
-                                                class="item-2"
-                                                src="https://janeto.com/wp-content/themes/blogs/asset/img/product/polygon-item-2.png"
-                                                alt="Polygon Item 2"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="item hiddenn"
-                    style="
-                        position: relative;
-                    "
-                >
-                    <div
-                        class="container image-test"
-                    >
-                        <div
-                            class="table"
-                        >
-                            <div
-                                class="table-cell"
-                            >
-                                <div
-                                    style="
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                    "
-                                >
-                                    <!-- on show id them content-pro -->
-                                    <div
-                                        class="content-pro"
-                                    >
-                                        <div
-                                            class="content-inside"
-                                        >
-                                            <h2
-                                                class="label-name"
-                                            >
-                                                eGOV
-                                            </h2>
-                                            <div
-                                                class="description"
-                                            >
-                                                <p>
-                                                    –
-                                                    Đây
-                                                    là
-                                                    dự
-                                                    án
-                                                    hợp
-                                                    tác
-                                                    với
-                                                    chính
-                                                    phủ
-                                                    để
-                                                    xây
-                                                    dựng
-                                                    Chính
-                                                    Quyền
-                                                    Điện
-                                                    Tử.
-                                                    Chúng
-                                                    tôi
-                                                    đã
-                                                    số
-                                                    hóa
-                                                    qui
-                                                    trình
-                                                    và
-                                                    triển
-                                                    khai
-                                                    các
-                                                    dịch
-                                                    vụ
-                                                    công
-                                                    trực
-                                                    tuyến
-                                                    Cấp
-                                                    3,
-                                                    Cấp
-                                                    4
-                                                    ở
-                                                    một
-                                                    số
-                                                    tỉnh
-                                                    thành.
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Giải
-                                                    pháp
-                                                    giúp
-                                                    công
-                                                    dân
-                                                    thực
-                                                    hiện
-                                                    các
-                                                    dịch
-                                                    vụ
-                                                    công
-                                                    một
-                                                    cách
-                                                    thuận
-                                                    lợi,
-                                                    trên
-                                                    môi
-                                                    trường
-                                                    internet.
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Hỗ
-                                                    trợ
-                                                    Qui
-                                                    Trình
-                                                    Động:
-                                                    Do
-                                                    đặc
-                                                    thù
-                                                    nên
-                                                    qui
-                                                    trình
-                                                    luôn
-                                                    luôn
-                                                    thay
-                                                    đổi
-                                                    theo
-                                                    thời
-                                                    gian
-                                                    cũng
-                                                    như
-                                                    quyền
-                                                    và
-                                                    cấp
-                                                    xử
-                                                    lý.
-                                                    Chúng
-                                                    tôi
-                                                    hỗ
-                                                    trợ
-                                                    việc
-                                                    thay
-                                                    đổi
-                                                    trên
-                                                    giao
-                                                    diện
-                                                    mà
-                                                    không
-                                                    cần
-                                                    phải
-                                                    thay
-                                                    đổi
-                                                    phần
-                                                    mềm.
-                                                    Ngoài
-                                                    ra,
-                                                    giải
-                                                    pháp
-                                                    còn
-                                                    hỗ
-                                                    trợ
-                                                    đa
-                                                    qui
-                                                    trình
-                                                    và
-                                                    thời
-                                                    gian
-                                                    hiệu
-                                                    lực
-                                                    cho
-                                                    mỗi
-                                                    loại
-                                                    dịch
-                                                    vụ
-                                                    công.
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Hỗ
-                                                    trợ
-                                                    CHỮ
-                                                    KÝ
-                                                    SỐ
-                                                    là
-                                                    các
-                                                    SmartCard
-                                                    hay
-                                                    USB-TOKEN.
-                                                    Chúng
-                                                    tôi
-                                                    là
-                                                    đơn
-                                                    vị
-                                                    DUY
-                                                    NHẤT
-                                                    tại
-                                                    ViỆT
-                                                    NAM
-                                                    hỗ
-                                                    trợ
-                                                    việc
-                                                    CHỮ
-                                                    KÝ
-                                                    SỐ
-                                                    trên
-                                                    tất
-                                                    cả
-                                                    mọi
-                                                    trình
-                                                    duyệt
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Các
-                                                    đơn
-                                                    vị
-                                                    triển
-                                                    khai:
-                                                    Sở
-                                                    Thông
-                                                    Tin
-                                                    và
-                                                    Truyền
-                                                    Thông,
-                                                    Sở
-                                                    Khoa
-                                                    học
-                                                    và
-                                                    Công
-                                                    Nghệ,
-                                                    Sở
-                                                    Kế
-                                                    Hoạch
-                                                    và
-                                                    Đầu
-                                                    Tư,
-                                                    Sở
-                                                    Công
-                                                    Thương
-                                                </p>
-                                            </div>
-                                            <div
-                                                style="
-                                                    margin-top: 15px;
-                                                "
-                                            ></div>
-                                            <div
-                                                class="class-btn"
-                                            >
-                                                <a
-                                                    href="http://dichvucongtructuyen.com/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    class=""
-                                                >
-                                                    <span
-                                                        class="button-animation btn-review"
-                                                        >Chi
-                                                        tiết<span
-                                                            class="arrow-right-button"
-                                                        ></span
-                                                    ></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="image-container long"
-                                    >
-                                        <div
-                                            class="image-wrap"
-                                        >
-                                            <div
-                                                class="wrapper"
-                                            >
-                                                <img
-                                                    class="product-image"
-                                                    src="https://janeto.com/wp-content/themes/blogs/asset/img/product/product_online_public_service.png"
-                                                    alt="laptrinhvien.io"
-                                                />
-                                                <span
-                                                    class="product-flash o1"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o2"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o3"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o4"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o5"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o6"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o7"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o8"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o9"
-                                                ></span>
-                                                <span
-                                                    class="product-flash o10"
-                                                ></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="item hiddenn"
-                    style="
-                        position: relative;
-                    "
-                >
-                    <div
-                        class="container image-test"
-                    >
-                        <div
-                            class="table"
-                        >
-                            <div
-                                class="table-cell"
-                            >
-                                <div
-                                    style="
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                    "
-                                >
-                                    <!-- on show id them content-pro -->
-                                    <div
-                                        class="content-pro"
-                                    >
-                                        <div
-                                            class="content-inside"
-                                        >
-                                            <div
-                                                class="name lg"
-                                                style="
-                                                    background-image: url('https://janeto.com/wp-content/uploads/2018/06/laptrinhvien.png');
-                                                    background-size: contain;
-                                                "
-                                            ></div>
-                                            <div
-                                                class="description"
-                                            >
-                                                <p>
-                                                    –
-                                                    Tiền
-                                                    thân
-                                                    là
-                                                    Trung
-                                                    Tâm
-                                                    Nghiên
-                                                    Cứu
-                                                    và
-                                                    Phát
-                                                    triển
-                                                    nguồn
-                                                    lực
-                                                    của
-                                                    JANETO.
-                                                    Chúng
-                                                    tôi
-                                                    đã
-                                                    hỗ
-                                                    trợ
-                                                    nhận
-                                                    và
-                                                    đào
-                                                    tạo
-                                                    các
-                                                    thực
-                                                    tập
-                                                    sinh
-                                                    là
-                                                    sinh
-                                                    viên
-                                                    của
-                                                    các
-                                                    trường
-                                                    Đại
-                                                    Học
-                                                    tại
-                                                    TP.HCM.
-                                                    Sau
-                                                    một
-                                                    thời
-                                                    gian,
-                                                    chúng
-                                                    tôi
-                                                    muốn
-                                                    mang
-                                                    phương
-                                                    pháp
-                                                    cũng
-                                                    như
-                                                    những
-                                                    nội
-                                                    dung
-                                                    thực
-                                                    tế
-                                                    nhất
-                                                    đến
-                                                    với
-                                                    các
-                                                    học
-                                                    viên
-                                                    khác
-                                                    có
-                                                    nhu
-                                                    cầu,
-                                                    nên
-                                                    Trung
-                                                    Tâm
-                                                    Đào
-                                                    Tạo
-                                                    Lập
-                                                    Trình
-                                                    Viên
-                                                    JANETO
-                                                    (JTC
-                                                    –
-                                                    laptrinhvien.io)
-                                                    đã
-                                                    được
-                                                    ra
-                                                    đời.
-                                                </p>
-                                                <p>
-                                                    –
-                                                    Với
-                                                    mục
-                                                    tiêu
-                                                    đào
-                                                    tạo
-                                                    ra
-                                                    đội
-                                                    ngũ
-                                                    chất
-                                                    lượng
-                                                    cao,
-                                                    đáp
-                                                    ứng
-                                                    nhu
-                                                    cầu
-                                                    cho
-                                                    tất
-                                                    cả
-                                                    các
-                                                    doanh
-                                                    nghiệp
-                                                    nước
-                                                    ngoài
-                                                    và
-                                                    trong
-                                                    nước
-                                                    theo
-                                                    tiêu
-                                                    chuẩn
-                                                    Quốc
-                                                    Tế.
-                                                </p>
-                                            </div>
-                                            <div
-                                                style="
-                                                    margin-top: 15px;
-                                                "
-                                            ></div>
-                                            <div
-                                                class="class-btn"
-                                            >
-                                                <a
-                                                    href="https://laptrinhvien.io/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    class=""
-                                                >
-                                                    <span
-                                                        class="button-animation btn-review"
-                                                        >Chi
-                                                        tiết<span
-                                                            class="arrow-right-button"
-                                                        ></span
-                                                    ></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="image-container ltv"
-                                    >
-                                        <img
-                                            src="https://janeto.com/wp-content/uploads/2018/06/ltv_6.jpg"
-                                        />
-                                        <img
-                                            src="https://janeto.com/wp-content/uploads/2018/06/ltv_1.jpg"
-                                        />
-                                        <img
-                                            src="https://janeto.com/wp-content/uploads/2018/06/ltv_3.jpg"
-                                        />
-                                        <img
-                                            src="https://janeto.com/wp-content/uploads/2018/06/ltv_5.jpg"
-                                        />
-                                        <img
-                                            src="https://janeto.com/wp-content/uploads/2018/06/ltv_2.jpg"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Hinh anh bla bla-->
-                <!-- <img   
+						<p class="content">
+							PATITEK là
+							công ty
+							phần mềm
+							chuyên về
+							ứng dụng
+							web và di
+							động. Với
+							trình độ
+							chuyên
+							biệt và
+							đội ngũ kỹ
+							thuật cao,
+							PATITEK
+							luôn luôn
+							cung cấp
+							cho khách
+							hàng giải
+							pháp sáng
+							tạo và tối
+							ưu. Việc
+							này không
+							những giảm
+							chi phí
+							phát
+							triển,
+							triển khai
+							mà chất
+							lượng của
+							sản phẩm
+							và dịch vụ
+							luôn luôn
+							được đảm
+							bảo tốt
+							nhất.
+						</p>
+					</div>
+				</div>
+				<div class="info-detail">
+					<div class="list-box-info">
+						<div
+							class="box-item"
+						>
+							<div
+								class="box-left"
+							></div>
+							<div
+								class="box-right"
+							></div>
+							<div
+								class="box-content"
+							>
+								<div
+									class="text-content"
+								>
+									<div
+										class="text-number"
+									>
+										<span
+											class="counter"
+											>21</span
+										>
+										<p
+											class="sysbol"
+										>
+											+
+										</p>
+									</div>
+									<p
+										class="text-bot"
+									>
+										Lập
+										trình
+										viên
+									</p>
+								</div>
+							</div>
+							<div
+								class="triangle"
+							></div>
+						</div>
+						<div
+							class="box-item"
+						>
+							<div
+								class="box-left"
+							></div>
+							<div
+								class="box-right bg2"
+							></div>
+							<div
+								class="box-content"
+							>
+								<div
+									class="text-content"
+								>
+									<div
+										class="text-number text-color2"
+									>
+										<span
+											class="counter"
+											>99</span
+										>
+										<p
+											class="sysbol"
+										>
+											%
+										</p>
+									</div>
+									<p
+										class="text-bot"
+									>
+										Khách
+										hàng
+										hài
+										lòng
+									</p>
+								</div>
+							</div>
+							<div
+								class="triangle bg2"
+							></div>
+						</div>
+						<div
+							class="box-item"
+						>
+							<div
+								class="box-left"
+							></div>
+							<div
+								class="box-right bg3"
+							></div>
+							<div
+								class="box-content"
+							>
+								<div
+									class="text-content"
+								>
+									<div
+										class="text-number text-color3"
+									>
+										<span
+											class="counter"
+											>10</span
+										>
+										<p
+											class="sysbol"
+										>
+											+
+										</p>
+									</div>
+									<p
+										class="text-bot"
+									>
+										Dự
+										án
+										hoàn
+										thành
+									</p>
+								</div>
+							</div>
+							<div
+								class="triangle bg3"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Solution -->
+			<div id="solution" class="section">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div
+							class="swiper-slide"
+							style="
+								background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
+							"
+						>
+							<h1
+								class="text-title"
+							>
+								Giải
+								pháp
+								quản
+								lý
+								thông
+								tin
+								số
+								(VDR)
+							</h1>
+							<div
+								class="list-language"
+							>
+								<div
+									class="language-item"
+								>
+									<img
+										src="./img/angular.png"
+										alt=""
+									/>
+								</div>
+								<div
+									class="language-item"
+								>
+									<img
+										src="./img/nodejs.png"
+										alt=""
+									/>
+								</div>
+							</div>
+							<button
+								class="btn-contact"
+							>
+								Liên
+								Hệ
+							</button>
+						</div>
+						<div
+							class="swiper-slide"
+							style="
+								background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
+							"
+						>
+							<h1
+								class="text-title"
+							>
+								Giải
+								pháp
+								quản
+								lý
+								thông
+								tin
+								số
+								(VDR)
+							</h1>
+							<div
+								class="list-language"
+							>
+								<div
+									class="language-item"
+								>
+									<img
+										src="./img/vue.png"
+										alt=""
+									/>
+								</div>
+								<div
+									class="language-item"
+								>
+									<img
+										src="./img/react.png"
+										alt=""
+									/>
+								</div>
+							</div>
+							<button
+								class="btn-contact"
+							>
+								Liên
+								Hệ
+							</button>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div
+						class="swiper-pagination"
+					></div>
+				</div>
+			</div>
+			<!-- Products -->
+			<section id="product" class="section">
+				<div class="product-menu">
+					<div class="table">
+						<div
+							class="table-cell"
+						>
+							<div
+								class="menu"
+							>
+								<div
+									class="item"
+									id="1"
+								>
+									<p
+										onclick="onclickP(event)"
+									>
+										Wowkids
+									</p>
+									<div
+										class="line"
+									></div>
+								</div>
+								<div
+									class="item"
+									id="2"
+								>
+									<p
+										onclick="onclickP(event)"
+									>
+										POLYGON
+									</p>
+									<div
+										class="line"
+									></div>
+								</div>
+								<div
+									class="item"
+									id="3"
+								>
+									<p
+										onclick="onclickP(event)"
+									>
+										eGOV
+									</p>
+									<div
+										class="line"
+									></div>
+								</div>
+								<div
+									class="item"
+									id="4"
+								>
+									<p
+										onclick="onclickP(event)"
+									>
+										laptrinhvien.io
+									</p>
+									<div
+										class="line"
+									></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product">
+					<div
+						class="item hiddenn"
+						style="
+							position: relative;
+						"
+					>
+						<div
+							class="container image-test"
+						>
+							<div
+								class="table"
+							>
+								<div
+									class="table-cell"
+								>
+									<div
+										style="
+											display: flex;
+											flex-wrap: wrap;
+										"
+									>
+										<!-- on show id them content-pro -->
+										<div
+											class="content-pro"
+										>
+											<div
+												class="content-inside"
+											>
+												<div
+													class="name"
+													style="
+														background-image: url('https://janeto.com/wp-content/uploads/2018/06/product_wowkids_text.png');
+														background-size: contain;
+													"
+												></div>
+												<div
+													class="description"
+												>
+													<p>
+														–
+														Đây
+														là
+														game
+														theo
+														dạng
+														nhanh
+														tay
+														nhanh
+														mắt.
+														Bạn
+														phải
+														tìm
+														kiếm
+														một
+														hình
+														đa
+														giác
+														giống
+														như
+														đề
+														bài
+														cho
+														trong
+														1
+														khoảng
+														thời
+														gian
+														10s.
+														Các
+														hình
+														rất
+														giống
+														nhau.
+													</p>
+													<p>
+														–
+														Đây
+														là
+														game
+														đầu
+														tiên
+														của
+														chúng
+														tôi
+														phát
+														triển.
+														Hi
+														vọng
+														các
+														bạn
+														thích
+														và
+														ủng
+														hộ
+														chúng
+														tôi.
+													</p>
+													<p>
+														–
+														Hỗ
+														trợ
+														tăng
+														độ
+														khó
+														trong
+														khi
+														chơi
+														bằng
+														ràng
+														buộc
+														thời
+														gian
+														đối
+														với
+														các
+														em
+														từ
+														6
+														tuổi
+														trở
+														lên.
+													</p>
+													<p>
+														–
+														Hãy
+														ủng
+														hộ
+														chúng
+														tôi
+														bằng
+														cách
+														sử
+														dụng
+														ứng
+														dụng
+													</p>
+												</div>
+												<div
+													style="
+														margin-top: 15px;
+													"
+												>
+													<a
+														href="https://itunes.apple.com/us/app/polygon-matching/id955002405"
+														class="download"
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														<img
+															src="https://janeto.com/wp-content/themes/blogs/asset/img/App_Store.png"
+															alt="DOWNLOAD POLYGON FROM APP STORE"
+														/>
+													</a>
+													<a
+														href="https://play.google.com/store/apps/details?id=com.janeto.game.polygonxpro"
+														class="download"
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														<img
+															src="https://janeto.com/wp-content/themes/blogs/asset/img/Google_Play.png"
+															alt="DOWNLOAD POLYGON FROM GOOGLE PLAY"
+														/>
+													</a>
+												</div>
+												<div
+													class="class-btn"
+												>
+													<a
+														href="http://wowkids.janeto.com"
+														target="_blank"
+														rel="noopener noreferrer"
+														class=""
+													>
+														<span
+															class="button-animation btn-review"
+															>Chi
+															tiết<span
+																class="arrow-right-button"
+															></span
+														></span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div
+											class="image-container"
+										>
+											<div
+												class="wowkids-wrapper"
+											>
+												<img
+													class="main-image"
+													src="https://janeto.com/wp-content/themes/blogs/asset/img/product/wowkids-main-image.png"
+													alt="Wowkids"
+												/>
+												<img
+													class="leaf-1"
+													src="https://janeto.com/wp-content/themes/blogs/asset/img/product/wowkids-leaf-1.png"
+													alt="Wowkids leaf 1"
+												/>
+												<img
+													class="leaf-2"
+													src="https://janeto.com/wp-content/themes/blogs/asset/img/product/wowkids-leaf-2.png"
+													alt="Wowkids leaf 2"
+												/>
+												<img
+													class="front-image"
+													src="https://janeto.com/wp-content/themes/blogs/asset/img/product/wowkids-front-image.png"
+													alt="Wowkids"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<svg
+							class="play-button"
+							onclick="autoPlay()"
+							width="200"
+							height="200"
+							viewBox="0 0 200 200"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<circle
+								cx="100"
+								cy="100"
+								r="90"
+								fill="none"
+								stroke-width="12"
+								stroke-linejoin="round"
+								stroke="#237DAD"
+								style="
+									filter: opacity(
+											100%
+										)
+										drop-shadow(
+											rgb(
+													27,
+													27,
+													27
+												)
+												0px
+												0px
+												3px
+										);
+								"
+							></circle>
+							<polygon
+								points="73, 55 73, 148 148, 100"
+								stroke-width="5"
+								stroke-linejoin="round"
+								stroke="#237DAD"
+								fill="#237DAD"
+								style="
+									filter: opacity(
+											100%
+										)
+										drop-shadow(
+											rgb(
+													27,
+													27,
+													27
+												)
+												0px
+												0px
+												3px
+										);
+								"
+							></polygon>
+						</svg>
+						<div
+							class="modal"
+							id="modal"
+							style="
+								height: 370px;
+							"
+							onclick="closeYoutube()"
+						>
+							<div
+								class="youtube-video"
+							>
+								<iframe
+									title="Wowkids Trailer"
+									id="wowkids-video"
+									width="560"
+									height="315"
+									src="https://www.youtube.com/embed/af8Txgatkcg?enablejsapi=1?autoplay=1"
+									allowfullscreen
+								></iframe>
+							</div>
+						</div>
+					</div>
+					<div
+						class="item hiddenn"
+						style="
+							position: relative;
+						"
+					>
+						<div
+							class="container image-test"
+						>
+							<div
+								class="table"
+							>
+								<div
+									class="table-cell"
+								>
+									<div
+										style="
+											display: flex;
+											flex-wrap: wrap;
+										"
+									>
+										<!-- on show id them content-pro -->
+										<div
+											class="content-pro"
+										>
+											<div
+												class="content-inside"
+											>
+												<div
+													class="name"
+													style="
+														background-image: url('https://janeto.com/wp-content/uploads/2018/06/product_polygon.png');
+														background-size: contain;
+													"
+												></div>
+												<div
+													class="description"
+												>
+													<p>
+														–
+														Đây
+														là
+														game
+														theo
+														dạng
+														nhanh
+														tay
+														nhanh
+														mắt.
+														Bạn
+														phải
+														tìm
+														kiếm
+														một
+														hình
+														đa
+														giác
+														giống
+														như
+														đề
+														bài
+														cho
+														trong
+														1
+														khoảng
+														thời
+														gian
+														10s.
+														Các
+														hình
+														rất
+														giống
+														nhau.
+													</p>
+													<p>
+														–
+														Đây
+														là
+														game
+														đầu
+														tiên
+														của
+														chúng
+														tôi
+														phát
+														triển.
+														Hi
+														vọng
+														các
+														bạn
+														thích
+														và
+														ủng
+														hộ
+														chúng
+														tôi.
+													</p>
+												</div>
+												<div
+													style="
+														margin-top: 15px;
+													"
+												>
+													<a
+														href="https://itunes.apple.com/us/app/polygon-matching/id955002405"
+														class="download"
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														<img
+															src="https://janeto.com/wp-content/themes/blogs/asset/img/App_Store.png"
+															alt="DOWNLOAD POLYGON FROM APP STORE"
+														/>
+													</a>
+													<a
+														href="https://play.google.com/store/apps/details?id=com.janeto.game.polygonxpro"
+														class="download"
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														<img
+															src="https://janeto.com/wp-content/themes/blogs/asset/img/Google_Play.png"
+															alt="DOWNLOAD POLYGON FROM GOOGLE PLAY"
+														/>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div
+											class="image-container"
+										>
+											<div
+												class="polygon-wrapper"
+											>
+												<img
+													class="main-image"
+													src="https://janeto.com/wp-content/themes/blogs/asset/img/product/polygon-main-image.png"
+													alt="Polygon"
+												/>
+												<img
+													class="item-1"
+													src="https://janeto.com/wp-content/themes/blogs/asset/img/product/polygon-item-1.png"
+													alt="Polygon Item 1"
+												/>
+												<img
+													class="item-2"
+													src="https://janeto.com/wp-content/themes/blogs/asset/img/product/polygon-item-2.png"
+													alt="Polygon Item 2"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="item hiddenn"
+						style="
+							position: relative;
+						"
+					>
+						<div
+							class="container image-test"
+						>
+							<div
+								class="table"
+							>
+								<div
+									class="table-cell"
+								>
+									<div
+										style="
+											display: flex;
+											flex-wrap: wrap;
+										"
+									>
+										<!-- on show id them content-pro -->
+										<div
+											class="content-pro"
+										>
+											<div
+												class="content-inside"
+											>
+												<h2
+													class="label-name"
+												>
+													eGOV
+												</h2>
+												<div
+													class="description"
+												>
+													<p>
+														–
+														Đây
+														là
+														dự
+														án
+														hợp
+														tác
+														với
+														chính
+														phủ
+														để
+														xây
+														dựng
+														Chính
+														Quyền
+														Điện
+														Tử.
+														Chúng
+														tôi
+														đã
+														số
+														hóa
+														qui
+														trình
+														và
+														triển
+														khai
+														các
+														dịch
+														vụ
+														công
+														trực
+														tuyến
+														Cấp
+														3,
+														Cấp
+														4
+														ở
+														một
+														số
+														tỉnh
+														thành.
+													</p>
+													<p>
+														–
+														Giải
+														pháp
+														giúp
+														công
+														dân
+														thực
+														hiện
+														các
+														dịch
+														vụ
+														công
+														một
+														cách
+														thuận
+														lợi,
+														trên
+														môi
+														trường
+														internet.
+													</p>
+													<p>
+														–
+														Hỗ
+														trợ
+														Qui
+														Trình
+														Động:
+														Do
+														đặc
+														thù
+														nên
+														qui
+														trình
+														luôn
+														luôn
+														thay
+														đổi
+														theo
+														thời
+														gian
+														cũng
+														như
+														quyền
+														và
+														cấp
+														xử
+														lý.
+														Chúng
+														tôi
+														hỗ
+														trợ
+														việc
+														thay
+														đổi
+														trên
+														giao
+														diện
+														mà
+														không
+														cần
+														phải
+														thay
+														đổi
+														phần
+														mềm.
+														Ngoài
+														ra,
+														giải
+														pháp
+														còn
+														hỗ
+														trợ
+														đa
+														qui
+														trình
+														và
+														thời
+														gian
+														hiệu
+														lực
+														cho
+														mỗi
+														loại
+														dịch
+														vụ
+														công.
+													</p>
+													<p>
+														–
+														Hỗ
+														trợ
+														CHỮ
+														KÝ
+														SỐ
+														là
+														các
+														SmartCard
+														hay
+														USB-TOKEN.
+														Chúng
+														tôi
+														là
+														đơn
+														vị
+														DUY
+														NHẤT
+														tại
+														ViỆT
+														NAM
+														hỗ
+														trợ
+														việc
+														CHỮ
+														KÝ
+														SỐ
+														trên
+														tất
+														cả
+														mọi
+														trình
+														duyệt
+													</p>
+													<p>
+														–
+														Các
+														đơn
+														vị
+														triển
+														khai:
+														Sở
+														Thông
+														Tin
+														và
+														Truyền
+														Thông,
+														Sở
+														Khoa
+														học
+														và
+														Công
+														Nghệ,
+														Sở
+														Kế
+														Hoạch
+														và
+														Đầu
+														Tư,
+														Sở
+														Công
+														Thương
+													</p>
+												</div>
+												<div
+													style="
+														margin-top: 15px;
+													"
+												></div>
+												<div
+													class="class-btn"
+												>
+													<a
+														href="http://dichvucongtructuyen.com/"
+														target="_blank"
+														rel="noopener noreferrer"
+														class=""
+													>
+														<span
+															class="button-animation btn-review"
+															>Chi
+															tiết<span
+																class="arrow-right-button"
+															></span
+														></span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div
+											class="image-container long"
+										>
+											<div
+												class="image-wrap"
+											>
+												<div
+													class="wrapper"
+												>
+													<img
+														class="product-image"
+														src="https://janeto.com/wp-content/themes/blogs/asset/img/product/product_online_public_service.png"
+														alt="laptrinhvien.io"
+													/>
+													<span
+														class="product-flash o1"
+													></span>
+													<span
+														class="product-flash o2"
+													></span>
+													<span
+														class="product-flash o3"
+													></span>
+													<span
+														class="product-flash o4"
+													></span>
+													<span
+														class="product-flash o5"
+													></span>
+													<span
+														class="product-flash o6"
+													></span>
+													<span
+														class="product-flash o7"
+													></span>
+													<span
+														class="product-flash o8"
+													></span>
+													<span
+														class="product-flash o9"
+													></span>
+													<span
+														class="product-flash o10"
+													></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="item hiddenn"
+						style="
+							position: relative;
+						"
+					>
+						<div
+							class="container image-test"
+						>
+							<div
+								class="table"
+							>
+								<div
+									class="table-cell"
+								>
+									<div
+										style="
+											display: flex;
+											flex-wrap: wrap;
+										"
+									>
+										<!-- on show id them content-pro -->
+										<div
+											class="content-pro"
+										>
+											<div
+												class="content-inside"
+											>
+												<div
+													class="name lg"
+													style="
+														background-image: url('https://janeto.com/wp-content/uploads/2018/06/laptrinhvien.png');
+														background-size: contain;
+													"
+												></div>
+												<div
+													class="description"
+												>
+													<p>
+														–
+														Tiền
+														thân
+														là
+														Trung
+														Tâm
+														Nghiên
+														Cứu
+														và
+														Phát
+														triển
+														nguồn
+														lực
+														của
+														JANETO.
+														Chúng
+														tôi
+														đã
+														hỗ
+														trợ
+														nhận
+														và
+														đào
+														tạo
+														các
+														thực
+														tập
+														sinh
+														là
+														sinh
+														viên
+														của
+														các
+														trường
+														Đại
+														Học
+														tại
+														TP.HCM.
+														Sau
+														một
+														thời
+														gian,
+														chúng
+														tôi
+														muốn
+														mang
+														phương
+														pháp
+														cũng
+														như
+														những
+														nội
+														dung
+														thực
+														tế
+														nhất
+														đến
+														với
+														các
+														học
+														viên
+														khác
+														có
+														nhu
+														cầu,
+														nên
+														Trung
+														Tâm
+														Đào
+														Tạo
+														Lập
+														Trình
+														Viên
+														JANETO
+														(JTC
+														–
+														laptrinhvien.io)
+														đã
+														được
+														ra
+														đời.
+													</p>
+													<p>
+														–
+														Với
+														mục
+														tiêu
+														đào
+														tạo
+														ra
+														đội
+														ngũ
+														chất
+														lượng
+														cao,
+														đáp
+														ứng
+														nhu
+														cầu
+														cho
+														tất
+														cả
+														các
+														doanh
+														nghiệp
+														nước
+														ngoài
+														và
+														trong
+														nước
+														theo
+														tiêu
+														chuẩn
+														Quốc
+														Tế.
+													</p>
+												</div>
+												<div
+													style="
+														margin-top: 15px;
+													"
+												></div>
+												<div
+													class="class-btn"
+												>
+													<a
+														href="https://laptrinhvien.io/"
+														target="_blank"
+														rel="noopener noreferrer"
+														class=""
+													>
+														<span
+															class="button-animation btn-review"
+															>Chi
+															tiết<span
+																class="arrow-right-button"
+															></span
+														></span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div
+											class="image-container ltv"
+										>
+											<img
+												src="https://janeto.com/wp-content/uploads/2018/06/ltv_6.jpg"
+											/>
+											<img
+												src="https://janeto.com/wp-content/uploads/2018/06/ltv_1.jpg"
+											/>
+											<img
+												src="https://janeto.com/wp-content/uploads/2018/06/ltv_3.jpg"
+											/>
+											<img
+												src="https://janeto.com/wp-content/uploads/2018/06/ltv_5.jpg"
+											/>
+											<img
+												src="https://janeto.com/wp-content/uploads/2018/06/ltv_2.jpg"
+											/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Hinh anh bla bla-->
+					<!-- <img   
                     src="https://janeto.com/wp-content/themes/blogs/asset/img/product/animation-icon-not-shadow.png"
                     alt="Janeto"
                     style="opacity: 1"
                 /> -->
-            </div>
-        </section>
+				</div>
+			</section>
 
-        <div id="customer" class="section">
-            <center>
-                <h3 class="text-customer">Khách hàng</h3>
-            </center>
+			<div id="customer" class="section">
+				<center>
+					<h3 class="text-customer">
+						Khách hàng
+					</h3>
+				</center>
 
-            <div class="gird container">
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/airtogas.svg" alt="" srcset="">
-                </div>
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/architecture.svg" alt="" srcset="">
-                </div>
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/chabad.svg" alt="" srcset="">
-                </div>
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/hi.svg" alt="" srcset="">
-                </div>
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/kingify.svg" alt="" srcset="">
-                </div>
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/kito.svg" alt="" srcset="">
-                </div>
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/lavashin.svg" alt="" srcset="">
-                </div>
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/nmk.svg" alt="" srcset="">
-                </div>
-                <div class="grid-item">
-                    <p class="name-customer">Definition and Usage</p>
-                    <img src="./img/customer/psbv.svg" alt="" srcset="">
-                </div>
-            </div>
-        </div>
-        <footer id="footer" class="section">
-            <div class="footer-main">
-                <div id="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.013324749312!2d106.66619731462285!3d10.810290992298587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529224c2bbef1%3A0xfc007a7d34ff8afe!2zMTYgWcOqbiBUaOG6vywgUGjGsOG7nW5nIDIsIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1616477099340!5m2!1svi!2s"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div class="contact_us">
-                    <h3 class="title-contact">Chúng tôi sẽ liên hệ cho bạn sớm nhất!</h3>
-                    <input class="input-phone-email" type="text" placeholder="Nhập số điện thoại hoặc Email">
-                    <br>
-                    <input class="input-mess" type="text" placeholder="Lời nhắn">
-                    <button class="btn-submit">Gửi</button>
-                </div>
-            </div>
+				<div class="gird container">
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/airtogas.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/architecture.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/chabad.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/hi.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/kingify.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/kito.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/lavashin.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/nmk.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div class="grid-item">
+						<p
+							class="name-customer"
+						>
+							Definition
+							and Usage
+						</p>
+						<img
+							src="./img/customer/psbv.svg"
+							alt=""
+							srcset=""
+						/>
+					</div>
+				</div>
+			</div>
+			<footer id="footer" class="section">
+				<div class="footer-main">
+					<div id="map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.013324749312!2d106.66619731462285!3d10.810290992298587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529224c2bbef1%3A0xfc007a7d34ff8afe!2zMTYgWcOqbiBUaOG6vywgUGjGsOG7nW5nIDIsIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1616477099340!5m2!1svi!2s"
+							width="400"
+							height="300"
+							style="
+								border: 0;
+							"
+							allowfullscreen=""
+							loading="lazy"
+						></iframe>
+					</div>
+					<div class="contact_us">
+						<h3
+							class="title-contact"
+						>
+							Chúng tôi
+							sẽ liên hệ
+							cho bạn
+							sớm nhất!
+						</h3>
+						<input
+							class="input-phone-email"
+							type="text"
+							placeholder="Nhập số điện thoại hoặc Email"
+						/>
+						<br />
+						<input
+							class="input-mess"
+							type="text"
+							placeholder="Lời nhắn"
+						/>
+						<button
+							class="btn-submit"
+						>
+							Gửi
+						</button>
+					</div>
+				</div>
+				<div class="content-footer">
+					<div class="location-parent">
+						<div
+							class="location"
+						>
+							<div
+								class="location-text"
+							>
+							<p class="text-cn" >
+								<span >
+									Công
+									ty
+									TNHH
+									Công
+									nghệ
+									Phần
+									mềm
+								</span>
+							   <img src="./img/customer/patitke.svg"></img> 
+							</p>
 
-            <div class="content-footer">
+								<p
+									class="text-dv"
+								>
+									Dịch
+									vụ
+									thiết
+									kế,
+									phát
+									triển
+									Website
+									và
+									ứng
+									dụng
+									đa
+									nền
+									tảng
+								</p>
+							</div>
 
-            </div>
-        </footer>
-    </div>
+							<div
+								class="item"
+							>
+								<p>
+                                    <img src="./img/customer/map.svg" >
+									16
+									Yên
+									Thế,
+									Phường
+									2,
+									Q.
+									Tân
+									Bình,
+									Thành
+									phố
+									Hồ
+									Chí
+									Minh.
+                                    <p style="padding-left: 25px;"> 
+                                        702
+                                        Xa
+                                        Lộ
+                                        Hà
+                                        Nội,
+                                        Phường
+                                        Hiệp
+                                        phú,
+                                        Q.9,
+                                        Thành
+                                        phố
+                                        Hồ
+                                        Chí
+                                        Minh.
+                                    </p>
+								</p>	
+							</div>
+                            <div class="items">
+                                <p>
+                                    <img src="./img/customer/internet.svg" >
+                                    <a href="#">www.patitek.com</a>    
+                                </p>
+                                <p>
+                                    <img src="./img/customer/phone.svg">
+                                    0358 349 648
+                                </p>
+                                <p>
+                                    <img src="./img/customer/email.svg">
+                                    info@patitek.com    
+                                </p>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+	<script src="./js/fullpage.js"></script>
 
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
-<script src="./js/fullpage.js"></script>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-    async></script>
-<script>
-    var myFullpage = new fullpage('#fullpage', {
-
-        scrollBar: true
-    });
-</script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    });
-</script>
-<script src="index.js"></script>
-
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+		async
+	></script>
+	<script>
+		var myFullpage = new fullpage("#fullpage", {
+			scrollBar: true,
+		});
+	</script>
+	<script>
+		var swiper = new Swiper(".swiper-container", {
+			effect: "coverflow",
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: "auto",
+			coverflowEffect: {
+				rotate: 50,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows: true,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
+	</script>
+	<script src="index.js"></script>
 </html>
