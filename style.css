@@ -8,6 +8,7 @@
     font-family: myFirstFont;
     src: url(./font/SVN-Avo.ttf);
 }
+
 html {
     font-family: myFirstFont;
     font-size: 16px;
@@ -21,7 +22,7 @@ html {
     line-height: 1.5rem;
 }
 body {
-    overflow: hidden;
+    overflow: hidden !important;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -50,8 +51,9 @@ button {
     outline: none;
 }
 .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
+    width: 100%;
     padding: 0 60px;
 }
 .section {
@@ -703,6 +705,7 @@ Intro
 }
 #solution .swiper-slide {
     /* padding: 0 30px; */
+    /* overflow: hidden; */
 }
 #solution .swiper-slide .text-title {
     color: #f7f1f1;
@@ -711,6 +714,17 @@ Intro
     font-weight: 700;
     margin-left: 2rem;
 }
+
+#solution .swiper-slide .text {
+    width: 66.667%;
+    height: 40%;
+    margin: auto;
+    font-family: "Lato", sans-serif;
+    padding-top: 20px;
+    font-size: 10pt;
+    overflow: hidden;
+}
+
 #solution .list-language {
     display: flex;
     padding: 0 60px;
@@ -727,8 +741,8 @@ Intro
     border-radius: 20px;
     background: #fe6e9a;
     padding: 20px 40px;
-    transform: translate(100px, 100px);
     transition: all 0.3s linear;
+    transform: translate(400px, 30px);
 }
 #solution .btn-contact:hover {
     background: #e00849;
@@ -1057,44 +1071,23 @@ Intro
     color: #747474;
 }
 /* Responsive-footer */
-@media screen and (max-height: 700px) and (max-width: 1024px) and (min-height: 650px) {
+@media (max-height: 700px) and (max-width: 1024px) and (min-height: 650px) {
     #footer {
         padding-top: 168px;
     }
 }
-@media screen and (max-height: 1024px) and (max-width: 768px) and (min-height: 650px) {
+@media (max-height: 1024px) and (max-width: 768px) and (min-height: 650px) {
     #footer {
         padding-top: 200px;
     }
 }
-@media screen and (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
+@media (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
     #footer {
         padding-top: 130px;
     }
 }
 
 /* Products */
-/* @media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-} */
 
 @keyframes polygon-item-1 {
     0% {
@@ -1168,10 +1161,11 @@ Intro
 .product .showw .container .table {
     height: 100%;
 }
-
 .product-menu {
     position: absolute;
-    right: 0;
+    /* right: 0; */
+    left: 5%;
+    top: 51%;
     z-index: 1;
     height: 100vh;
 }
@@ -1189,83 +1183,8 @@ Intro
     color: #212529;
 }
 
-/* Responsive */
-@media screen and (max-height: 1024px) and (max-width: 768px) and (min-height: 650px) {
-    .product .content-pro {
-        margin-bottom: 25px;
-    }
-}
-@media screen and (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
-    .product .content-pro {
-        width: 100%;
-    }
-}
-@media screen and (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
-    .product .content-pro {
-        width: 100%;
-        margin-bottom: 50px;
-    }
-}
-@media screen and (max-width: 1280px) {
-    .product .content-pro {
-        width: 60%;
-    }
-}
-
-@media screen and (max-height: 500px) {
-    .product .content-pro {
-        width: 60%;
-    }
-}
-
-@media screen and (max-height: 650px) {
-    .product .content-pro {
-        width: 60%;
-    }
-}
-
-@media screen and (max-height: 500px) {
-    .product .name {
-        height: 25px;
-    }
-}
-@media screen and (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
-    .product .image-container {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-@media screen and (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
-    .product .table {
-        padding-top: 145px;
-    }
-}
-
-@media screen and (max-height: 700px) and (max-width: 1024px) and (min-height: 650px) {
-    .product .description p {
-        font-size: 11pt;
-    }
-}
-@media screen and (max-height: 1024px) and (max-width: 768px) and (min-height: 650px) {
-    .product .description p {
-        font-size: 11pt;
-    }
-}
-@media screen and (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
-    .product .description p {
-        font-size: 15pt;
-    }
-}
-@media screen and (max-height: 700px) {
-    .product .description p {
-        font-size: 11pt;
-    }
-}
-@media screen and (max-width: 1280px) {
-    .product .description p {
-        font-size: 13pt;
-    }
+#product {
+    background-color: #ffffff;
 }
 .product-menu .menu {
     text-align: right;
@@ -1281,27 +1200,28 @@ Intro
 .product-menu .menu .item {
     display: flex;
     align-items: center;
-    color: #75848e !important;
-    justify-content: center;
+    color: #465f7a !important;
     font-size: 10pt;
     margin: 25px 0;
 }
 .product-menu .menu .item:hover,
-.janeto-app a:hover {
+a:hover {
     color: #121043 !important;
 }
 .product-menu .menu .active .line {
     width: 35px;
-    border-top: 1px solid #ff421f;
     right: 0;
     position: absolute;
-    /* margin-top: -20px; */
     margin-right: 12px;
+    border-bottom: 12px solid transparent;
+    border-top: 12px solid transparent;
+    border-right: 12px solid #465f7a;
 }
 
 .product-menu .menu .active p {
     font-weight: 700;
     margin-right: 45px;
+    font-size: 20px;
 }
 
 .product {
@@ -1312,11 +1232,21 @@ Intro
     position: relative;
     transition: all 0.5s ease-in-out;
 }
+.svg-product {
+    position: absolute;
+    right: 0;
+    width: 55%;
+}
+
+.container .content-table {
+    padding-top: 5%;
+}
 
 .product .showw {
     opacity: 1;
     transition: opacity 0.8s ease-in;
     height: 100%;
+    display: block;
 }
 .product .hiddenn {
     opacity: 0;
@@ -1328,16 +1258,23 @@ Intro
     height: 100%;
 }
 
-@media screen and (max-height: 500px) {
-    .product .image-container {
-        width: 40%;
-    }
+.showw .image-computer {
+    position: absolute;
+    width: 55%;
+    height: 80%;
+    z-index: -99;
+    bottom: -33%;
+    right: 30%;
 }
 
-@media screen and (max-height: 650px) {
-    .product .image-container {
-        width: 40%;
-    }
+.showw .home-computer {
+    position: absolute;
+    width: 55%;
+    height: 80%;
+    z-index: -99;
+    transform: rotate(5deg);
+    bottom: -30%;
+    right: 35%;
 }
 
 .product .image-test {
@@ -1373,7 +1310,7 @@ Intro
 .product .content-inside {
     position: relative;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(90%, -50%);
 }
 
 .product h2.label-name {
@@ -1384,12 +1321,30 @@ Intro
 .product .name {
     background-repeat: no-repeat;
     height: 50px;
+    position: absolute;
+    /* display: flex; */
+    transform: translateY(-450%);
 }
 
-.product .description {
-    margin-top: 30px;
+.product .name h2 {
+    font-size: 12pt;
+    text-align: justify;
+    width: 50%;
+    font-family: SVN-Avo;
 }
+/* .product .description {
+    display: block;
+    margin-top: 10%;
+    margin-bottom: auto;
+    z-index: 2;
+} */
 
+.product .description p {
+    text-align: justify;
+    width: 80%;
+    margin-left: 1%;
+    font-family: SVN-Avo;
+}
 .product .download {
     padding-right: 15px;
 }
@@ -1432,41 +1387,149 @@ img {
     position: relative;
 }
 
-.product .image-container {
-    width: 40%;
-    flex-basis: 45%;
-    display: inline-block;
-    position: relative;
-    text-align: right;
+.product .showw .container {
+    transform: translateX(10%);
+}
+.content-inside .items {
+    display: flex;
+    transform: translateX(5%);
+}
+.items p {
+    margin-left: 15px;
 }
 
-/* Responsive */
-@media screen and (max-height: 500px) {
-    .wowkids-wrapper,
-    .wowkids-wrapper .main-image {
-        width: 300px;
-        height: 287px;
+/* Responsive product */
+@media (max-height: 1024px) and (max-width: 768px) and (min-height: 650px) {
+    .product .content-inside {
+        width: 65%;
+    }
+    .product .name h2,
+    .product-menu .menu .item p {
+        font-size: 11pt;
+    }
+}
+@media (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
+    .product .content-inside {
+        width: 70%;
+        transform: translateX(65%);
+    }
+    .product.content-inside.name h2 {
+        font-size: 10pt;
+    }
+    .product.content-inside.items p {
+        font-size: 8pt;
+    }
+    .product-menu .menu .active .line {
+        right: 5px;
     }
 }
 
-@media screen and (max-height: 500px) {
-    .leaf-1 {
-        width: 40px;
+@media (max-height: 1024px) and (max-width: 768px) and (min-height: 650px) {
+    .product .content-pro {
+        margin-bottom: 25px;
     }
 }
-@media screen and (max-height: 700px) {
+@media (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
+    .product .content-pro {
+        width: 100%;
+    }
+}
+@media (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
+    .product .content-pro {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .product .description {
+        padding-top: 50px;
+    }
+}
+@media (max-width: 1280px) {
+    .product .content-pro {
+        width: 60%;
+    }
+}
+
+@media (max-height: 500px) {
+    .product .content-pro {
+        width: 60%;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .product .content-pro {
+        width: 60%;
+    }
+}
+
+@media (max-height: 500px) {
+    .product .name {
+        height: 25px;
+    }
+}
+@media (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
+    .product {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
+    .product .table {
+        padding-top: 145px;
+    }
+}
+
+@media (max-height: 700px) and (max-width: 1024px) and (min-height: 650px) {
     .product .description p {
         font-size: 11pt;
     }
 }
-
-@media screen and (max-height: 500px) {
+@media (max-height: 1024px) and (max-width: 768px) and (min-height: 650px) {
     .product .description p {
-        font-size: 8pt;
-        margin-top: 15px;
+        font-size: 11pt;
     }
 }
-
+@media (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
+    .product .description p {
+        font-size: 15pt;
+    }
+}
+@media (max-height: 700px) {
+    .product .description p {
+        font-size: 11pt;
+    }
+}
+@media (max-width: 1280px) {
+    .product .description p {
+        font-size: 13pt;
+    }
+}
+@media (max-width: 813px) {
+    .product-menu .menu .active .line {
+        right: 10%;
+    }
+    .product-menu .menu .active p {
+        font-size: 14px;
+    }
+    .location-text,
+    .location-text .text-dv,
+    .location .item {
+        font-size: 11px;
+    }
+    .location-text img {
+        width: 20%;
+    }
+    .location-text .text-cn {
+        padding-bottom: 10px;
+    }
+    .location-text .text-cn span {
+        padding-right: 10px;
+        transform: translateY(15px);
+    }
+    .content-footer {
+        padding-left: 45px;
+    }
+}
 /* Wowkids */
 .wowkids-wrapper {
     width: 447px;
@@ -1475,7 +1538,7 @@ img {
     margin-right: 0;
     margin-left: auto;
 }
-@media screen and (max-height: 500px) {
+@media (max-height: 500px) {
     .leaf-1 {
         width: 40px;
     }
@@ -1519,7 +1582,7 @@ img {
 .product .showw .leaf-2 {
     animation: leaf-2 7s infinite;
 }
-@media screen and (max-height: 500px) {
+@media (max-height: 500px) {
     .leaf-2 {
         width: 35px;
     }
@@ -1558,7 +1621,7 @@ img {
     transform-origin: 0 100%;
 }
 
-@media screen and (max-height: 500px) {
+@media (max-height: 500px) {
     .wowkids-wrapper .front-image {
         width: 75px;
     }
@@ -1627,7 +1690,7 @@ iframe {
 
 /* Polygon */
 
-@media screen and (max-height: 500px) {
+@media (max-height: 500px) {
     .polygon-wrapper,
     .polygon-wrapper .main-image {
         width: 300px;
@@ -1635,7 +1698,7 @@ iframe {
     }
 }
 
-@media screen and (max-height: 500px) {
+@media (max-height: 500px) {
     .polygon-wrapper,
     .wowkids-wrapper {
         margin: auto;
@@ -1674,7 +1737,7 @@ iframe {
 }
 /* eGDv */
 
-@media screen and (max-height: 650px) {
+@media (max-height: 650px) {
     .image-wrap .wrapper {
         width: 80%;
         display: block;
