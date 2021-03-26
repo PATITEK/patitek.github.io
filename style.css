@@ -850,9 +850,9 @@ Intro
         font-size: 20px;
     }
     .info .info-detail .list-box-info .box-item {
-    width: 180px;
-    height: 152px;
-    margin: 5px 0;
+        width: 180px;
+        height: 152px;
+        margin: 5px 0;
     }
 }
 
@@ -970,23 +970,36 @@ Intro
     width: 33.3333%;
 }
 .contact_us .input-phone-email {
+    /* position: absolute; */
     margin-top: 10px;
-    background: #dee7f1;
+    background: #ffffff;
     border-radius: 15px;
+    border: 2px solid #d8eaff;
     padding: 10px;
     width: 100%;
+    height: 50px;
 }
 .contact_us .input-mess {
-    background: #dee7f1;
+    /* position: absolute; */
+    background: #ffffff;
+    border: 2px solid #d8eaff;
     border-radius: 15px;
     width: 100%;
     padding: 10px;
     height: 100px;
+    box-sizing: border-box;
+    border-radius: 14px;
 }
 ::placeholder {
-    color: #0a0a0a;
-    text-align: left;
     position: absolute;
+    font-family: SVN-Avo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+
+    color: #7a7a7a;
 }
 .contact_us .btn-submit {
     margin-top: 10px;
@@ -1066,7 +1079,7 @@ Intro
 }
 
 .location .items {
-    padding:5px 0;
+    padding: 5px 0;
 }
 
 .location .items p a {
@@ -1537,7 +1550,7 @@ img {
         padding-right: 10px;
         transform: translateY(15px);
     }
-    .location-text .text-cn span img{
+    .location-text .text-cn span img {
         width: 100px;
     }
     .content-footer {
