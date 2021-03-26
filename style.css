@@ -850,7 +850,9 @@ Intro
         font-size: 20px;
     }
     .info .info-detail .list-box-info .box-item {
-        width: 115px;
+    width: 180px;
+    height: 152px;
+    margin: 5px 0;
     }
 }
 
@@ -895,6 +897,7 @@ Intro
     opacity: 1;
 }
 #customer .grid-item:hover .name-customer {
+    text-align: center;
     opacity: 1;
     top: 50%;
     transform: translateY(-100%);
@@ -909,15 +912,18 @@ Intro
     opacity: 0;
     position: absolute;
     color: rgb(253, 251, 249);
-    font-size: 20px;
+    font-size: 15px;
     top: 0%;
-    left: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
     transform: translateY(-100%);
     line-height: 35px;
     transition: all 0.3s linear;
 }
 .text-customer {
     font-size: 40px;
+    text-align: center;
 }
 @media (max-width: 415px) {
     #customer .grid-item .name-customer {
@@ -978,7 +984,7 @@ Intro
     height: 100px;
 }
 ::placeholder {
-    color: #ffffff;
+    color: #0a0a0a;
     text-align: left;
     position: absolute;
 }
@@ -1003,10 +1009,15 @@ Intro
 }
 .content-footer {
     /* position: relative; */
+    border-top: 2px solid red;
+    padding-top: 15px;
     position: absolute;
     height: 200px;
-    width: 100%;
+    width: 70%;
     bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 .btn-submit:hover {
     background: #006adc;
@@ -1055,7 +1066,7 @@ Intro
 }
 
 .location .items {
-    padding-top: 15px;
+    padding:5px 0;
 }
 
 .location .items p a {
@@ -1525,6 +1536,9 @@ img {
     .location-text .text-cn span {
         padding-right: 10px;
         transform: translateY(15px);
+    }
+    .location-text .text-cn span img{
+        width: 100px;
     }
     .content-footer {
         padding-left: 45px;
