@@ -96,6 +96,11 @@ function onclickP(e) {
 		if (x[i].className === 'item active') {
 			x[i + 4].className = 'item showw';
 			y[i].className = 'content-pro on-show';
+			if (x[i].id === '4') {
+				hanldeBackgroundId(false);
+			} else {
+				hanldeBackgroundId(true);
+			}
 		}
 	}
 }
@@ -122,5 +127,14 @@ function removeProduct() {
 			x[i].className = 'item';
 			y[i].className = 'content-pro';
 		}
+	}
+}
+
+function hanldeBackgroundId(checkId) {
+	const background = document.getElementById('elip');
+	if (checkId === false) {
+		background.src = './img/customer/elip1.svg';
+	} else {
+		background.src = './img/customer/elip.svg';
 	}
 }
