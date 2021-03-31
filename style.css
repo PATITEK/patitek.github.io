@@ -59,7 +59,7 @@ button {
 }
 .section {
     /* margin-top: 200px; */
-    margin-top: 12rem;
+    margin-top: 12rem;  
 }
 .wrap {
     height: 5px;
@@ -173,6 +173,7 @@ header {
     z-index: 8;
     font-size: 40px;
     position: absolute;
+    top: 35px;
 }
 .menu-mobile .menu-content-mobile {
     position: fixed;
@@ -936,16 +937,16 @@ Intro
 }
 /* footer */
 #footer {
-    padding-top: 8rem;
+    /* padding-top: 8rem; */
     /* background-color: #e5e5e5; */
 }
 #footer .footer-main {
-    /* padding: 0 120px; */
+    padding: 0 120px;
     display: flex;
     flex-wrap: wrap;
 }
 #map {
-    height: 100px;
+    height: auto;
     flex-basis: 60%;
     /* width: 66.6667%; */
     /* The height is 400 pixels */
@@ -1007,14 +1008,14 @@ Intro
     left: 0;
     right: 0;
     margin: auto;
-    transform: translateY(80%);
+    transform: translateY(-105%);
     transition: all 0.3s linear;
 }
 .content-footer {
-    /* position: relative; */
+    position: relative;
     border-top: 2px solid red;
     padding-top: 15px;
-    position: absolute;
+    /* position: absolute; */
     height: 200px;
     width: 70%;
     bottom: 0;
@@ -1086,24 +1087,35 @@ Intro
 }
 /* Responsive-footer */
 @media (max-height: 700px) and (max-width: 1024px) and (min-height: 650px) {
-    #footer {
-        padding-top: 168px;
+    .contact_us,.input-mess{
+        height:80%;
+    }
+    #map iframe{
+        width:100%;
+        height: 100%;
     }
 }
 @media (max-height: 1024px) and (max-width: 768px) and (min-height: 650px) {
-    #footer {
-        padding-top: 200px;
+    .contact_us,.input-mess{
+        height:90%;
     }
 }
 @media (max-height: 1366px) and (max-width: 1024px) and (min-height: 650px) {
-    #footer {
-        padding-top: 130px;
+    .contact_us,.input-mess{
+        height:100%;
     }
 }
 @media (max-width: 768px) {
     #map,
     .contact_us {
         flex-basis: 100%;
+    }
+    .contact_us .input-mess{
+        height: 80%;
+    }
+    #map iframe{
+        width:100%;
+        height: 90%;
     }
 }
 
@@ -1512,6 +1524,9 @@ img {
     }
 }
 @media (max-width: 813px) {
+    #footer .footer-main{
+        padding:0;
+    }
     .product-menu .menu .active .line {
         right: 10%;
     }
@@ -1537,7 +1552,27 @@ img {
         width: 100px;
     }
     .content-footer {
+        position: absolute;
         padding-left: 45px;
+        height:7.25%;
+        width: 95%;
+        margin:0;
+        padding: 0;
+        margin-left: 10px;
+
+    }
+    .contact_us .btn-submit{
+        top:85%;
+        width:75px;
+        font-size: 12px;
+        transform:translateY(75%);
+    }
+    .location .items p{
+        padding-right: 30px;
+    }
+    .contact_us .title-contact{
+        font-size:14px;
+        text-align: center;
     }
 }
 /* Wowkids */
