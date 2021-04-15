@@ -18,6 +18,8 @@
 			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="indexs.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 		<title>Patitek</title>
 	</head>
 
@@ -53,7 +55,6 @@
 		<div id="fullpage">
 			<header class="header">
 				<div class="menu-content">
-
 					<div class="logo">
 						<img src="./img/logo1.svg" alt="" srcset="" />
 					</div>
@@ -76,9 +77,11 @@
 						</li>
 					</ul>
 				</div>
-			
 				<!-- MENU MOBIE -->
-				<!-- <div class="menu-mobile">
+				<div class="menu-mobile__logo">
+						<img src="./img/logo1.svg" alt="" srcset="" />
+				</div>
+				 <div class="menu-mobile">
 					<i class="fal fa-bars icon-menu" onclick="clickMenuBar()"></i>
 					<div class="menu-content-mobile">
 						<ul class="list-menu">
@@ -98,14 +101,16 @@
 							</li>
 						</ul>
 					</div>
-				</div> -->
+				</div> 
 			</header>
 			<div id="home" class="section">
-				<img
-					class="img-home"
-					src="./img/firt.svg"
-					alt=""
-				/>
+				 <div class="home-img">
+					 <div class="circle"></div>
+					 <div class="circle1"></div>
+					 <div class="circle2"></div>
+					 <div class="circle3"></div>
+				  <img class="img-home" src="./img/customer/image-home.svg" alt="" srcset=""> 
+				</div>  
 			</div>
 			<!-- Intro -->
 			<div id="intro" class="info container section">
@@ -708,246 +713,261 @@
 				<img src="./img/customer/elip.svg" id="elip" alt="">
 				</div>	
 			</section>
-			<div id="customer" class="section">
-				<div class="wrap"></div>
-					<h3 class="text-customer">
-						Khách hàng
-					</h3>
-
-				<div class="gird container">
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/Asset 2.png"
-							alt=""
-							srcset=""
-						/>
-					</div>
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/Asset 3.png"
-							alt=""
-							srcset=""
-						/>
-					</div>
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/Asset 4.png"
-							alt=""
-							srcset=""
-						/>
-					</div>
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/1.jpg"
-							alt=""
-							srcset=""
-						/>
-					</div>
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/2.jpg"
-							alt=""
-							srcset=""
-						/>
-					</div>
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/kito.svg"
-							alt=""
-							srcset=""
-						/>
-					</div>
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/3.jpg"
-							alt=""
-							srcset=""
-						/>
-					</div>
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/4.jpg"
-							alt=""
-							srcset=""
-						/>
-					</div>
-					<div class="grid-item">
-						<p
-							class="name-customer"
-						>
-							Definition
-							and Usage
-						</p>
-						<img
-							src="./img/customer/5.jpg"
-							alt=""
-							srcset=""
-						/>
-					</div>
+			<div id="customer" class="section" >
+			<div class="container">
+				<div class="customer__all">
+					<div class="customer__top">
+						<div class="customer__test">
+							 <p class="customer__p">
+								<img src="/img/customer/check.svg" >
+								Sứ mệnh của chúng tôi là cung cấp cho khách hàng các dịch vụ đa dạng, sáng tạo và ưu việt nhất.
+							 </p>
+							 <p class="customer__p">
+								<img src="/img/customer/check.svg" >
+								 Trách nhiệm của chúng tôi: Không ngừng sáng tạo, đóng góp vào sự phát triển đời sống văn hóa, tinh thần cho cộng đồng và xã hội.
+							 </p>
+						</div>
+					<div class="customer__img">
+						<img src="./img/khachang.svg" alt="" sizes="" srcset="">
+					</div>	
+				</div>
+				<!-- bottom -->
+					<div class="customer__bottom gtco-testimonials ">
+						<div class="owl-carousel owl-carousel1 owl-theme">
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang9.svg"
+										alt="">
+								</div>
+							</div>
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang8.svg"
+										alt="">
+								</div>
+							</div>
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang7.svg"
+										alt="">
+								</div>
+							</div>
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang6.svg"
+										alt="">
+								</div>
+							</div>
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang5.svg"
+										alt="">
+								</div>
+							</div>
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang4.svg"
+										alt="">
+								</div>
+							</div>
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang3.svg"
+										alt="">
+								</div>
+							</div>
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang2.svg"
+										alt="">
+								</div>
+							</div>
+							<div>
+								<div class="card text-center">
+									<img class="card-img-top"
+										src="./img/khachhang1.svg"
+										alt="">
+								</div>
+							</div>
+						</div>
+					</div>  
 				</div>
 			</div>
+				 <!-- <div class="container"> 
+					<div class="customer__all">
+							<div class="customer__top">
+								<div class="customer__test">
+									 <p class="customer__p">
+										<img src="/img/customer/check.svg" >
+										Sứ mệnh của chúng tôi là cung cấp cho khách hàng các dịch vụ đa dạng, sáng tạo và ưu việt nhất.
+									 </p>
+									 <p class="customer__p">
+										<img src="/img/customer/check.svg" >
+										 Trách nhiệm của chúng tôi: Không ngừng sáng tạo, đóng góp vào sự phát triển đời sống văn hóa, tinh thần cho cộng đồng và xã hội.
+									 </p>
+								</div>
+							<div class="customer__img">
+								<img src="./img/khachang.svg" alt="" sizes="" srcset="">
+							</div>	
+						</div>
+							<div class="customer__bottom">
+								<div class="customer__logo">
+									<img idx="0"class="silde_logo" src="./img/khachhang1.svg" alt="" sizes="" srcset="">
+								</div>
+								<div class="customer__logo">
+									<img idx="1" class="silde_logo" src="./img/khachhang2.svg" alt="" sizes="" srcset="">
+								</div>
+								<div class="customer__logo">
+									<img idx="2"class="silde_logo" src="./img/khachhang3.svg" alt="" sizes="" srcset="">
+								</div>
+								<div class="customer__logo">
+									<img idx="3"class="silde_logo" src="./img/khachhang4.svg" alt="" sizes="" srcset="">
+								</div>
+								<div class="customer__logo">
+									<img
+									idx="4"
+									 class="silde_logo"
+									 style="position: relative;"
+									 src="./img/khachhang6.svg" 
+									 alt="" sizes="" srcset="">
+								</div>
+								<div class="customer__logo">
+									<img idx="5" class="silde_logo" src="./img/khachhang7.svg" alt="" sizes="" srcset="">
+								</div>
+								<div class="customer__logo">
+									<img idx="6" class="silde_logo" src="./img/khachhang8.svg" alt="" sizes="" srcset="">
+								</div>
+								<div class="customer__logo">
+									<img idx="7" class="silde_logo" src="./img/khachhang9.svg" alt="" sizes="" srcset="">
+								</div>
+							</div>	
+					</div>
+				</div>  -->
+			</div>		
 			<footer id="footer" class="section">
-				<div class="footer-main">
-					<div id="map">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.013324749312!2d106.66619731462285!3d10.810290992298587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529224c2bbef1%3A0xfc007a7d34ff8afe!2zMTYgWcOqbiBUaOG6vywgUGjGsOG7nW5nIDIsIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1616477099340!5m2!1svi!2s"
-							width="400"
-							height="300"
-							style="
-								border: 0;
-							"
-							allowfullscreen=""
-							loading="lazy"
-						></iframe>
-					</div>
-					<div class="contact_us">
-						<h3
-							class="title-contact"
-						>
-							Chúng tôi
-							sẽ liên hệ
-							cho bạn
-							sớm nhất!
-						</h3>
-						<input
-							class="input-phone-email"
-							type="text"
-							placeholder="Nhập số điện thoại hoặc Email"
-						/>
-						<br />
-						<input
-							class="input-mess"
-							type="text"
-							placeholder="Lời nhắn"
-						/>
-						<button
-							class="btn-submit"
-						>
-							Gửi
-						</button>
-					</div>
-				</div>
-				<div class="content-footer">
-					<div class="location-parent">
-						<div
-							class="location"
-						>
-							<div
-								class="location-text"
-							>
-							<p class="text-cn" >
-								<span >
-									Công
-									ty
-									TNHH
-									Công
-									nghệ
-									Phần
-									mềm
-								</span>
-							   <img src="./img/customer/patitke.svg"></img> 
-							</p>
-
-								<p
-									class="text-dv"
+					<div class="container-footer">
+						<div class="footer-main">
+							<div id="map">
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.013324749312!2d106.66619731462285!3d10.810290992298587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529224c2bbef1%3A0xfc007a7d34ff8afe!2zMTYgWcOqbiBUaOG6vywgUGjGsOG7nW5nIDIsIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1616477099340!5m2!1svi!2s"
+									width="400"
+									height="300"
+									style="
+										border: 0;
+									"
+									allowfullscreen=""
+									loading="lazy"
+								></iframe>
+							</div>
+							<div class="contact_us">
+								<h3
+									class="title-contact"
 								>
-									Dịch
-									vụ
-									thiết
-									kế,
-									phát
-									triển
-									Website
-									và
-									ứng
-									dụng
-									đa
-									nền
-									tảng
-								</p>
+									Chúng tôi
+									sẽ liên hệ
+									cho bạn
+									sớm nhất!
+								</h3>
+								<input
+									class="input-phone-email"
+									type="text"
+									placeholder="Nhập số điện thoại hoặc Email"
+								/>
+								<br />
+								<input
+									class="input-mess"
+									type="text"
+									placeholder="Lời nhắn"
+								/>
+								<button
+									class="btn-submit"
+								>
+									Gửi
+								</button>
 							</div>
-
-							<div
-								class="items"
-							>
-								<p>
-                                    <img src="./img/customer/map.svg" >
-									16
-									Yên
-									Thế,
-									Phường
-									2,
-									Q.
-									Tân
-									Bình,
-									Thành
-									phố
-									Hồ
-									Chí
-									Minh.
-								</p>	
+						</div>
+						<div class="content-footer">
+							<div class="location-parent">
+								<div
+									class="location"
+								>
+									<div
+										class="location-text"
+									>
+									<p class="text-cn" >
+										<span >
+											Công
+											ty
+											TNHH
+											Công
+											nghệ
+											Phần
+											mềm
+										</span>
+										 <img src="./img/customer/patitke.svg"></img> 
+									</p>
+		
+										<p
+											class="text-dv"
+										>
+											Dịch
+											vụ
+											thiết
+											kế,
+											phát
+											triển
+											Website
+											và
+											ứng
+											dụng
+											đa
+											nền
+											tảng
+										</p>
+									</div>
+		
+									<div
+										class="items"
+									>
+										<p>
+																				<img src="./img/customer/map.svg" >
+											16
+											Yên
+											Thế,
+											Phường
+											2,
+											Q.
+											Tân
+											Bình,
+											Thành
+											phố
+											Hồ
+											Chí
+											Minh.
+										</p>	
+									</div>
+																<div class="items">
+																		<p>
+																				<img src="./img/customer/phone.svg">
+																				0358 349 648
+																		</p>
+																		<p>
+																				<img src="./img/customer/email.svg">
+																				info@patitek.com    
+																		</p>
+															 </div>
+								</div>
 							</div>
-                            <div class="items">
-                                <p>
-                                    <img src="./img/customer/phone.svg">
-                                    0358 349 648
-                                </p>
-                                <p>
-                                    <img src="./img/customer/email.svg">
-                                    info@patitek.com    
-                                </p>
-                           </div>
 						</div>
 					</div>
-				</div>
 			</footer>
 		</div>
 	</body>
@@ -986,4 +1006,5 @@
 		});
 	</script>
 	<script src="index.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </html>
