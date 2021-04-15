@@ -1,9 +1,48 @@
-$('.preloader').delay(1500).fadeOut(500);
-$('.counter').counterUp({
-	delay: 10,
-	time: 2000,
+$(document).ready(function () {
+	$('.preloader').delay(1500).fadeOut(500);
+	$('.counter').counterUp({
+		delay: 10,
+		time: 2000,
+	});
+	$('.counter').addClass('animated fadeInDownBig');
+	$('.text-bot').addClass('animated fadeIn');
+	var carousels = (function () {
+		$('.owl-carousel1').owlCarousel({
+			items: 1,
+			loop: true,
+			center: true,
+			margin: 10,
+			responsiveClass: true,
+			nav: false,
+			autoplay: true,
+			// autoplayTimeout: 1000,
+			autoplayHoverPause: true,
+			responsive: {
+				0: {
+					items: 1,
+					nav: false,
+				},
+				680: {
+					items: 2,
+					nav: false,
+					loop: false,
+				},
+				1000: {
+					items: 3,
+					nav: true,
+				},
+			},
+		});
+	})(function ($) {
+		carousels();
+		$('.play').on('click', function () {
+			owl.trigger('play.owl.autoplay', [1000]);
+		});
+		$('.stop').on('click', function () {
+			owl.trigger('stop.owl.autoplay');
+		});
+	})(jQuery);
 });
-$('.counter').addClass('animated fadeInDownBig');
 $('.text-bot').addClass('animated fadeIn');
 // function initMap() {
 //     // The location of Uluru
@@ -138,3 +177,5 @@ function hanldeBackgroundId(checkId) {
 		background.src = './img/customer/elip.svg';
 	}
 }
+
+/*  customer  */
