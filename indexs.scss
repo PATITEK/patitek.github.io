@@ -95,53 +95,6 @@
 }
 
 /*silde customer*/
-.owl-carousel .owl-stage-outer {
-	overflow: visible !important;
-	top: 300px;
-}
-
-.center {
-	.text-center {
-		display: flex;
-		.card-body {
-			position: absolute;
-			display: flex;
-			top: -275%;
-			left: -50%;
-			width: 250%;
-			align-items: center;
-			justify-content: center;
-			.card-body-text {
-				flex-basis: 40%;
-				.card-text {
-					text-align: justify;
-					font-family: SVN-Avo;
-					font-style: normal;
-					font-weight: normal;
-					font-size: 20px;
-					line-height: 28px;
-					text-align: justify;
-
-					color: #465f7a;
-					img {
-						display: inline-block;
-						width: 5%;
-					}
-				}
-			}
-			.card-body-img {
-				position: relative;
-				left: 110px;
-				flex-basis: 60%;
-				margin: auto;
-				img {
-					width: 70%;
-				}
-			}
-		}
-	}
-}
-
 #customer {
 	padding-top: 7rem;
 	.customer__all {
@@ -151,17 +104,17 @@
 		.customer__top {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: space-around;
+			margin-left: 100px;
 			.customer__test {
 				flex-basis: 30%;
 				.customer__p {
 					text-align: justify;
 					font-size: 18px;
-					line-height: 22px;
+					line-height: 28px;
 					color: #465f7a;
 					font-style: normal;
 					font-weight: bold;
-					font-family: SVN-Avo;
 				}
 			}
 			.customer__img {
@@ -176,52 +129,102 @@
 		}
 		.gtco-testimonials {
 			position: relative;
-			margin: 50px 0;
-			top: -360px;
-		}
+		 	margin: 50px 0;
+		 	top: -360px;
+		 }
 		.customer__bottom {
+			position: relative;
+			flex-wrap: wrap;
 			display: flex;
 			justify-content: space-between;
-			flex-wrap: wrap;
-			.customer__logo {
+			.owl-theme{
 				text-align: center;
-				img {
-					width: 70%;
-					top: 10px;
-					opacity: 0.5;
-					filter: alpha(opacity=50);
+				.customer__logo {
+					width: 175px;
+					height: 175px;
+					margin: 15px;
+					background: #ffffff;
+					border: 1px dashed #aaaaaa;
+					box-sizing: border-box;
+					border-radius: 30px;
+					img {
+						position: relative;
+						width: 65%;
+						top:30px;
+						// filter: alpha(opacity=50);
+						right: -30px;
+					}
+					.silde_logo_8{
+						top:65px
+					}
 				}
-				margin: 15px;
-				background: #ffffff;
-				border: 1px dashed #aaaaaa;
-				box-sizing: border-box;
-				border-radius: 30px;
-			}
-			.change-img {
-				position: absolute;
-				right: 20%;
-				text-align: center;
-				margin-top: 1rem;
 			}
 		}
 	}
 }
+
+
+.container-footer{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
 /* responsive ipad*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 	/* Styles */
-	#customer {
+ #home{
+	 .home-img{
+		 transform: translateY(140%);
+	 }
+ }
+ .section{
+	 margin: 0;
+ }  
+   #intro{
+	   .info-main{
+		   display: block;
+		   .img-info{
+			
+		   }
+		   .content-info{
+			   .content{
+
+			   }
+		   }
+	   }
+	   .info-detail{
+			.list-box-info{
+				.box-item{
+					.box-left{
+
+					}
+					.box-right{
+
+					}
+					.box-content{
+						.triangle{
+
+						}
+					}
+				}
+			}
+	   }
+   }
+	 #customer {
 		.customer__all {
 			.customer__top {
+				margin: 40px;
 				flex-direction: column-reverse;
 				.customer__test {
-					width: 70%;
+					width: 80%;
 					.customer__p {
 					}
 				}
 				.customer__img {
 					left: 0;
 					img {
-						width: 100%;
+						width: 90%;
 					}
 				}
 			}
@@ -231,9 +234,52 @@
 				flex-wrap: wrap;
 				padding: 25px;
 				width: 85%;
+				top:2px;
 				left: 80px;
 				justify-content: space-around;
 				.customer__logo {
+				}
+			}
+		}
+	}
+
+	#footer{
+		background-color: #e5e5e5;
+		.container-footer{
+			.footer-main{
+				padding-bottom: 36px;
+			}
+			.content-footer{
+				padding: 0 0 0 100px;
+  			    width: 75vh;
+                height: 100vh;
+                border-radius: 30px;
+                margin: 0;
+                background-color: #ffffff;
+				.location-parent{
+					.location{
+						.location-text{
+							.text-cn{
+								span{
+									font-size: 18px;
+								}
+
+								img{
+									transform: translateY(7px);
+									width: 25%;
+								}
+							}
+							.text-dv{
+
+							}
+						}
+						.items{
+							p{
+								padding-bottom: 30px;
+							}
+						   display: flex;
+						}
+					}
 				}
 			}
 		}
@@ -248,39 +294,89 @@
 		display: block;
 	}
 
-	#customer {
-		.customer__all {
-			.customer__top {
-				flex-direction: column-reverse;
-				.customer__test {
-					width: 80%;
-					.customer__p {
-						font-size: 14px;
-					}
-				}
-				.customer__img {
-					left: 0;
-					img {
-						width: 100%;
-					}
-				}
+	#footer{
+		background-color: #e5e5e5;
+		.container-footer{
+			.footer-main{
+				padding-bottom: 30px;
 			}
-			.customer__bottom {
-				position: relative;
-				text-align: center;
-				flex-wrap: wrap;
-				width: 100%;
-				top: 30px;
+			.content-footer{
+				padding: 0;
+  			    width: auto;
+                height: 100vh;
+                border-radius: 0;
+                margin: 0;
+				// background-color: #e5e5ee;
+				.location-parent{
+					.location{
+						.location-text{
+							.text-cn{
+								span{
+									font-size: 15px;
+								}
 
-				// justify-content: space-around;
-				.customer__logo {
-					border-radius: 20px;
-					width: 24%;
-					img {
-						top: 5px;
+								img{
+									transform: translateY(0px);
+									width: 20%;
+								}
+							}
+							.text-dv{
+									font-size: 15px;
+							}
+						}
+						.items{
+							p{
+								padding-bottom: 0px;
+							}
+						   display: flex;
+						   flex-wrap: wrap;
+						}
 					}
 				}
 			}
 		}
+	}	
+   #customer {
+		.customer__all {
+			.customer__top {
+				flex-direction: column-reverse;
+				margin: 0;
+				.customer__test {
+					width: 80%;
+					
+					.customer__p {
+						font-size: 12px;
+						line-height: 20px;
+					}
+				}
+				.customer__img {
+					left: 15px;
+					img {
+						width: 85%;
+					}
+				}
+			}
+				.customer__bottom {
+				position: relative;
+				text-align: center;
+				flex-wrap: wrap;
+				top: 30px;
+				.owl-theme{
+				// justify-content: space-around;
+				.customer__logo {
+					width: 90px;
+					height: 90px;
+					border-radius: 20px;
+					img {
+						top: 16px;
+						left: 16px;
+					}
+					.silde_logo_8{
+						top:35px;
+					}
+				}
+			}
+			}
+			}
 	}
 }

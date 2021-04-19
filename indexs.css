@@ -155,66 +155,6 @@
 }
 
 /*silde customer*/
-.owl-carousel .owl-stage-outer {
-  overflow: visible !important;
-  top: 300px;
-}
-
-.center .text-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.center .text-center .card-body {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: -275%;
-  left: -50%;
-  width: 250%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.center .text-center .card-body .card-body-text {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
-}
-
-.center .text-center .card-body .card-body-text .card-text {
-  text-align: justify;
-  font-family: SVN-Avo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: justify;
-  color: #465f7a;
-}
-
-.center .text-center .card-body .card-body-text .card-text img {
-  display: inline-block;
-  width: 5%;
-}
-
-.center .text-center .card-body .card-body-img {
-  position: relative;
-  left: 110px;
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
-  margin: auto;
-}
-
-.center .text-center .card-body .card-body-img img {
-  width: 70%;
-}
-
 #customer {
   padding-top: 7rem;
 }
@@ -237,9 +177,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 100px;
 }
 
 #customer .customer__all .customer__top .customer__test {
@@ -250,11 +190,10 @@
 #customer .customer__all .customer__top .customer__test .customer__p {
   text-align: justify;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 28px;
   color: #465f7a;
   font-style: normal;
   font-weight: bold;
-  font-family: SVN-Avo;
 }
 
 #customer .customer__all .customer__top .customer__img {
@@ -276,18 +215,24 @@
 }
 
 #customer .customer__all .customer__bottom {
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-#customer .customer__all .customer__bottom .customer__logo {
+#customer .customer__all .customer__bottom .owl-theme {
   text-align: center;
+}
+
+#customer .customer__all .customer__bottom .owl-theme .customer__logo {
+  width: 175px;
+  height: 175px;
   margin: 15px;
   background: #ffffff;
   border: 1px dashed #aaaaaa;
@@ -296,37 +241,56 @@
   border-radius: 30px;
 }
 
-#customer .customer__all .customer__bottom .customer__logo img {
-  width: 70%;
-  top: 10px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+#customer .customer__all .customer__bottom .owl-theme .customer__logo img {
+  position: relative;
+  width: 65%;
+  top: 30px;
+  right: -30px;
 }
 
-#customer .customer__all .customer__bottom .change-img {
-  position: absolute;
-  right: 20%;
-  text-align: center;
-  margin-top: 1rem;
+#customer .customer__all .customer__bottom .owl-theme .customer__logo .silde_logo_8 {
+  top: 65px;
+}
+
+.container-footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /* responsive ipad*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Styles */
+  #home .home-img {
+    -webkit-transform: translateY(140%);
+            transform: translateY(140%);
+  }
+  .section {
+    margin: 0;
+  }
+  #intro .info-main {
+    display: block;
+  }
   #customer .customer__all .customer__top {
+    margin: 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
   #customer .customer__all .customer__top .customer__test {
-    width: 70%;
+    width: 80%;
   }
   #customer .customer__all .customer__top .customer__img {
     left: 0;
   }
   #customer .customer__all .customer__top .customer__img img {
-    width: 100%;
+    width: 90%;
   }
   #customer .customer__all .customer__bottom {
     position: relative;
@@ -335,9 +299,40 @@
         flex-wrap: wrap;
     padding: 25px;
     width: 85%;
+    top: 2px;
     left: 80px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  #footer {
+    background-color: #e5e5e5;
+  }
+  #footer .container-footer .footer-main {
+    padding-bottom: 36px;
+  }
+  #footer .container-footer .content-footer {
+    padding: 0 0 0 100px;
+    width: 75vh;
+    height: 100vh;
+    border-radius: 30px;
+    margin: 0;
+    background-color: #ffffff;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-cn span {
+    font-size: 18px;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-cn img {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+    width: 25%;
+  }
+  #footer .container-footer .content-footer .location-parent .location .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #footer .container-footer .content-footer .location-parent .location .items p {
+    padding-bottom: 30px;
   }
 }
 
@@ -348,38 +343,78 @@
   .menu-mobile__logo {
     display: block;
   }
+  #footer {
+    background-color: #e5e5e5;
+  }
+  #footer .container-footer .footer-main {
+    padding-bottom: 30px;
+  }
+  #footer .container-footer .content-footer {
+    padding: 0;
+    width: auto;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-cn span {
+    font-size: 15px;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-cn img {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    width: 20%;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-dv {
+    font-size: 15px;
+  }
+  #footer .container-footer .content-footer .location-parent .location .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #footer .container-footer .content-footer .location-parent .location .items p {
+    padding-bottom: 0px;
+  }
   #customer .customer__all .customer__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    margin: 0;
   }
   #customer .customer__all .customer__top .customer__test {
     width: 80%;
   }
   #customer .customer__all .customer__top .customer__test .customer__p {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 20px;
   }
   #customer .customer__all .customer__top .customer__img {
-    left: 0;
+    left: 15px;
   }
   #customer .customer__all .customer__top .customer__img img {
-    width: 100%;
+    width: 85%;
   }
   #customer .customer__all .customer__bottom {
     position: relative;
     text-align: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 100%;
     top: 30px;
   }
-  #customer .customer__all .customer__bottom .customer__logo {
+  #customer .customer__all .customer__bottom .owl-theme .customer__logo {
+    width: 90px;
+    height: 90px;
     border-radius: 20px;
-    width: 24%;
   }
-  #customer .customer__all .customer__bottom .customer__logo img {
-    top: 5px;
+  #customer .customer__all .customer__bottom .owl-theme .customer__logo img {
+    top: 16px;
+    left: 16px;
+  }
+  #customer .customer__all .customer__bottom .owl-theme .customer__logo .silde_logo_8 {
+    top: 35px;
   }
 }
 /*# sourceMappingURL=indexs.css.map */
