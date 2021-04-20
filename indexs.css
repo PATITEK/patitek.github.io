@@ -1,0 +1,420 @@
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  20% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+  40% {
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+  }
+  60% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  80% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1.12);
+            transform: scale(1.12);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  20% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+  40% {
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+  }
+  60% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  80% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1.12);
+            transform: scale(1.12);
+  }
+}
+
+#home {
+  margin: 0;
+  background: linear-gradient(206.34deg, #b4e7e5 -22.46%, #115567 5.55%, #3f6288 40.23%, #56789c 70.25%, #465f7a 105.59%);
+}
+
+#home .home-img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 12rem;
+}
+
+#home .home-img div {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ce1126;
+  background-clip: content-box;
+  padding: 100px;
+  border: 40px solid rgba(255, 255, 255, 0.03);
+}
+
+#home .home-img .circle {
+  z-index: 4;
+  padding: 98px;
+  -webkit-box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+          box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#home .home-img .circle1 {
+  z-index: 3;
+  padding: 138px;
+  -webkit-box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+          box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#home .home-img .circle2 {
+  z-index: 2;
+  padding: 178px;
+  -webkit-box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+          box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#home .home-img .circle3 {
+  z-index: 1;
+  padding: 218px;
+  -webkit-box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+          box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#home .home-img .img-home {
+  width: 25%;
+}
+
+/*silde customer*/
+#customer {
+  padding-top: 7rem;
+}
+
+#customer .customer__all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+#customer .customer__all .customer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 100px;
+}
+
+#customer .customer__all .customer__top .customer__test {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+#customer .customer__all .customer__top .customer__test .customer__p {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 28px;
+  color: #465f7a;
+  font-style: normal;
+  font-weight: bold;
+}
+
+#customer .customer__all .customer__top .customer__img {
+  position: relative;
+  left: 110px;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin: auto;
+}
+
+#customer .customer__all .customer__top .customer__img img {
+  width: 60%;
+}
+
+#customer .customer__all .gtco-testimonials {
+  position: relative;
+  margin: 50px 0;
+  top: -360px;
+}
+
+#customer .customer__all .customer__bottom {
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#customer .customer__all .customer__bottom .owl-theme {
+  text-align: center;
+}
+
+#customer .customer__all .customer__bottom .owl-theme .customer__logo {
+  width: 175px;
+  height: 175px;
+  margin: 15px;
+  background: #ffffff;
+  border: 1px dashed #aaaaaa;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 30px;
+}
+
+#customer .customer__all .customer__bottom .owl-theme .customer__logo img {
+  position: relative;
+  width: 65%;
+  top: 30px;
+  right: -30px;
+}
+
+#customer .customer__all .customer__bottom .owl-theme .customer__logo .silde_logo_8 {
+  top: 65px;
+}
+
+.container-footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* responsive ipad*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles */
+  #home .home-img {
+    -webkit-transform: translateY(140%);
+            transform: translateY(140%);
+  }
+  .section {
+    margin: 0;
+  }
+  #intro .info-main {
+    display: block;
+  }
+  #customer .customer__all .customer__top {
+    margin: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #customer .customer__all .customer__top .customer__test {
+    width: 80%;
+  }
+  #customer .customer__all .customer__top .customer__img {
+    left: 0;
+  }
+  #customer .customer__all .customer__top .customer__img img {
+    width: 90%;
+  }
+  #customer .customer__all .customer__bottom {
+    position: relative;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 25px;
+    width: 85%;
+    top: 2px;
+    left: 80px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #footer {
+    background-color: #e5e5e5;
+  }
+  #footer .container-footer .footer-main {
+    padding-bottom: 36px;
+  }
+  #footer .container-footer .content-footer {
+    padding: 0 0 0 100px;
+    width: 75vh;
+    height: 100vh;
+    border-radius: 30px;
+    margin: 0;
+    background-color: #ffffff;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-cn span {
+    font-size: 18px;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-cn img {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+    width: 25%;
+  }
+  #footer .container-footer .content-footer .location-parent .location .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #footer .container-footer .content-footer .location-parent .location .items p {
+    padding-bottom: 30px;
+  }
+}
+
+/* responsive phone*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  .menu-mobile,
+  .menu-mobile__logo {
+    display: block;
+  }
+  #footer {
+    background-color: #e5e5e5;
+  }
+  #footer .container-footer .footer-main {
+    padding-bottom: 30px;
+  }
+  #footer .container-footer .content-footer {
+    padding: 0;
+    width: auto;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-cn span {
+    font-size: 15px;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-cn img {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    width: 20%;
+  }
+  #footer .container-footer .content-footer .location-parent .location .location-text .text-dv {
+    font-size: 15px;
+  }
+  #footer .container-footer .content-footer .location-parent .location .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #footer .container-footer .content-footer .location-parent .location .items p {
+    padding-bottom: 0px;
+  }
+  #customer .customer__all .customer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0;
+  }
+  #customer .customer__all .customer__top .customer__test {
+    width: 80%;
+  }
+  #customer .customer__all .customer__top .customer__test .customer__p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  #customer .customer__all .customer__top .customer__img {
+    left: 15px;
+  }
+  #customer .customer__all .customer__top .customer__img img {
+    width: 85%;
+  }
+  #customer .customer__all .customer__bottom {
+    position: relative;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    top: 30px;
+  }
+  #customer .customer__all .customer__bottom .owl-theme .customer__logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+  }
+  #customer .customer__all .customer__bottom .owl-theme .customer__logo img {
+    top: 16px;
+    left: 16px;
+  }
+  #customer .customer__all .customer__bottom .owl-theme .customer__logo .silde_logo_8 {
+    top: 35px;
+  }
+}
+/*# sourceMappingURL=indexs.css.map */

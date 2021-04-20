@@ -1,0 +1,382 @@
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(1.02);
+	}
+	20% {
+		transform: scale(1.04);
+	}
+	40% {
+		transform: scale(1.06);
+	}
+	60% {
+		transform: scale(1.08);
+	}
+	80% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1.12);
+	}
+}
+#home {
+	margin: 0;
+	background: linear-gradient(
+		206.34deg,
+		#b4e7e5 -22.46%,
+		#115567 5.55%,
+		#3f6288 40.23%,
+		#56789c 70.25%,
+		#465f7a 105.59%
+	);
+
+	.home-img {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 12rem;
+		div {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-color: #ce1126;
+			background-clip: content-box;
+			padding: 100px;
+			border: 40px solid rgba(255, 255, 255, 0.03);
+		}
+		.circle {
+			z-index: 4;
+			padding: 98px;
+			box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+			animation-name: zoom;
+
+			animation-duration: 1s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+		}
+		.circle1 {
+			z-index: 3;
+			padding: 138px;
+			box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+			animation-name: zoom;
+
+			animation-duration: 1s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+		}
+		.circle2 {
+			z-index: 2;
+			padding: 178px;
+			box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+			animation-name: zoom;
+
+			animation-duration: 1s;
+			animation-delay: 2s;
+			animation-iteration-count: infinite;
+		}
+		.circle3 {
+			z-index: 1;
+			padding: 218px;
+			box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
+			animation-name: zoom;
+
+			animation-duration: 1s;
+			animation-delay: 3s;
+			animation-iteration-count: infinite;
+		}
+		.img-home {
+			width: 25%;
+		}
+	}
+}
+
+/*silde customer*/
+#customer {
+	padding-top: 7rem;
+	.customer__all {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		.customer__top {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			margin-left: 100px;
+			.customer__test {
+				flex-basis: 30%;
+				.customer__p {
+					text-align: justify;
+					font-size: 18px;
+					line-height: 28px;
+					color: #465f7a;
+					font-style: normal;
+					font-weight: bold;
+				}
+			}
+			.customer__img {
+				position: relative;
+				left: 110px;
+				flex-basis: 60%;
+				margin: auto;
+				img {
+					width: 60%;
+				}
+			}
+		}
+		.gtco-testimonials {
+			position: relative;
+		 	margin: 50px 0;
+		 	top: -360px;
+		 }
+		.customer__bottom {
+			position: relative;
+			flex-wrap: wrap;
+			display: flex;
+			justify-content: space-between;
+			.owl-theme{
+				text-align: center;
+				.customer__logo {
+					width: 175px;
+					height: 175px;
+					margin: 15px;
+					background: #ffffff;
+					border: 1px dashed #aaaaaa;
+					box-sizing: border-box;
+					border-radius: 30px;
+					img {
+						position: relative;
+						width: 65%;
+						top:30px;
+						// filter: alpha(opacity=50);
+						right: -30px;
+					}
+					.silde_logo_8{
+						top:65px
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.container-footer{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+/* responsive ipad*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	/* Styles */
+ #home{
+	 .home-img{
+		 transform: translateY(140%);
+	 }
+ }
+ .section{
+	 margin: 0;
+ }  
+   #intro{
+	   .info-main{
+		   display: block;
+		   .img-info{
+			
+		   }
+		   .content-info{
+			   .content{
+
+			   }
+		   }
+	   }
+	   .info-detail{
+			.list-box-info{
+				.box-item{
+					.box-left{
+
+					}
+					.box-right{
+
+					}
+					.box-content{
+						.triangle{
+
+						}
+					}
+				}
+			}
+	   }
+   }
+	 #customer {
+		.customer__all {
+			.customer__top {
+				margin: 40px;
+				flex-direction: column-reverse;
+				.customer__test {
+					width: 80%;
+					.customer__p {
+					}
+				}
+				.customer__img {
+					left: 0;
+					img {
+						width: 90%;
+					}
+				}
+			}
+			.customer__bottom {
+				position: relative;
+				text-align: center;
+				flex-wrap: wrap;
+				padding: 25px;
+				width: 85%;
+				top:2px;
+				left: 80px;
+				justify-content: space-around;
+				.customer__logo {
+				}
+			}
+		}
+	}
+
+	#footer{
+		background-color: #e5e5e5;
+		.container-footer{
+			.footer-main{
+				padding-bottom: 36px;
+			}
+			.content-footer{
+				padding: 0 0 0 100px;
+  			    width: 75vh;
+                height: 100vh;
+                border-radius: 30px;
+                margin: 0;
+                background-color: #ffffff;
+				.location-parent{
+					.location{
+						.location-text{
+							.text-cn{
+								span{
+									font-size: 18px;
+								}
+
+								img{
+									transform: translateY(7px);
+									width: 25%;
+								}
+							}
+							.text-dv{
+
+							}
+						}
+						.items{
+							p{
+								padding-bottom: 30px;
+							}
+						   display: flex;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* responsive phone*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	/* Styles */
+	.menu-mobile,
+	.menu-mobile__logo {
+		display: block;
+	}
+
+	#footer{
+		background-color: #e5e5e5;
+		.container-footer{
+			.footer-main{
+				padding-bottom: 30px;
+			}
+			.content-footer{
+				padding: 0;
+  			    width: auto;
+                height: 100vh;
+                border-radius: 0;
+                margin: 0;
+				// background-color: #e5e5ee;
+				.location-parent{
+					.location{
+						.location-text{
+							.text-cn{
+								span{
+									font-size: 15px;
+								}
+
+								img{
+									transform: translateY(0px);
+									width: 20%;
+								}
+							}
+							.text-dv{
+									font-size: 15px;
+							}
+						}
+						.items{
+							p{
+								padding-bottom: 0px;
+							}
+						   display: flex;
+						   flex-wrap: wrap;
+						}
+					}
+				}
+			}
+		}
+	}	
+   #customer {
+		.customer__all {
+			.customer__top {
+				flex-direction: column-reverse;
+				margin: 0;
+				.customer__test {
+					width: 80%;
+					
+					.customer__p {
+						font-size: 12px;
+						line-height: 20px;
+					}
+				}
+				.customer__img {
+					left: 15px;
+					img {
+						width: 85%;
+					}
+				}
+			}
+				.customer__bottom {
+				position: relative;
+				text-align: center;
+				flex-wrap: wrap;
+				top: 30px;
+				.owl-theme{
+				// justify-content: space-around;
+				.customer__logo {
+					width: 90px;
+					height: 90px;
+					border-radius: 20px;
+					img {
+						top: 16px;
+						left: 16px;
+					}
+					.silde_logo_8{
+						top:35px;
+					}
+				}
+			}
+			}
+			}
+	}
+}
