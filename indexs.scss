@@ -1,95 +1,88 @@
+
+
+  $--shadowShift: 10px;
+  $--shadowBlur: 20px;
+  $--circleColor: rgba(255, 255, 255,0.6);
 @keyframes zoom {
 	0% {
-		transform: scale(1);
-	}
-	10% {
-		transform: scale(1.02);
-	}
-	20% {
-		transform: scale(1.04);
-	}
-	40% {
-		transform: scale(1.06);
-	}
-	60% {
-		transform: scale(1.08);
-	}
-	80% {
-		transform: scale(1.1);
-	}
-	100% {
-		transform: scale(1.12);
-	}
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0;
+	  }
+	
+	  15% {
+		opacity: 0.6;
+	  }
+	  55%{
+		  opacity: 0.3;
+	  }
+	  85% {
+		opacity: 0.1;
+	  }
+	
+	  100% {
+		transform: translate(-50%, -50%) scale(4);
+		opacity: 0;
+	  }
 }
-#home {
-	margin: 0;
-	background: linear-gradient(
-		206.34deg,
-		#b4e7e5 -22.46%,
-		#115567 5.55%,
-		#3f6288 40.23%,
-		#56789c 70.25%,
-		#465f7a 105.59%
-	);
 
+.circle-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  .circle {
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: center center;
+	width: 200px;
+	height: 200px;
+	background-color: transparent;
+	border: 10px solid $--circleColor;
+	border-radius: 50%;
+	box-shadow: inset $--shadowShift $--shadowShift $--shadowBlur
+		rgba(55, 84, 170 , 0.2),
+	  $--shadowShift $--shadowShift $--shadowBlur
+		rgba(55 ,84, 170 , 0.2),
+	  inset calc($--shadowShift* -1) calc($--shadowShift * -1)
+		$--shadowBlur rgba(255 ,255 ,255 , 1),
+	  calc($--shadowShift * -1) calc($--shadowShift * -1)
+		$--shadowBlur rgba(255 ,255 ,255 , 1);
+	filter: blur(6px);
+  
+	animation-name: zoom;
+	animation-duration: 4s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+  }
+
+#home {
 	.home-img {
 		position: relative;
+		min-height: 100vh;
 		display: flex;
+		justify-content: space-around;
 		align-items: center;
-		justify-content: center;
-		top: 12rem;
-		div {
-			position: absolute;
-			width: 80px;
-			height: 80px;
-			border-radius: 50%;
-			background-color: #ce1126;
-			background-clip: content-box;
-			padding: 100px;
-			border: 40px solid rgba(255, 255, 255, 0.03);
-		}
-		.circle {
-			z-index: 4;
-			padding: 98px;
-			box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-			animation-name: zoom;
-
-			animation-duration: 1s;
-			animation-delay: 1s;
-			animation-iteration-count: infinite;
-		}
-		.circle1 {
-			z-index: 3;
-			padding: 138px;
-			box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-			animation-name: zoom;
-
-			animation-duration: 1s;
-			animation-delay: 1s;
-			animation-iteration-count: infinite;
-		}
-		.circle2 {
-			z-index: 2;
-			padding: 178px;
-			box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-			animation-name: zoom;
-
-			animation-duration: 1s;
-			animation-delay: 2s;
-			animation-iteration-count: infinite;
-		}
-		.circle3 {
-			z-index: 1;
-			padding: 218px;
-			box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-			animation-name: zoom;
-
-			animation-duration: 1s;
-			animation-delay: 3s;
-			animation-iteration-count: infinite;
-		}
+		background-image: linear-gradient(
+			206.34deg,
+			#b4e7e5 -22.46%,
+			#115567 5.55%,
+			#3f6288 40.23%,
+			#56789c 70.25%,
+			#465f7a 105.59%
+		);
 		.img-home {
-			width: 25%;
+			position: relative;
+			width: 15%;
+			z-index: 99;
+			cursor: pointer;
+		}
+		.img-home:hover{
+			width: 20%;
 		}
 	}
 }
@@ -146,6 +139,7 @@
 					background: #ffffff;
 					border: 1px dashed #aaaaaa;
 					box-sizing: border-box;
+					cursor: pointer;
 					border-radius: 30px;
 					img {
 						position: relative;

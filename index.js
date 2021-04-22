@@ -10,7 +10,7 @@ $(document).ready(function () {
 			loop:true,
 			margin:10,
 			nav:false,
-			autoplay:false,
+			autoplay:true,
 			autoplayTimeout:2500,
 			responsive:{
 				0:{
@@ -161,4 +161,25 @@ function hanldeBackgroundId(checkId) {
 	}
 }
 
-/*  customer  */
+/*  home  */
+
+const CIRCLE_NUMBER = 4;
+
+const root = document.getElementById("home-img");
+console.log(root);
+const generateCircles = () => {
+  const circleContainer = document.createElement('div');
+  circleContainer.classList.add('circle-container')
+  for (let i = 0; i < CIRCLE_NUMBER; i++) {
+    const circle = document.createElement('div');
+    circle.classList.add('circle');
+    
+    circle.style.animationDelay = `${4 * (i / CIRCLE_NUMBER)}s`;
+    circleContainer.appendChild(circle);
+  }
+  
+  root.appendChild(circleContainer);
+}
+
+generateCircles();
+

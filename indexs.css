@@ -1,157 +1,106 @@
 @-webkit-keyframes zoom {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
   }
-  10% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+  15% {
+    opacity: 0.6;
   }
-  20% {
-    -webkit-transform: scale(1.04);
-            transform: scale(1.04);
+  55% {
+    opacity: 0.3;
   }
-  40% {
-    -webkit-transform: scale(1.06);
-            transform: scale(1.06);
-  }
-  60% {
-    -webkit-transform: scale(1.08);
-            transform: scale(1.08);
-  }
-  80% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+  85% {
+    opacity: 0.1;
   }
   100% {
-    -webkit-transform: scale(1.12);
-            transform: scale(1.12);
+    -webkit-transform: translate(-50%, -50%) scale(4);
+            transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
   }
 }
 
 @keyframes zoom {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
   }
-  10% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+  15% {
+    opacity: 0.6;
   }
-  20% {
-    -webkit-transform: scale(1.04);
-            transform: scale(1.04);
+  55% {
+    opacity: 0.3;
   }
-  40% {
-    -webkit-transform: scale(1.06);
-            transform: scale(1.06);
-  }
-  60% {
-    -webkit-transform: scale(1.08);
-            transform: scale(1.08);
-  }
-  80% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+  85% {
+    opacity: 0.1;
   }
   100% {
-    -webkit-transform: scale(1.12);
-            transform: scale(1.12);
+    -webkit-transform: translate(-50%, -50%) scale(4);
+            transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
   }
 }
 
-#home {
-  margin: 0;
-  background: linear-gradient(206.34deg, #b4e7e5 -22.46%, #115567 5.55%, #3f6288 40.23%, #56789c 70.25%, #465f7a 105.59%);
+.circle-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.circle {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: 10px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  -webkit-box-shadow: inset 10px 10px 20px rgba(55, 84, 170, 0.2), 10px 10px 20px rgba(55, 84, 170, 0.2), inset calc($--shadowShift* -1) calc($--shadowShift * -1) 20px white, calc($--shadowShift * -1) calc($--shadowShift * -1) 20px white;
+          box-shadow: inset 10px 10px 20px rgba(55, 84, 170, 0.2), 10px 10px 20px rgba(55, 84, 170, 0.2), inset calc($--shadowShift* -1) calc($--shadowShift * -1) 20px white, calc($--shadowShift * -1) calc($--shadowShift * -1) 20px white;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 #home .home-img {
   position: relative;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  top: 12rem;
-}
-
-#home .home-img div {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #ce1126;
-  background-clip: content-box;
-  padding: 100px;
-  border: 40px solid rgba(255, 255, 255, 0.03);
-}
-
-#home .home-img .circle {
-  z-index: 4;
-  padding: 98px;
-  -webkit-box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-          box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-  -webkit-animation-name: zoom;
-          animation-name: zoom;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-#home .home-img .circle1 {
-  z-index: 3;
-  padding: 138px;
-  -webkit-box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-          box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-  -webkit-animation-name: zoom;
-          animation-name: zoom;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-#home .home-img .circle2 {
-  z-index: 2;
-  padding: 178px;
-  -webkit-box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-          box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-  -webkit-animation-name: zoom;
-          animation-name: zoom;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-#home .home-img .circle3 {
-  z-index: 1;
-  padding: 218px;
-  -webkit-box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-          box-shadow: 1px 0px 1px 3px rgba(255, 255, 255, 0.04);
-  -webkit-animation-name: zoom;
-          animation-name: zoom;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  background-image: linear-gradient(206.34deg, #b4e7e5 -22.46%, #115567 5.55%, #3f6288 40.23%, #56789c 70.25%, #465f7a 105.59%);
 }
 
 #home .home-img .img-home {
-  width: 25%;
+  position: relative;
+  width: 15%;
+  z-index: 99;
+  cursor: pointer;
+}
+
+#home .home-img .img-home:hover {
+  width: 20%;
 }
 
 /*silde customer*/
@@ -238,6 +187,7 @@
   border: 1px dashed #aaaaaa;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
   border-radius: 30px;
 }
 
