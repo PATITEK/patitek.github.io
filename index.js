@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
 	$('.preloader').delay(1500).fadeOut(500);
 	$('.counter').counterUp({
 		delay: 10,
@@ -26,6 +28,8 @@ $(document).ready(function () {
 		})
 
 });
+
+
 $('.text-bot').addClass('animated fadeIn');
 // function initMap() {
 //     // The location of Uluru
@@ -45,24 +49,24 @@ var menu = false;
 function clickMenuBar() {
 	if (menu == false) {
 		document.querySelector('.menu-content-mobile').style.opacity = 1;
-		menu = true;
 		document.querySelector('.icon-menu').style.color = 'white';
+		menu = true;
 	} else {
 		document.querySelector('.menu-content-mobile').style.opacity = 0;
 		menu = false;
 		document.querySelector('.icon-menu').style.color = 'black';
 	}
 }
-window.onscroll = function () {
-	if (
-		document.body.scrollTop > 100 ||
-		document.documentElement.scrollTop > 100
-	) {
-		document.querySelector('.icon-menu').style.color = 'black';
-	} else {
-		document.querySelector('.icon-menu').style.color = 'white';
-	}
-};
+// window.onscroll = function () {
+// 	if (
+// 		document.body.scrollTop > 100 ||
+// 		document.documentElement.scrollTop > 100
+// 	) {
+// 		document.querySelector('.icon-menu').style.color = 'black';
+// 	} else {
+// 		// document.querySelector('.icon-menu').style.color = 'white';
+// 	}
+// };
 $(function () {
 	var $clientslider = $('#clientlogo');
 	var clients = $clientslider.children().length;
@@ -126,16 +130,6 @@ function onclickP(e) {
 		}
 	}
 }
-var checkAuto = false;
-function autoPlay() {
-	checkAuto = !checkAuto;
-	if (checkAuto) document.getElementById('modal').style.width = '1366px';
-	else closeYoutube();
-}
-
-function closeYoutube() {
-	document.getElementById('modal').style.width = '0';
-}
 
 function addProduct() {
 	x[0].className = 'item active';
@@ -161,12 +155,12 @@ function hanldeBackgroundId(checkId) {
 	}
 }
 
+
 /*  home  */
 
 const CIRCLE_NUMBER = 4;
 
 const root = document.getElementById("home-img");
-console.log(root);
 const generateCircles = () => {
   const circleContainer = document.createElement('div');
   circleContainer.classList.add('circle-container')
@@ -177,9 +171,52 @@ const generateCircles = () => {
     circle.style.animationDelay = `${4 * (i / CIRCLE_NUMBER)}s`;
     circleContainer.appendChild(circle);
   }
+
   
   root.appendChild(circleContainer);
 }
 
 generateCircles();
+const mobile = document.getElementsByClassName("mobile");
+// active class 
+function indexClass(){
+	for(var i = 0; i<mobile.length;i++){
+		if(mobile[i].className === "menu-item mobile active"){
+			return i;
+		}
+   }
 
+}
+
+function classActive(){
+	var index = indexClass();
+	switch(index){
+		case 0:
+			return "home";
+		case 1:
+			return "intro";
+		case 2:
+			return "solution";
+		case 3:
+			return "product";
+		case 4:
+			return "customer";
+		default:		
+			return "footer";		
+	}
+}
+// menu moble
+
+
+function onclickMenu(e){
+	var index = indexClass();
+	var activeClass = classActive();
+	     if(mobile[index].className === "menu-item mobile active"){
+			 mobile[index].className = "menu-item mobile";
+			 mobile[index].children[1].src ="./img/customer/menucheck.svg";
+	}
+	e.target.parentElement.className = "menu-item mobile active";
+	e.target.parentElement.children[1].src ="./img/customer/menutick.svg";
+	clickMenuBar();
+	
+}

@@ -41,6 +41,10 @@ ul,
 li {
 	list-style: none;
 }
+a{
+	text-decoration: none;
+	color: #465F7A;
+}
 input {
 	border: none;
 	outline: none;
@@ -74,6 +78,7 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
+	width: 100%;
 	height: 75px;
 	background: #ffffff;
 	z-index: 999;
@@ -83,7 +88,7 @@ header {
 .menu-content {
 	display: flex;
 	align-items: center;
-	padding-top: 10px;
+	height: 100%;
 	margin-left: 15px;
 	margin-right: 15px;
 	z-index: 99;
@@ -162,7 +167,7 @@ header {
 
 .menu-scoll {
 	background-color: #9da7b1;
-	position: fixed;
+	/* position: fixed; */
 	top: -100px;
 	width: 100%;
 	transform: translateY(100px);
@@ -232,18 +237,18 @@ header {
 */
 .menu-mobile__logo {
 	display: none;
-	transform: translate(175px, 12px);
+	transform: translate(175px, 8px);
 }
 .menu-mobile__logo img {
 	width: 35px;
 }
 .menu-mobile {
 	display: none;
-	position: fixed;
+	/* position: fixed; */
 	transform: translate(-5px, -40px);
 }
 .menu-mobile .icon-menu {
-	color: white;
+	color: black;
 	margin: 20px 20px;
 	z-index: 8;
 	font-size: 30px;
@@ -267,12 +272,27 @@ header {
 	margin-top: 3rem;
 }
 .menu-mobile .menu-content-mobile .list-menu .menu-item {
+	display: flex;
+	align-items: center;
 	color: black;
 	text-align: left;
 	height: 85px;
 	border-top: 1px solid #f3f3f3;
 	box-shadow: 0px 2px #f3f3f3;
 	border-bottom: 1px solid #f3f3f3;
+	justify-content: space-between;
+}
+.menu-mobile .menu-content-mobile .list-menu .menu-item a{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+	/* identical to box height */
+	
+	text-align: justify;
+	
+	color: #465F7A !important;
+	
 }
 /* PRE */
 .preloader {
@@ -633,7 +653,7 @@ Intro
 	padding-top: 6rem;
 	padding-right: 2rem;
 	margin-left: 0;
-	background-color: #e5e5e5;
+	/* background-color: #e5e5e5; */
 	max-width: none;
 }
 .info .info-main {
@@ -664,9 +684,13 @@ Intro
 	font-weight: 700;
 }
 .info .info-main .content-info .content {
-	color: #484848;
-	margin-top: 30px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 34px;
 	text-align: justify;
+
+	color: #465F7A;
 }
 @media (max-width: 813px) {
 	.info .info-main {
@@ -889,7 +913,7 @@ Intro
 		margin-top: 50px;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-	}
+	} 
 	.info .info-detail .list-box-info .box-item {
 		height: 100px;
 	}
@@ -930,7 +954,7 @@ Intro
 		text-align: center;
 	}
 }
-@media screen and (max-width: 480px) {
+@media  screen and (max-width: 480px) {
 
 	.section{
 		margin: 0;
@@ -946,11 +970,15 @@ Intro
 	.logo-text {
 		width: 80px;
 	}
+	.info-detail{
+		height: unset;
+	}
+	
 	.info .info-detail .list-box-info .box-item {
 		width: 70px;
 	}.info .info-detail .list-box-info .box-item .box-content{
 		top:1%;
-		width: 73px;
+		width: 75px;
 		height: 88px;
 	}
 
@@ -992,8 +1020,10 @@ Intro
 		.box-content
 		.text-content
 		.text-bot {
-		font-size: 8px;
-		transform: translateY(-8px);
+		position: absolute;
+		width: 100px;
+		font-size: 12px;
+		transform: translate(-25px,40px);
 	}
 	.counter {
 		font-size: 20px;
@@ -1018,7 +1048,8 @@ Intro
 	.info .info-main .content-info .content {
 		font-size: 12px;
 		padding: 0 1rem;
-	}
+		line-height: 26px;
+	}	
 	.info .info-detail .list-box-info .box-item{
 		width: 110px;
 		height: 92px;
@@ -1029,6 +1060,10 @@ Intro
 	}
 	.info .info-detail .list-box-info {
 		transform: translate(0px, 70px);
+		padding: 0;
+		margin-top: 50px;
+		flex-wrap: nowrap;
+		justify-content: space-between;
 	}
 }
 
@@ -1639,7 +1674,7 @@ img {
 	cursor: pointer;
 }
 
-.modal {
+/* .modal {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -1649,7 +1684,7 @@ img {
 	height: 100%;
 	overflow: hidden;
 	outline: 0;
-}
+} */
 
 .product .modal {
 	display: block;
@@ -1811,7 +1846,7 @@ iframe {
 		flex-basis: 50%;
 	}
 	#footer .footer-main #map iframe {
-		width: 355px;
+		width: 375px;
 	}
 	#footer .footer-main .contact_us {
 		flex-basis: 50%;
@@ -2002,7 +2037,7 @@ iframe {
 	.location .items p {
 		display: block;
 		font-size: 12px;
-		line-height: 20px;
+		line-height: 15px;
 	}
 	.content-footer {
 		height: 4%;
@@ -2244,5 +2279,8 @@ iframe {
 		width: 80%;
 		right: 25%;
 		bottom: -8%;
+	}
+	.location-parent{
+		margin-top: 10px;
 	}
 }
