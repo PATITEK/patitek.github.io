@@ -106,11 +106,50 @@ $(function () {
 });
 
 //Products
+let temp;
+function fromLoadingToCheck(){	
+	 for (var i = 0; i < x.length / 2; i++)
+		{
+			if (x[i].className === 'item active') {
+				temp = y[i];
+				setTimeout(async () => {
+					temp.lastElementChild.lastElementChild.children[1].firstElementChild.src="/img/customer/check.svg";	
+					setTimeout(async() => {
+						temp.lastElementChild.lastElementChild.children[2].firstElementChild.src="/img/customer/check.svg";	
+						setTimeout(async() => {
+							temp.lastElementChild.lastElementChild.children[3].firstElementChild.src="/img/customer/check.svg";	
+							setTimeout(async() => {
+								temp.lastElementChild.lastElementChild.children[4].firstElementChild.src="/img/customer/check.svg";	
+							}, 1000);
+						}, 1000);
+					}, 1000);
+					
+				}, 4000); 		 
+			 }
+		}
+	
+}
+function fromCheckToLoading(){
+	for (var i = 0; i < x.length / 2; i++)
+		{
+			if (x[i].className === 'item active') {
+				temp = y[i];
+				temp.lastElementChild.lastElementChild.children[1].firstElementChild.src="/img/customer/loading-check.svg";
+				temp.lastElementChild.lastElementChild.children[2].firstElementChild.src="/img/customer/loading-check.svg";
+				temp.lastElementChild.lastElementChild.children[3].firstElementChild.src="/img/customer/loading-check.svg";
+				temp.lastElementChild.lastElementChild.children[4].firstElementChild.src="/img/customer/loading-check.svg";
+			}
+		}
+}
+
+
 
 const x = document.getElementsByClassName('item');
 const y = document.getElementsByClassName('content-pro');
 function onclickP(e) {
-	for (var i = 0; i < x.length / 2; i++) {
+	clearTimeout();
+	fromCheckToLoading();
+	for (let i = 0; i < x.length / 2; i++) {
 		if (x[i].className === 'item active') {
 			x[i + 4].className = 'item hiddenn';
 			x[i].className = 'item';
@@ -118,7 +157,7 @@ function onclickP(e) {
 		}
 	}
 	e.target.parentElement.className = 'item active';
-	for (var i = 0; i < x.length / 2; i++) {
+	for (let i = 0; i < x.length / 2; i++) {
 		if (x[i].className === 'item active') {
 			x[i + 4].className = 'item showw';
 			y[i].className = 'content-pro on-show';
@@ -127,16 +166,20 @@ function onclickP(e) {
 			} else {
 				hanldeBackgroundId(true);
 			}
+			fromLoadingToCheck();
 		}
 	}
 }
+
 
 function addProduct() {
 	x[0].className = 'item active';
 	x[4].className = 'item showw';
 	y[0].className = 'content-pro on-show';
+	fromLoadingToCheck();
 }
 function removeProduct() {
+	fromCheckToLoading();
 	for (var i = 0; i < x.length / 2; i++) {
 		if (x[i].className === 'item active') {
 			x[i + 4].className = 'item hiddenn';
@@ -180,43 +223,35 @@ generateCircles();
 const mobile = document.getElementsByClassName("mobile");
 // active class 
 function indexClass(){
-	for(var i = 0; i<mobile.length;i++){
+	for(var i = 0; i< mobile.length;i++){
 		if(mobile[i].className === "menu-item mobile active"){
 			return i;
 		}
    }
-
+   return 0;
 }
 
-function classActive(){
-	var index = indexClass();
-	switch(index){
-		case 0:
-			return "home";
-		case 1:
-			return "intro";
-		case 2:
-			return "solution";
-		case 3:
-			return "product";
-		case 4:
-			return "customer";
-		default:		
-			return "footer";		
-	}
-}
 // menu moble
 
-
 function onclickMenu(e){
-	var index = indexClass();
-	var activeClass = classActive();
-	     if(mobile[index].className === "menu-item mobile active"){
+   let	index = indexClass();
 			 mobile[index].className = "menu-item mobile";
 			 mobile[index].children[1].src ="./img/customer/menucheck.svg";
-	}
 	e.target.parentElement.className = "menu-item mobile active";
 	e.target.parentElement.children[1].src ="./img/customer/menutick.svg";
+	index = indexClass();
+	// document.body.className = "fp-viewing-"+ index;
+	if(mobile[3].className === "menu-item mobile active"){
+		addProduct();
+	}
+	else{
+		removeProduct();
+	}
 	clickMenuBar();
+}
+
+function onClickProduct(e){
+	addProduct();
 	
 }
+
