@@ -107,24 +107,16 @@ $(function () {
 
 //Products
 let temp;
+let timeId;
 function fromLoadingToCheck(){	
 	 for (var i = 0; i < x.length / 2; i++)
 		{
 			if (x[i].className === 'item active') {
-				temp = y[i];
-				setTimeout(async () => {
-					temp.lastElementChild.lastElementChild.children[1].firstElementChild.src="/img/customer/check.svg";	
-					setTimeout(async() => {
-						temp.lastElementChild.lastElementChild.children[2].firstElementChild.src="/img/customer/check.svg";	
-						setTimeout(async() => {
-							temp.lastElementChild.lastElementChild.children[3].firstElementChild.src="/img/customer/check.svg";	
-							setTimeout(async() => {
-								temp.lastElementChild.lastElementChild.children[4].firstElementChild.src="/img/customer/check.svg";	
-							}, 1000);
-						}, 1000);
-					}, 1000);
-					
-				}, 4000); 		 
+				temp = y[i];	 
+				temp.lastElementChild.lastElementChild.children[1].firstElementChild.style = "opacity: 1;";
+				temp.lastElementChild.lastElementChild.children[2].firstElementChild.style = "opacity: 1;";
+				temp.lastElementChild.lastElementChild.children[3].firstElementChild.style = "opacity: 1;";
+				temp.lastElementChild.lastElementChild.children[4].firstElementChild.style = "opacity: 1;";
 			 }
 		}
 	
@@ -134,10 +126,10 @@ function fromCheckToLoading(){
 		{
 			if (x[i].className === 'item active') {
 				temp = y[i];
-				temp.lastElementChild.lastElementChild.children[1].firstElementChild.src="/img/customer/loading-check.svg";
-				temp.lastElementChild.lastElementChild.children[2].firstElementChild.src="/img/customer/loading-check.svg";
-				temp.lastElementChild.lastElementChild.children[3].firstElementChild.src="/img/customer/loading-check.svg";
-				temp.lastElementChild.lastElementChild.children[4].firstElementChild.src="/img/customer/loading-check.svg";
+				temp.lastElementChild.lastElementChild.children[1].firstElementChild.style = "opacity: 0;";
+				temp.lastElementChild.lastElementChild.children[2].firstElementChild.style = "opacity: 0;";
+				temp.lastElementChild.lastElementChild.children[3].firstElementChild.style = "opacity: 0;";
+				temp.lastElementChild.lastElementChild.children[4].firstElementChild.style = "opacity: 0;";
 			}
 		}
 }
@@ -147,7 +139,7 @@ function fromCheckToLoading(){
 const x = document.getElementsByClassName('item');
 const y = document.getElementsByClassName('content-pro');
 function onclickP(e) {
-	clearTimeout();
+	// clearTimeout(timeId);
 	fromCheckToLoading();
 	for (let i = 0; i < x.length / 2; i++) {
 		if (x[i].className === 'item active') {
@@ -166,7 +158,9 @@ function onclickP(e) {
 			} else {
 				hanldeBackgroundId(true);
 			}
+			timeId =  setTimeout(() => {
 			fromLoadingToCheck();
+			}, 2000);
 		}
 	}
 }
@@ -176,9 +170,12 @@ function addProduct() {
 	x[0].className = 'item active';
 	x[4].className = 'item showw';
 	y[0].className = 'content-pro on-show';
-	fromLoadingToCheck();
+	timeId	= setTimeout(() => {
+			fromLoadingToCheck();
+		}, 2000);
 }
 function removeProduct() {
+	// clearTimeout(timeId);
 	fromCheckToLoading();
 	for (var i = 0; i < x.length / 2; i++) {
 		if (x[i].className === 'item active') {
@@ -220,37 +217,9 @@ const generateCircles = () => {
 }
 
 generateCircles();
-const mobile = document.getElementsByClassName("mobile");
 // active class 
-function indexClass(){
-	for(var i = 0; i< mobile.length;i++){
-		if(mobile[i].className === "menu-item mobile active"){
-			return i;
-		}
-   }
-   return 0;
-}
-
-// menu moble
-
-function onclickMenu(e){
-   let	index = indexClass();
-			 mobile[index].className = "menu-item mobile";
-			 mobile[index].children[1].src ="./img/customer/menucheck.svg";
-	e.target.parentElement.className = "menu-item mobile active";
-	e.target.parentElement.children[1].src ="./img/customer/menutick.svg";
-	index = indexClass();
-	// document.body.className = "fp-viewing-"+ index;
-	if(mobile[3].className === "menu-item mobile active"){
-		addProduct();
-	}
-	else{
-		removeProduct();
-	}
-	clickMenuBar();
-}
-
 function onClickProduct(e){
+	removeProduct();
 	addProduct();
 	
 }

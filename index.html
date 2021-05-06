@@ -1,406 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<link rel="shortcut icon" href="./img/logo2.svg" type="image/x-icon">
-		<link rel="stylesheet" href="style.css" />
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/swiper/swiper-bundle.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="indexs.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-		<title>Patitek</title>
-	</head>
 
-	<body>
-		<div class="preloader">
-			<div class="loader">
-				<div class="ytp-spinner">
-					<div
-						class="ytp-spinner-container"
-					>
-						<div
-							class="ytp-spinner-rotator"
-						>
-							<div
-								class="ytp-spinner-left"
-							>
-								<div
-									class="ytp-spinner-circle"
-								></div>
-							</div>
-							<div
-								class="ytp-spinner-right"
-							>
-								<div
-									class="ytp-spinner-circle"
-								></div>
-							</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./img/logo2.svg" type="image/x-icon">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="stylesheet" href="indexs.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<title>Patitek</title>
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="loader">
+			<div class="ytp-spinner">
+				<div class="ytp-spinner-container">
+					<div class="ytp-spinner-rotator">
+						<div class="ytp-spinner-left">
+							<div class="ytp-spinner-circle"></div>
+						</div>
+						<div class="ytp-spinner-right">
+							<div class="ytp-spinner-circle"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<header class="header">
-			<div class="menu-content" id = "menu" >
-				<div class="logo"  >
-					<a href="#homemenu"><img src="./img/logo1.svg" alt="" srcset="" /></a>
-				</div>
-				<ul class="menu-list">
-					<li  class="menu-item active">
-						<a class="menu-link" href="#intromenu" onclick="removeProduct()">Về chúng tôi</a>
-					</li>
-					<li  class="menu-item">
-						<a class="menu-link" href="#solutionmenu" onclick="removeProduct()">Giải pháp</a>
-					</li>
-					<li  class="menu-item">
-						<a class="menu-link" href="#productmenu" onclick="onClickProduct(event)">Sản Phẩm</a>
-					</li>
-					<li  class="menu-item">
-			     	<a class="menu-link" href="#customermenu" onclick="removeProduct()">Khách hàng</a>
-					</li>
-					<li class="menu-item">
-						<a class="menu-link" href="#footermenu" onclick="removeProduct()">Liên hệ</a>
-					</li>
-				</ul>
+	</div>
+	<header class="header">
+		<div class="menu-content" id="menu">
+			<div class="logo">
+				<a href="#homemenu"><img src="./img/logo1.svg" alt="" srcset="" /></a>
 			</div>
-			<!-- MENU MOBIE -->
-			<div class="menu_mobile_container">
-				<div class="menu-mobile__logo">
-					<img src="./img/logo2.svg" alt="" srcset="" />
+			<ul class="menu-list">
+				<li class="menu-item" data-menuanchor="intromenu">
+					<a class="menu-link" href="#intromenu" onclick="removeProduct()">Về chúng tôi</a>
+					<div class="line"></div>
+				</li>
+				<li class="menu-item" data-menuanchor="solutionmenu">
+					<a class="menu-link" href="#solutionmenu" onclick="removeProduct()">Giải pháp</a>
+					<div class="line"></div>
+				</li>
+				<li class="menu-item" data-menuanchor="productmenu">
+					<a class="menu-link" href="#productmenu" onclick="onClickProduct(event)">Sản Phẩm</a>
+					<div class="line"></div>
+				</li>
+				<li class="menu-item" data-menuanchor="customermenu">
+					<a class="menu-link" href="#customermenu" onclick="removeProduct()">Khách hàng</a>
+					<div class="line"></div>
+				</li>
+				<li class="menu-item" data-menuanchor="footermenu">
+					<a class="menu-link" href="#footermenu" onclick="removeProduct()">Liên hệ</a>
+					<div class="line"></div>
+				</li>
+			</ul>
+		</div>
+		<!-- MENU MOBIE -->
+		<div class="menu_mobile_container">
+			<div class="menu-mobile__logo">
+				<img src="./img/logo2.svg" alt="" srcset="" />
 			</div>
-			 <div class="menu-mobile">
+			<div class="menu-mobile">
 				<i class="fal fa-bars icon-menu" onclick="clickMenuBar()"></i>
 				<div class="menu-content-mobile">
-					<ul class="list-menu" id="menu-mobile-list">
-						<li   class="menu-item mobile active">
-							<a href="#homemenu" onclick="onclickMenu(event)">Trang chủ</a>
-							<img src="./img/customer/menutick.svg" alt="" sizes="" srcset="">
+					<ul class="list-menu" id="menu">
+						<li class="menu-item" data-menuanchor="homemenu" onclick="clickMenuBar()" >
+							<a href="#homemenu">Trang chủ</a>
+							 <div class="line"></div>
 						</li>
-						<li   class="menu-item mobile">
-							<a href="#intromenu" onclick="onclickMenu(event)">Về chung tôi</a>
-							<img src="./img/customer/menucheck.svg" alt="" sizes="" srcset="">
+						<li class="menu-item" data-menuanchor="intromenu" onclick="clickMenuBar()">
+							<a href="#intromenu">Về chung tôi</a>
+							<div class="line"></div>
 						</li>
-						<li   class="menu-item mobile">
-							<a href="#solutionmenu" onclick="onclickMenu(event)">Giải pháp</a>
-							<img src="./img/customer/menucheck.svg" alt="" sizes="" srcset="">
+						<li class="menu-item" data-menuanchor="solutionmenu" onclick="clickMenuBar()">
+							<a href="#solutionmenu">Giải pháp</a>
+							<div class="line"></div>
 						</li>
-						<li   class="menu-item mobile">
-							<a href="#productmenu" onclick="onclickMenu(event)">Sản phẩm</a>
-							<img src="./img/customer/menucheck.svg" alt="" sizes="" srcset="">
+						<li class="menu-item" data-menuanchor="productmenu" onclick="clickMenuBar()">
+							<a href="#productmenu">Sản phẩm</a>
+							<div class="line"></div>
 						</li>
-						<li   class="menu-item mobile">
-							<a href="#customermenu" onclick="onclickMenu(event)" >Khách hàng</a>
-							<img src="./img/customer/menucheck.svg" alt="" sizes="" srcset="">
+						<li class="menu-item" data-menuanchor="customermenu" onclick="clickMenuBar()">
+							<a href="#customermenu">Khách hàng</a>
+							<div class="line"></div>
 						</li>
-						<li class="menu-item mobile">
-							<a href="#footermenu" onclick="onclickMenu(event)">Liên hệ</a>
-							<img src="./img/customer/menucheck.svg" alt="" sizes="" srcset="">
+						<li class="menu-item" data-menuanchor="footermenu" onclick="clickMenuBar()">
+							<a href="#footermenu">Liên hệ</a>
+							<div class="line"></div>
 						</li>
 					</ul>
 				</div>
-			</div> 
 			</div>
-		</header>
-		<div class="destop">
-			<div id="fullPage">
-				<section id="home" class="section">
-					<div id="home-img" class="home-img">
-					 <img class="img-home" src="./img/customer/image-home.svg" alt="" srcset=""> 
-				   </div>  
-				</section>
-				<!-- Intro -->
-				<section id="intro" class="section">
-					<div class="info container">
-						<div class="info-main">
-							<div class="img-info">
-								<img
-								src="./img/img-1.svg"
-								alt=""
-								srcset=""
-							/>
-							</div>
-							<div class="content-info">
-								<img src="./img/textlogo.svg">
-								<p class="content">
-									PATITEK là công ty phần mềm chuyên về ứng dụng web và di động. Với trình độ chuyên biệt và đội ngũ kỹ thuật cao, đặc biệt chú trọng việc phát triển chất lượng sản phẩm.
-								</p>
-							</div>
+		</div>
+	</header>
+	<div class="destop">
+		<div id="fullPage">
+			<section id="home" class="section">
+				<div id="home-img" class="home-img">
+					<div class="mouse"></div>
+					<img class="img-home" src="./img/customer/image-home.svg" alt="" srcset="">
+				</div>
+			</section>
+			<!-- Intro -->
+			<section id="intro" class="section">
+				<div class="info container">
+					<div class="info-main">
+						<div class="img-info">
+							<img src="./img/img-1.svg" alt="" srcset="" />
 						</div>
-						<div class="info-detail">
-							<div class="list-box-info">
-								<div
-									class="box-item"
-								>
-									<div
-										class="box-left"
-									></div>
-									<div
-										class="box-right"
-									></div>
-									<div
-										class="box-content"
-									>
-										<div
-											class="text-content"
-										>
-											<div
-												class="text-number"
-											>
-												<span
-													class="counter"
-													>21</span
-												>
-												<p
-													class="sysbol"
-												>
-													+
-												</p>
-											</div>
-											<p
-												class="text-bot"
-											>
-												Lập
-												trình
-												viên
+						<div class="content-info">
+							<img src="./img/textlogo.svg">
+							<p class="content">
+								PATITEK là công ty phần mềm chuyên về ứng dụng web và di động. Với trình độ chuyên biệt
+								và đội ngũ kỹ thuật cao, đặc biệt chú trọng việc phát triển chất lượng sản phẩm.
+							</p>
+						</div>
+					</div>
+					<div class="info-detail">
+						<div class="list-box-info">
+							<div class="box-item">
+								<div class="box-left"></div>
+								<div class="box-right"></div>
+								<div class="box-content">
+									<div class="text-content">
+										<div class="text-number">
+											<span class="counter">21</span>
+											<p class="sysbol">
+												+
 											</p>
 										</div>
+										<p class="text-bot">
+											Lập
+											trình
+											viên
+										</p>
 									</div>
-									<div
-										class="triangle"
-									></div>
 								</div>
-								<div
-									class="box-item"
-								>
-									<div
-										class="box-left"
-									></div>
-									<div
-										class="box-right bg2"
-									></div>
-									<div
-										class="box-content"
-									>
-										<div
-											class="text-content"
-										>
-											<div
-												class="text-number text-color2"
-											>
-												<span
-													class="counter"
-													>99</span
-												>
-												<p
-													class="sysbol"
-												>
-													%
-												</p>
-											</div>
-											<p
-												class="text-bot"
-											>
-												Khách
-												hàng
-												hài
-												lòng
+								<div class="triangle"></div>
+							</div>
+							<div class="box-item">
+								<div class="box-left"></div>
+								<div class="box-right bg2"></div>
+								<div class="box-content">
+									<div class="text-content">
+										<div class="text-number text-color2">
+											<span class="counter">99</span>
+											<p class="sysbol">
+												%
 											</p>
 										</div>
+										<p class="text-bot">
+											Khách
+											hàng
+											hài
+											lòng
+										</p>
 									</div>
-									<div
-										class="triangle bg2"
-									></div>
 								</div>
-								<div
-									class="box-item"
-								>
-									<div
-										class="box-left"
-									></div>
-									<div
-										class="box-right bg3"
-									></div>
-									<div
-										class="box-content"
-									>
-										<div
-											class="text-content"
-										>
-											<div
-												class="text-number text-color3"
-											>
-												<span
-													class="counter"
-													>10</span
-												>
-												<p
-													class="sysbol"
-												>
-													+
-												</p>
-											</div>
-											<p
-												class="text-bot"
-											>
-												Dự
-												án
-												hoàn
-												thành
+								<div class="triangle bg2"></div>
+							</div>
+							<div class="box-item">
+								<div class="box-left"></div>
+								<div class="box-right bg3"></div>
+								<div class="box-content">
+									<div class="text-content">
+										<div class="text-number text-color3">
+											<span class="counter">10</span>
+											<p class="sysbol">
+												+
 											</p>
 										</div>
+										<p class="text-bot">
+											Dự
+											án
+											hoàn
+											thành
+										</p>
 									</div>
-									<div
-										class="triangle bg3"
-									></div>
 								</div>
+								<div class="triangle bg3"></div>
 							</div>
 						</div>
 					</div>
-				</section>
-				<!-- Solution -->
-				<section id="solution" class="section">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div
-								class="swiper-slide"
-								style="
+				</div>
+			</section>
+			<!-- Solution -->
+			<section id="solution" class="section">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" style="
 									background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
-								"
-							>
-								<h1
-									class="text-title"> Hệ quản trị doanh nghiệp (ERP)
-								</h1>
-								<div class="list-language">
-									<div
-										class="language-item"
-									>
-										<img
-											src="./img/angular.png"
-											alt=""
-										/>
-									</div>
-									<div
-										class="language-item"
-									>
-										<img
-											src="./img/nodejs.png"
-											alt=""
-										/>
-									</div>
-									
+								">
+							<h1 class="text-title"> Hệ quản trị doanh nghiệp (ERP)
+							</h1>
+							<div class="list-language">
+								<div class="language-item">
+									<img src="./img/angular.png" alt="" />
 								</div>
-								<div class="text">
-								<p >Báo cáo doanh thu theo tháng/quý/năm, quản lý nhân sự, chấm công hay hệ quản
+								<div class="language-item">
+									<img src="./img/nodejs.png" alt="" />
+								</div>
+
+							</div>
+							<div class="text">
+								<p>Báo cáo doanh thu theo tháng/quý/năm, quản lý nhân sự, chấm công hay hệ quản
 									trị
-									khách hàng,... giờ đây có thể tích hợp đồng bộ cùng với hệ thống ERP, Chúng tôi cung cấp       rất
-									nhiều các giải pháp quản trị doanh nghiệp. Từ Hệ quản trị khách hàng (CRM), hệ quản trị
+									khách hàng,... giờ đây có thể tích hợp đồng bộ cùng với hệ thống ERP, Chúng tôi cung
+									cấp rất
+									nhiều các giải pháp quản trị doanh nghiệp. Từ Hệ quản trị khách hàng (CRM), hệ quản
+									trị
 									nội
 									dung (CMS), cho đến quản lý kho hàng (GDM), quản lý nhân lực (HRM),... </p>
-								</div>	
-								<button
-									class="btn-contact"
-								>
-									Liên
-									Hệ
-								</button>
 							</div>
-							<div
-								class="swiper-slide"
-								style="
+							<button class="btn-contact">
+								Liên
+								Hệ
+							</button>
+						</div>
+						<div class="swiper-slide" style="
 									background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
-								"
-							>
-								<h1
-									class="text-title"
-								> 
+								">
+							<h1 class="text-title">
 								Hệ quản trị khách hàng (CRM)
-								</h1>
-								<div
-									class="list-language"
-								>
-									<div
-										class="language-item"
-									>
-										<img
-											src="./img/vue.png"
-											alt=""
-										/>
-									</div>
-									<div
-										class="language-item"
-									>
-										<img
-											src="./img/react.png"
-											alt=""
-										/>
-									</div>
+							</h1>
+							<div class="list-language">
+								<div class="language-item">
+									<img src="./img/vue.png" alt="" />
 								</div>
-								<div class="text">	<p >Quản trị khách hàng cung cấp cho doanh nghiệp những tiện ích và giải pháp
+								<div class="language-item">
+									<img src="./img/react.png" alt="" />
+								</div>
+							</div>
+							<div class="text">
+								<p>Quản trị khách hàng cung cấp cho doanh nghiệp những tiện ích và giải pháp
 									nhằm
-									phục vụ khách hàng tốt hơn và thiết lập mối quan hệ bền vững với họ dựa trên dữ liệu và
-									thông tin thu được từ khách hàng. Giờ đây, khách hàng của bạn sẽ nhận được các ưu đãi và
+									phục vụ khách hàng tốt hơn và thiết lập mối quan hệ bền vững với họ dựa trên dữ liệu
+									và
+									thông tin thu được từ khách hàng. Giờ đây, khách hàng của bạn sẽ nhận được các ưu
+									đãi và
 									sự
-									quan tâm thường xuyên từ bạn mà không cần mất quá nhiều thời gian để liên lạc cho khách
+									quan tâm thường xuyên từ bạn mà không cần mất quá nhiều thời gian để liên lạc cho
+									khách
 									hàng
 									của bạn.
-									<br />- Các tính năng nổi bật: Tự động gửi mail, video call one touch, thống kê dữ liệu
+									<br />- Các tính năng nổi bật: Tự động gửi mail, video call one touch, thống kê dữ
+									liệu
 									bán
 									hàng,...
 								</p>
 							</div>
-								<button
-									class="btn-contact"
-								>
-									Liên
-									Hệ
-								</button>
-							</div>
-							<div
-							class="swiper-slide"
-							style="
+							<button class="btn-contact">
+								Liên
+								Hệ
+							</button>
+						</div>
+						<div class="swiper-slide" style="
 								background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
-							"	>
-							<h1
-								class="text-title"
-							> 
-							Hệ quản trị nội dung (CMS)
+							">
+							<h1 class="text-title">
+								Hệ quản trị nội dung (CMS)
 							</h1>
-							<div
-								class="list-language"
-							>
-								<div
-									class="language-item"
-								>
-									<img
-										src="./img/vue.png"
-										alt=""
-									/>
+							<div class="list-language">
+								<div class="language-item">
+									<img src="./img/vue.png" alt="" />
 								</div>
-								<div
-									class="language-item"
-								>
-									<img
-										src="./img/react.png"
-										alt=""
-									/>
+								<div class="language-item">
+									<img src="./img/react.png" alt="" />
 								</div>
 							</div>
 							<div class="text">
-								<p >Hệ thống quản trị nội dung giúp doanh nghiệp có thể quản lý nội dung trên
-									website/app mobile một cách dễ dàng hơn bao giờ hết. Không chỉ giúp ích trong việc lưu
+								<p>Hệ thống quản trị nội dung giúp doanh nghiệp có thể quản lý nội dung trên
+									website/app mobile một cách dễ dàng hơn bao giờ hết. Không chỉ giúp ích trong việc
+									lưu
 									trữ
 									tài liệu cho công ty, Hệ quản trị nội dung còn có thể ứng dụng trong việc xây dựng
 									thương
@@ -409,534 +285,438 @@
 									nghiệp,...
 								</p>
 							</div>
-							<button
-								class="btn-contact"
-							>
+							<button class="btn-contact">
 								Liên
 								Hệ
 							</button>
-							</div>
-							<div
-							class="swiper-slide"
-							style="
+						</div>
+						<div class="swiper-slide" style="
 								background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
-							"
-						>
-							<h1
-								class="text-title"
-							> 
-							Hệ quản trị bán hàng
+							">
+							<h1 class="text-title">
+								Hệ quản trị bán hàng
 							</h1>
-							<div
-								class="list-language"
-							>
-								<div
-									class="language-item"
-								>
-									<img
-										src="./img/vue.png"
-										alt=""
-									/>
+							<div class="list-language">
+								<div class="language-item">
+									<img src="./img/vue.png" alt="" />
 								</div>
-								<div
-									class="language-item"
-								>
-									<img
-										src="./img/react.png"
-										alt=""
-									/>
+								<div class="language-item">
+									<img src="./img/react.png" alt="" />
 								</div>
 							</div>
 							<div class="text">
 								<p">Giải pháp phù hợp dành cho doanh nghiệp có nhu cầu kinh doanh sản phẩm/dịch
 									vụ
-									trên website hoặc app mobile. Các chương trình khuyến mãi, hậu mãi cũng như sự kiện hấp
+									trên website hoặc app mobile. Các chương trình khuyến mãi, hậu mãi cũng như sự kiện
+									hấp
 									dẫn
 									sẽ luôn được cập nhật đến khách hàng của bạn.
 									<br />- Các tính năng nổi bật: category/product dynamics, promotion, booking,....
-								</p>
+									</p>
 							</div>
-							<button
-								class="btn-contact"
-							>
+							<button class="btn-contact">
 								Liên
 								Hệ
 							</button>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+			<!-- Products -->
+			<section id="product" class="section">
+				<div class="product-menu">
+					<div class="menu">
+						<div class="item" id="1">
+							<p onclick="onclickP(event)">
+								Patiomi Chanel
+							</p>
+							<div class="line"></div>
+						</div>
+						<div class="item" id="2">
+							<p onclick="onclickP(event)">
+								Patihome
+							</p>
+							<div class="line"></div>
+						</div>
+						<div class="item" id="3">
+							<p onclick="onclickP(event)">
+								CHABAD APP
+							</p>
+							<div class="line">
 							</div>
 						</div>
-						<!-- Add Pagination -->
-						<div
-							class="swiper-pagination"
-						></div>
+						<div class="item" id="4">
+							<p onclick="onclickP(event)">
+								Kito app
+							</p>
+							<div class="line"></div>
+						</div>
 					</div>
-				</section>
-				<!-- Products -->
-				<section id="product" class="section">
-					<div class="product-menu">
-							<div
-								class="menu"
-							>
-								<div
-									class="item"
-									id="1"
-								>
-									<p
-										onclick="onclickP(event)"
-									>
-										Patiomi Chanel
-									</p>
-									<div class="line"></div>
-								</div>
-								<div
-									class="item"
-									id="2"
-								>
-									<p
-										onclick="onclickP(event)"
-									>
-										Patihome
-									</p>
-									<div
-										class="line"
-										></div>
-								</div>
-								<div
-									class="item"
-									id="3"
-								>
-									<p
-										onclick="onclickP(event)"
-									>
-										CHABAD APP
-									</p>
-									<div
-										class="line"
-									>
-								</div>
-								</div>
-								<div
-									class="item"
-									id="4"
-								>
-									<p
-										onclick="onclickP(event)"
-									>
-										Kito app
-									</p>
-									<div
-										class="line">
-								</div>
-								</div>
-							</div>
 					<div class="product">
-							<div class="item hiddenn"
-								style="position: relative;">
-								<div class="container image-test">
-												<!-- on show id them content-pro -->
-												<div class="content-pro">
-													<div class="content-inside">
-														<div
-															class="name"
-															style="background-size: contain;"
-														> <h2>Hệ thống đa kênh xây dựng tích hợp bán hàng đồng bộ trên tất cả các thiết bị và hình thức. Tất cả được quản lí trên 1 hệ thống ổn định.
-														</h2>
-														<div class="items">
-															<img id="loading-check-1" src="/img/customer/loading-check.svg" >
-															<p>Kết nối bán hàng đa kênh.</p>
-														 </div>
-														 <div class="items">	
-															<img id="loading-check-2" src="/img/customer/loading-check.svg" >
-															<p>Tiếp thị đa điểm, quản lí tập trung.</p>
-														</div>
-														 <div class="items">	
-															<img id="loading-check-3" src="/img/customer/loading-check.svg" >
-															<p>Xây dựng website nhanh chóng.</p>
-															</div>
-														<div class="items">	
-															<img id="loading-check-4" src="/img/customer/loading-check.svg" >
-															<p>Kết nối với các sàn thương mại điện tử.. </p>
-														</div>
-														</div>
-													</div>
-												</div>
+						<div class="item hiddenn" style="position: relative;">
+							<div class="container image-test">
+								<!-- on show id them content-pro -->
+								<div class="content-pro">
+									<div class="content-inside">
+										<div class="name" style="background-size: contain;">
+											<h2>Hệ thống đa kênh xây dựng tích hợp bán hàng đồng bộ trên tất cả các
+												thiết bị và hình thức. Tất cả được quản lí trên 1 hệ thống ổn định.
+											</h2>
+											<div class="items">
+												<img id="loading-check-1" src="./img//customer/check.svg">
+												<p>Kết nối bán hàng đa kênh.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-2" src="./img/customer/check.svg">
+												<p>Tiếp thị đa điểm, quản lí tập trung.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-3" src="./img/customer/check.svg">
+												<p>Xây dựng website nhanh chóng.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-4" src="./img/customer/check.svg">
+												<p>Kết nối với các sàn thương mại điện tử.. </p>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="patiomi-computer">
-									<img  class="img-1"src="./img/customer/patiomi.svg" >
+							</div>
+							<div class="patiomi-computer">
+								<img class="img-1" src="./img/customer/patiomi.svg">
+							</div>
+						</div>
+						<div class="item hiddenn" style="position: relative;">
+							<div class="container image-test">
+								<div class="content-pro">
+									<div class="content-inside">
+										<div class="name" style="background-size: contain;">
+											<h2>Dự án căn hộ thông minh PATIHOME - Tiện ích 3 trong 1
+												Tích hợp hệ thống căn nhà vào chiếc điện thoại, đem cả căn nhà vào tầm
+												tay của bạn.
+											</h2>
+											<div class="items">
+												<img id="loading-check-1" src="./img/customer/check.svg">
+												<p>Kết nối bán hàng đa kênh.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-2" src="./img/customer/check.svg">
+												<p>Tiếp thị đa điểm, quản lí tập trung.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-3" src="./img/customer/check.svg">
+												<p>Xây dựng website nhanh chóng.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-4" src="./img/customer/check.svg">
+												<p>Kết nối với các sàn thương mại điện tử.. </p>
+											</div>
+										</div>
+									</div>
 								</div>
+							</div>
+							<div class="home-computer">
+								<img class="img-1" src="./img/customer/phonehome.svg">
+							</div>
+						</div>
+						<div class="item hiddenn" style="position: relative;">
+							<div class="container image-test">
+								<div class="content-pro">
+									<div class="content-inside">
+										<div class="name" style="background-size: contain;">
+											<h2>Đây là dự án đưa công nghệ áp dụng vào hoạt động tín ngưỡng tôn giáo.
+												Giúp các hoạt động được tổ chức chặt chẽ hơn và liên kết các thành viên
+												lại với nhau.
+											</h2>
+											<div class="items">
+												<img id="loading-check-1" src="./img/customer/check.svg">
+												<p>Hỗ trợ tiếng Anh, tiếng Việt.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-2" src="./img/customer/check.svg">
+												<p>
+													Cập nhật thông tin đầy đủ, nhanh chóng, tiện lợi.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-3" src="./img/customer/check.svg">
+												<p>
+													Tổng hợp các buổi lễ, thành viên tham gia.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-4" src="./img/customer/check.svg">
+												<p> Thông báo cho người dùng tin tức mới nhất. </p>
+											</div>
+										</div>
+									</div>
 								</div>
-							<div class="item hiddenn"
-								 style="position: relative;">
-								<div class="container image-test">
-												<!-- on show id them content-pro -->
-												<div
-													class="content-pro"
-												>
-													<div
-														class="content-inside"
-													>
-														<div
-															class="name"
-															style="
+							</div>
+							<div class="image-computer">
+								<img class="img-1" src="./img/customer/all-img.svg">
+							</div>
+						</div>
+						<div class="item hiddenn" style="position: relative;">
+							<div class="container image-test">
+								<!-- on show id them content-pro -->
+								<div class="content-pro">
+									<div class="content-inside">
+										<div class="name" style="
 																background-size: contain;
-															"
-														> <h2>Dự án căn hộ thông minh PATIHOME - Tiện ích 3 trong 1
-														Tích hợp hệ thống căn nhà vào chiếc điện thoại, đem cả căn nhà vào tầm tay của bạn.
-														</h2>
-														<div class="items">
-															<img id="loading-check-1" src="/img/customer/loading-check.svg" >
-															<p>Kết nối bán hàng đa kênh.</p>
-														 </div>
-														 <div class="items">	
-															<img id="loading-check-2" src="/img/customer/loading-check.svg">
-															<p>Tiếp thị đa điểm, quản lí tập trung.</p></div>
-														 <div class="items">	
-															<img id="loading-check-3" src="/img/customer/loading-check.svg">
-															<p>Xây dựng website nhanh chóng.</p></div>
-														<div class="items">	
-															<img id="loading-check-4" src="/img/customer/loading-check.svg">
-															<p>Kết nối với các sàn thương mại điện tử.. </p>
-														</div>
-														</div>
-													</div>
-												</div>
+															">
+											<h2>Đây là dự án đưa công nghệ áp dụng vào hoạt động tín ngưỡng tôn giáo.
+												Giúp các hoạt động được tổ chức chặt chẽ hơn và liên kết các thành viên
+												lại với nhau.
+											</h2>
+											<div class="items">
+												<img id="loading-check-1" src="./img/customer/check.svg">
+												<p>Hỗ trợ tiếng Anh, tiếng Việt.</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-2" src="./img/customer/check.svg">
+												<p>
+													Cập nhật thông tin đầy đủ, nhanh chóng, tiện lợi.
+												</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-3" src="./img/customer/check.svg">
+												<p> Tổng hợp các buổi lễ, thành viên tham gia.
+												</p>
+											</div>
+											<div class="items">
+												<img id="loading-check-4" src="./img/customer/check.svg">
+												<p>Thông báo cho người dùng tin tức mới nhất. </p>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="home-computer">
-									<img  class="img-1"src="./img/customer/phonehome.svg" >
-								</div>
-								</div>
-							<div class="item hiddenn"  style="position: relative;">
-								<div class="container image-test">
-												<!-- on show id them content-pro -->
-												<div
-													class="content-pro"
-												>
-													<div
-														class="content-inside"
-													>
-														<div
-															class="name"
-															style="
-																background-size: contain;
-															"
-														> <h2>Đây là dự án đưa công nghệ áp dụng vào hoạt động tín ngưỡng tôn giáo.
-															Giúp các hoạt động được tổ chức chặt chẽ hơn và liên kết các thành viên lại với nhau. 
-														</h2>
-														<div class="items">
-															<img id="loading-check-1" src="/img/customer/loading-check.svg" >
-															<p>Hỗ trợ tiếng Anh, tiếng Việt.</p>
-														 </div>
-														 <div class="items">	
-															<img id="loading-check-2" src="/img/customer/loading-check.svg" >
-															<p>
-																Cập nhật thông tin đầy đủ, nhanh chóng, tiện lợi.</p></div>
-														 <div class="items">	
-															<img id="loading-check-3" src="/img/customer/loading-check.svg" >
-															<p>
-																Tổng hợp các buổi lễ, thành viên tham gia.</p></div>
-															<div class="items">	
-																<img id="loading-check-4" src="/img/customer/loading-check.svg" >
-																<p>	Thông báo cho người dùng tin tức mới nhất. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-								</div>
-								<div class="image-computer">
-									<img  class="img-1"src="./img/customer/all-img.svg" >
-								</div>
-								</div>
-							<div class="item hiddenn"	style="position: relative;">
-								<div
-									class="container image-test"
-								>
-												<!-- on show id them content-pro -->
-												<div
-													class="content-pro"
-												>
-													<div
-														class="content-inside"
-													>
-														<div
-															class="name"
-															style="
-																background-size: contain;
-															"
-														> <h2>Đây là dự án đưa công nghệ áp dụng vào hoạt động tín ngưỡng tôn giáo.
-															Giúp các hoạt động được tổ chức chặt chẽ hơn và liên kết các thành viên lại với nhau. 
-														</h2>
-														<div class="items">
-															<img id="loading-check-1" src="/img/customer/loading-check.svg" >
-															<p>Hỗ trợ tiếng Anh, tiếng Việt.</p>
-														 </div>
-														 <div class="items">	
-															<img id="loading-check-2" src="/img/customer/loading-check.svg" >
-															<p>
-																Cập nhật thông tin đầy đủ, nhanh chóng, tiện lợi.
-															</p></div>
-														 <div class="items">	
-															<img id="loading-check-3" src="/img/customer/loading-check.svg" >
-															<p>	Tổng hợp các buổi lễ, thành viên tham gia.
-															</p>
-														 </div>
-															<div class="items">	
-																<img id="loading-check-4" src="/img/customer/loading-check.svg" >
-															<p>Thông báo cho người dùng tin tức mới nhất. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-								</div>
-								<div class="kito-computer">
-									<img  class="img-1"src="./img/customer/kitoapp.svg" >
-								</div>
-								</div>
-					 </div>
+							</div>
+							<div class="kito-computer">
+								<img class="img-1" src="./img/customer/kitoapp.svg">
+							</div>
+						</div>
 					</div>
-					<div class="svg-product" >
+				</div>
+				<div class="svg-product">
 					<img src="./img/customer/elip.svg" id="elip" alt="">
-					</div>	
-				</section>
-				<!-- customer -->
-				<section id="customer" class="section" >
-						<div class="customer__all">
-								<div class="customer__top">
-									<div class="customer__test">
-										 <p class="customer__p">
-											<img src="/img/customer/check.svg" >
-											Sứ mệnh của chúng tôi là cung cấp cho khách hàng các dịch vụ đa dạng, sáng tạo và ưu việt nhất.
-										 </p>
-										 <p class="customer__p">
-											<img src="/img/customer/check.svg" >
-											 Trách nhiệm của chúng tôi: Không ngừng sáng tạo, đóng góp vào sự phát triển đời sống văn hóa, tinh thần cho cộng đồng và xã hội.
-										 </p>
-									</div>
-								<div class="customer__img">
-									<img src="./img/khachang.svg" alt="" sizes="" srcset="">
-								</div>	
-							</div>
-								<div id="slider" class="customer__bottom">
-									<div class="owl-carousel owl-theme">
-											<div class=" customer__logo">
-												<img class="silde_logo" src="./img/khachhang1.svg" alt="" sizes="" srcset="">
-											</div>
-											<div class="customer__logo">
-												<img  class="silde_logo" src="./img/khachhang2.svg" alt="" sizes="" srcset="">
-											</div>
-											<div class="customer__logo">
-												<img class="silde_logo" src="./img/khachhang3.svg" alt="" sizes="" srcset="">
-											</div>
-											<div class="customer__logo">
-												<img class="silde_logo" src="./img/khachhang4.svg" alt="" sizes="" srcset="">
-											</div>
-											<div class="customer__logo">
-												<img
-												
-												class="silde_logo"
-												src="./img/khachhang6.svg" 
-												alt="" sizes="" srcset="">
-											</div>
-											<div class="customer__logo">
-												<img  class="silde_logo_7" src="./img/khachhang7.svg" alt="" sizes="" srcset="">
-											</div>
-											<div class="customer__logo">
-												<img  class="silde_logo_8" src="./img/khachhang8.svg" alt="" sizes="" srcset="">
-											</div>
-											<div class="customer__logo">
-												<img  class="silde_logo_8" src="./img/khachhang9.svg" alt="" sizes="" srcset="">
-											</div>
-									 </div>
-								</div>	
+				</div>
+			</section>
+			<!-- customer -->
+			<section id="customer" class="section">
+				<div class="customer__all">
+					<div class="customer__top">
+						<div class="customer__test">
+							<p class="customer__p">
+								<img src="/img/customer/check.svg">
+								Sứ mệnh của chúng tôi là cung cấp cho khách hàng các dịch vụ đa dạng, sáng tạo và ưu
+								việt nhất.
+							</p>
+							<p class="customer__p">
+								<img src="/img/customer/check.svg">
+								Trách nhiệm của chúng tôi: Không ngừng sáng tạo, đóng góp vào sự phát triển đời sống văn
+								hóa, tinh thần cho cộng đồng và xã hội.
+							</p>
 						</div>
-					</section>  
-				<!-- Footer -->
-				<footer id="footer" class="section">
-						<div class="container-footer">
-							<div class="footer-main">
-								<div id="map">
-									<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.013324749312!2d106.66619731462285!3d10.810290992298587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529224c2bbef1%3A0xfc007a7d34ff8afe!2zMTYgWcOqbiBUaOG6vywgUGjGsOG7nW5nIDIsIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1616477099340!5m2!1svi!2s"
-										width="400"
-										height="300"
-										style="
+						<div class="customer__img">
+							<img src="./img/khachang.svg" alt="" sizes="" srcset="">
+						</div>
+					</div>
+					<div id="slider" class="customer__bottom">
+						<div class="owl-carousel owl-theme">
+							<div class=" customer__logo">
+								<img class="silde_logo" src="./img/khachhang1.svg" alt="" sizes="" srcset="">
+							</div>
+							<div class="customer__logo">
+								<img class="silde_logo" src="./img/khachhang2.svg" alt="" sizes="" srcset="">
+							</div>
+							<div class="customer__logo">
+								<img class="silde_logo" src="./img/khachhang3.svg" alt="" sizes="" srcset="">
+							</div>
+							<div class="customer__logo">
+								<img class="silde_logo" src="./img/khachhang4.svg" alt="" sizes="" srcset="">
+							</div>
+							<div class="customer__logo">
+								<img class="silde_logo" src="./img/khachhang6.svg" alt="" sizes="" srcset="">
+							</div>
+							<div class="customer__logo">
+								<img class="silde_logo_7" src="./img/khachhang7.svg" alt="" sizes="" srcset="">
+							</div>
+							<div class="customer__logo">
+								<img class="silde_logo_8" src="./img/khachhang8.svg" alt="" sizes="" srcset="">
+							</div>
+							<div class="customer__logo">
+								<img class="silde_logo_8" src="./img/khachhang9.svg" alt="" sizes="" srcset="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Footer -->
+			<footer id="footer" class="section">
+				<div class="container-footer">
+					<div class="footer-main">
+						<div id="map">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.013324749312!2d106.66619731462285!3d10.810290992298587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529224c2bbef1%3A0xfc007a7d34ff8afe!2zMTYgWcOqbiBUaOG6vywgUGjGsOG7nW5nIDIsIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1616477099340!5m2!1svi!2s"
+								width="400" height="300" style="
 											border: 0;
-										"
-										allowfullscreen=""
-										loading="lazy"
-									></iframe>
+										" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+						<div class="contact_us">
+							<h3 class="title-contact">
+								Chúng tôi
+								sẽ liên hệ
+								cho bạn
+								sớm nhất!
+							</h3>
+							<input class="input-phone-email" type="text" placeholder="Nhập số điện thoại hoặc Email" />
+							<br />
+							<input class="input-mess" type="text" placeholder="Lời nhắn" />
+							<button class="btn-submit">
+								Gửi
+							</button>
+						</div>
+					</div>
+					<div class="content-footer">
+						<div class="location-parent">
+							<div class="location">
+								<div class="location-text">
+									<p class="text-cn">
+										<span>
+											Công
+											ty
+											TNHH
+											Công
+											nghệ
+											Phần
+											mềm
+										</span>
+										<img src="./img/customer/patitke.svg"></img>
+									</p>
+
+									<p class="text-dv">
+										Dịch
+										vụ
+										thiết
+										kế,
+										phát
+										triển
+										Website
+										và
+										ứng
+										dụng
+										đa
+										nền
+										tảng
+									</p>
 								</div>
-								<div class="contact_us">
-									<h3
-										class="title-contact"
-									>
-										Chúng tôi
-										sẽ liên hệ
-										cho bạn
-										sớm nhất!
-									</h3>
-									<input
-										class="input-phone-email"
-										type="text"
-										placeholder="Nhập số điện thoại hoặc Email"
-									/>
-									<br />
-									<input
-										class="input-mess"
-										type="text"
-										placeholder="Lời nhắn"
-									/>
-									<button
-										class="btn-submit"
-									>
-										Gửi
-									</button>
+
+								<div class="items">
+									<p>
+										<img src="./img/customer/map.svg">
+										16
+										Yên
+										Thế,
+										Phường
+										2,
+										Q.
+										Tân
+										Bình,
+										TP.HCM
+									</p>
 								</div>
-							</div>
-							<div class="content-footer">
-								<div class="location-parent">
-									<div
-										class="location"
-									>
-										<div
-											class="location-text"
-										>
-										<p class="text-cn" >
-											<span >
-												Công
-												ty
-												TNHH
-												Công
-												nghệ
-												Phần
-												mềm
-											</span>
-											 <img src="./img/customer/patitke.svg"></img> 
+								<div class="items items_3">
+									<p>
+										<img src="./img/customer/internet.svg">
+										wwww.patitek.com
+									</p>
+									<p>
+										<img src="./img/customer/phone.svg">
+										0358 349 648
+									</p>
+									<p>
+										<img src="./img/customer/email.svg">
+										info@patitek.com
+									</p>
+									<div class="center-items">
+										<p>
+											MST: 0316479124
 										</p>
-			
-											<p
-												class="text-dv"
-											>
-												Dịch
-												vụ
-												thiết
-												kế,
-												phát
-												triển
-												Website
-												và
-												ứng
-												dụng
-												đa
-												nền
-												tảng
-											</p>
-										</div>
-			
-										<div
-											class="items"
-										>
-											<p>
-											<img src="./img/customer/map.svg" >
-												16
-												Yên
-												Thế,
-												Phường
-												2,
-												Q.
-												Tân
-												Bình,
-												TP.HCM
-											</p>	
-										</div>
-													<div class="items items_3">
-																		<p>
-																			<img src="./img/customer/internet.svg">
-																			 wwww.patitek.com   
-																		</p>
-																			<p>
-																					<img src="./img/customer/phone.svg">
-																					0358 349 648
-																			</p>
-																			<p>
-																					<img src="./img/customer/email.svg">
-																					info@patitek.com    
-																			</p>	
-																			<div class="center-items">
-																				<p >
-																					MST: 0316479124
-																				</p>				
-																				<p style="color: #000000;">
-																					Phát triển bởi Patitek
-																				 </p>
-																			</div>	
-																 </div>
+										<p style="color: #000000;">
+											Phát triển bởi Patitek
+										</p>
 									</div>
 								</div>
 							</div>
 						</div>
-				</footer>
-			</div>
+					</div>
+				</div>
+			</footer>
 		</div>
-	</body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
-	<script type="text/javascript" src="./js/fullpage.js"></script>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-		async
-	></script>
-	<script type="text/javascript">
-		 var isPhoneDevice = "ontouchstart" in document.documentElement; 
- 	     $(document).ready(function() {
-         if(isPhoneDevice){
-		 	 $('#fullPage').fullpage({
-				menu:"#menu-mobile-list",
-				anchors: ['homemenu','intromenu','solutionmenu','productmenu','customermenu','footermenu'],
-		 		scrollBar: false,
-		 		srollOverflow:false,
-		 		srollingSpeed: 700,
-         		controlArrows: false,
-         		animateAnchor: false,
-         		fitToSection: false,
-         		resetSliders: true,
-         		loopHorizontal: false,
-		 	 })
-			
-         }
-         else {
-				
-		 		$('#fullPage').fullpage({	 
-				menu: "#menu",	 
-				anchors: ['homemenu','intromenu','solutionmenu','productmenu','customermenu','footermenu'],	 
-				scrollBar: true,
-		 		autoScrolling:true,
-		 		srollingSpeed: 700,
-				animateAnchor:false,
-		 		})
-         }
-    	 });
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+<script type="text/javascript" src="./js/fullpage.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" async>
+</script>
+<script type="text/javascript">
+	var isPhoneDevice = "ontouchstart" in document.documentElement;
+	$(document).ready(function () {
+		if (isPhoneDevice) {
+			$('#fullPage').fullpage({
+				anchors: ['homemenu', 'intromenu', 'solutionmenu', 'productmenu', 'customermenu',
+					'footermenu'
+				],
+				menu: "#menu",
+				css3:true,
+				scrollBar: false,
+				autoScrolling:true,
+				srollOverflow: false,
+				keyboardScrolling: true,
+				srollingSpeed: 800,
+				animateAnchor: false,
+				fitToSection: true,
+			})
+		} else {
+			$('#fullPage').fullpage({
+				anchors: ['homemenu', 'intromenu', 'solutionmenu', 'productmenu', 'customermenu',
+					'footermenu'
+				],
+				menu: "#menu",
+				scrollBar: false,
+				autoScrolling: true,
+				animateAnchor: false,
+				keyboardScrolling: true,
+				fitToSection: true,
+				css3: true,
+				scrollingSpeed: 800,
+			})
+		}
+	});
+</script>
+<script>
+	var swiper = new Swiper(".swiper-container", {
+		effect: "coverflow",
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: "auto",
+		coverflowEffect: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows: true,
+		},
+		pagination: {
+			el: ".swiper-pagination",
+		},
+	});
+</script>
+<script src="./index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-	</script>
-	<script>
-		var swiper = new Swiper(".swiper-container", {
-			effect: "coverflow",
-			grabCursor: true,
-			centeredSlides: true,
-			slidesPerView: "auto",
-			coverflowEffect: {
-				rotate: 50,
-				stretch: 0,
-				depth: 100,
-				modifier: 1,
-				slideShadows: true,
-			},
-			pagination: {
-				el: ".swiper-pagination",
-			},
-		});
-	</script>
-	<script src="./index.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </html>
