@@ -903,6 +903,8 @@
   }
   #intro .info .info-detail {
     height: unset;
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
   }
   #intro .info .info-detail .list-box-info {
     -webkit-transform: translate(0px, 70px);
