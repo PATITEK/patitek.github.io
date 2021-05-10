@@ -39,6 +39,7 @@
   90%, 100% {
     background-color: #ffffff;
   }
+
 }
 
 @keyframes colorSlide {
@@ -238,6 +239,7 @@
     -webkit-transform: scale(1) translateY(-20px);
             transform: scale(1) translateY(-20px);
   }
+
 }
 
 @-webkit-keyframes nudgeMouse {
@@ -326,12 +328,17 @@
             transform: scale(2.5, 2.5);
     opacity: 0;
   }
+
 }
 
 #home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -340,6 +347,7 @@
           justify-content: center;
   overflow: hidden;
   position: relative;
+
   background-image: linear-gradient(206.34deg, #b4e7e5 -22.46%, #115567 5.55%, #3f6288 40.23%, #56789c 70.25%, #465f7a 105.59%);
 }
 
@@ -360,7 +368,6 @@
       -ms-flex-align: center;
           align-items: center;
 }
-
 #home .home-img .circle {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.04);
@@ -782,6 +789,7 @@
     -webkit-transform: translate(30%, -25%);
             transform: translate(30%, -25%);
   }
+
 }
 
 @media only screen and (max-width: 768px) {
