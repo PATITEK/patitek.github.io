@@ -363,7 +363,7 @@
 
 #home .home-img .circle {
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.06);
   width: 30rem;
   height: 30rem;
   position: absolute;
@@ -619,16 +619,19 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
+    -webkit-transform: none;
+            transform: none;
   }
   #intro .info .info-main .content-info img {
     position: absolute;
     top: 18.5%;
     -webkit-transform: none;
             transform: none;
+    width: 70%;
   }
   #intro .info .info-main .content-info .content {
     position: relative;
-    top: 180px;
+    top: 18rem;
     width: 70%;
   }
   #intro .info .info-detail {
@@ -651,7 +654,7 @@
     padding: 25px 35px 35px 35px;
   }
   #intro .info .info-detail .list-box-info .box-item {
-    width: 200px;
+    width: 255px;
     height: 200px;
     margin: 20px;
     margin: 0 40px;
@@ -785,6 +788,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #intro .info .info-main .content-info .content {
+    top: 14rem;
+  }
   #intro .info .info-detail {
     position: relative;
     height: 500px;
@@ -865,6 +871,10 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  #intro .info .info-main .content-info {
+    -webkit-transform: translate(0px, 60px);
+            transform: translate(0px, 60px);
   }
   #intro .info .info-detail {
     height: unset;

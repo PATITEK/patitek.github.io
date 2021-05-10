@@ -224,7 +224,7 @@
 		align-items: center;
 		.circle {
 			border-radius: 50%;
-			background-color: rgba(255, 255, 255,0.04);
+			background-color: rgba(255, 255, 255,0.06);
 			width: 30rem;
 			height: 30rem;
 			position: absolute;
@@ -429,15 +429,17 @@
 				justify-content: center;
 				flex-wrap: wrap;
 				width: 100%;
+				transform: none;
 				img{
  
 				position: absolute;
 				top:18.5%;
 				transform: none;
+				width: 70%;
 				}
 				.content{
 					position: relative;
-					top:180px;
+					top: 18rem;
 					width: 70%;
 				}
 			}
@@ -452,7 +454,7 @@
 				 justify-content: center;
 				 padding: 25px 35px 35px 35px;
 				 .box-item{
-					 width: 200px;
+					 width: 255px;
 					 height: 200px;
 					 margin: 20px;
 					 margin: 0 40px;
@@ -587,8 +589,14 @@
 
 @media only screen and(max-width:768px) {
 	#intro{
-		
 		.info{
+			.info-main{
+				.content-info{
+					.content{
+						top:14rem;
+					}
+				}
+			}
 			.info-detail{
 				position: relative;
 				height: 500px;
@@ -665,6 +673,11 @@
 	#intro{
 		.info{
 			justify-content: flex-start;
+			.info-main{
+				.content-info{
+					transform: translate(0px, 60px);
+				}
+			}
 			.info-detail{
 				height: unset;
 				// transform: translateY(-66%);
