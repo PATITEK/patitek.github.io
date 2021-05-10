@@ -135,7 +135,7 @@
 				showActiveTooltip: false,
 				slidesNavigation: false,
 				slidesNavPosition: "bottom",
-				scrollBar: false,
+				scrollBar: true,
 				hybrid: false,
 
 				//scrolling
@@ -1206,6 +1206,7 @@
 			css(container, {
 				height: "100%",
 				position: "relative",
+				transition: "all 700ms ease 0s",
 			});
 
 			//adding a class to recognize the container internally in the code
@@ -4524,10 +4525,10 @@
 
 			//adding the current anchor
 			addClass($body, VIEWING_PREFIX + "-" + text);
-			if (
+			if ((
 				VIEWING_PREFIX + "-" + text ===
-				"fp-viewing-4"
-			)
+				"fp-viewing-3"
+			) || (VIEWING_PREFIX + "-" + text ==="fp-viewing-productmenu"))
 				addProduct();
 			else removeProduct();
 		}
@@ -5132,8 +5133,8 @@
 
 			//removing the applied transition from the fullpage wrapper
 			css(container, {
-				"-webkit-transition": "none",
-				transition: "none",
+				"-webkit-transition": "all 700ms ease 0s",
+				transition: "all 700ms ease 0s",
 			});
 
 			//scrolling the page to the top with no animation
@@ -6155,3 +6156,4 @@ if (window.jQuery && window.fullpage) {
 		};
 	})(window.jQuery, window.fullpage);
 }
+

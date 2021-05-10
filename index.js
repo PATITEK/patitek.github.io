@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
 	$('.preloader').delay(1500).fadeOut(500);
 	$('.counter').counterUp({
 		delay: 10,
@@ -10,7 +12,7 @@ $(document).ready(function () {
 			loop:true,
 			margin:10,
 			nav:false,
-			autoplay:false,
+			autoplay:true,
 			autoplayTimeout:2500,
 			responsive:{
 				0:{
@@ -26,6 +28,8 @@ $(document).ready(function () {
 		})
 
 });
+
+
 $('.text-bot').addClass('animated fadeIn');
 // function initMap() {
 //     // The location of Uluru
@@ -45,24 +49,24 @@ var menu = false;
 function clickMenuBar() {
 	if (menu == false) {
 		document.querySelector('.menu-content-mobile').style.opacity = 1;
-		menu = true;
 		document.querySelector('.icon-menu').style.color = 'white';
+		menu = true;
 	} else {
 		document.querySelector('.menu-content-mobile').style.opacity = 0;
 		menu = false;
 		document.querySelector('.icon-menu').style.color = 'black';
 	}
 }
-window.onscroll = function () {
-	if (
-		document.body.scrollTop > 100 ||
-		document.documentElement.scrollTop > 100
-	) {
-		document.querySelector('.icon-menu').style.color = 'black';
-	} else {
-		document.querySelector('.icon-menu').style.color = 'white';
-	}
-};
+// window.onscroll = function () {
+// 	if (
+// 		document.body.scrollTop > 100 ||
+// 		document.documentElement.scrollTop > 100
+// 	) {
+// 		document.querySelector('.icon-menu').style.color = 'black';
+// 	} else {
+// 		// document.querySelector('.icon-menu').style.color = 'white';
+// 	}
+// };
 $(function () {
 	var $clientslider = $('#clientlogo');
 	var clients = $clientslider.children().length;
@@ -102,11 +106,42 @@ $(function () {
 });
 
 //Products
+let temp;
+let timeId;
+function fromLoadingToCheck(){	
+	 for (var i = 0; i < x.length / 2; i++)
+		{
+			if (x[i].className === 'item active') {
+				temp = y[i];	 
+				temp.lastElementChild.lastElementChild.children[1].firstElementChild.style = "opacity: 1;";
+				temp.lastElementChild.lastElementChild.children[2].firstElementChild.style = "opacity: 1;";
+				temp.lastElementChild.lastElementChild.children[3].firstElementChild.style = "opacity: 1;";
+				temp.lastElementChild.lastElementChild.children[4].firstElementChild.style = "opacity: 1;";
+			 }
+		}
+	
+}
+function fromCheckToLoading(){
+	for (var i = 0; i < x.length / 2; i++)
+		{
+			if (x[i].className === 'item active') {
+				temp = y[i];
+				temp.lastElementChild.lastElementChild.children[1].firstElementChild.style = "opacity: 0;";
+				temp.lastElementChild.lastElementChild.children[2].firstElementChild.style = "opacity: 0;";
+				temp.lastElementChild.lastElementChild.children[3].firstElementChild.style = "opacity: 0;";
+				temp.lastElementChild.lastElementChild.children[4].firstElementChild.style = "opacity: 0;";
+			}
+		}
+}
+
+
 
 const x = document.getElementsByClassName('item');
 const y = document.getElementsByClassName('content-pro');
 function onclickP(e) {
-	for (var i = 0; i < x.length / 2; i++) {
+	// clearTimeout(timeId);
+	fromCheckToLoading();
+	for (let i = 0; i < x.length / 2; i++) {
 		if (x[i].className === 'item active') {
 			x[i + 4].className = 'item hiddenn';
 			x[i].className = 'item';
@@ -114,7 +149,7 @@ function onclickP(e) {
 		}
 	}
 	e.target.parentElement.className = 'item active';
-	for (var i = 0; i < x.length / 2; i++) {
+	for (let i = 0; i < x.length / 2; i++) {
 		if (x[i].className === 'item active') {
 			x[i + 4].className = 'item showw';
 			y[i].className = 'content-pro on-show';
@@ -123,26 +158,25 @@ function onclickP(e) {
 			} else {
 				hanldeBackgroundId(true);
 			}
+			timeId =  setTimeout(() => {
+			fromLoadingToCheck();
+			}, 2000);
 		}
 	}
 }
-var checkAuto = false;
-function autoPlay() {
-	checkAuto = !checkAuto;
-	if (checkAuto) document.getElementById('modal').style.width = '1366px';
-	else closeYoutube();
-}
 
-function closeYoutube() {
-	document.getElementById('modal').style.width = '0';
-}
 
 function addProduct() {
 	x[0].className = 'item active';
 	x[4].className = 'item showw';
 	y[0].className = 'content-pro on-show';
+	timeId	= setTimeout(() => {
+			fromLoadingToCheck();
+		}, 2000);
 }
 function removeProduct() {
+	// clearTimeout(timeId);
+	fromCheckToLoading();
 	for (var i = 0; i < x.length / 2; i++) {
 		if (x[i].className === 'item active') {
 			x[i + 4].className = 'item hiddenn';
@@ -161,4 +195,32 @@ function hanldeBackgroundId(checkId) {
 	}
 }
 
-/*  customer  */
+
+/*  home  */
+
+// const CIRCLE_NUMBER = 4;
+
+// const root = document.getElementById("home-img");
+// const generateCircles = () => {
+//   const circleContainer = document.createElement('div');
+//   circleContainer.classList.add('circle-container')
+//   for (let i = 0; i < CIRCLE_NUMBER; i++) {
+//     const circle = document.createElement('div');
+//     circle.classList.add('circle');
+    
+//     circle.style.animationDelay = `${4 * (i / CIRCLE_NUMBER)}s`;
+//     circleContainer.appendChild(circle);
+//   }
+
+  
+//   root.appendChild(circleContainer);
+// }
+
+// generateCircles();
+// active class 
+function onClickProduct(e){
+	removeProduct();
+	addProduct();
+	
+}
+
