@@ -198,25 +198,25 @@ function hanldeBackgroundId(checkId) {
 
 /*  home  */
 
-const CIRCLE_NUMBER = 4;
+// const CIRCLE_NUMBER = 4;
 
-const root = document.getElementById("home-img");
-const generateCircles = () => {
-  const circleContainer = document.createElement('div');
-  circleContainer.classList.add('circle-container')
-  for (let i = 0; i < CIRCLE_NUMBER; i++) {
-    const circle = document.createElement('div');
-    circle.classList.add('circle');
+// const root = document.getElementById("home-img");
+// const generateCircles = () => {
+//   const circleContainer = document.createElement('div');
+//   circleContainer.classList.add('circle-container')
+//   for (let i = 0; i < CIRCLE_NUMBER; i++) {
+//     const circle = document.createElement('div');
+//     circle.classList.add('circle');
     
-    circle.style.animationDelay = `${4 * (i / CIRCLE_NUMBER)}s`;
-    circleContainer.appendChild(circle);
-  }
+//     circle.style.animationDelay = `${4 * (i / CIRCLE_NUMBER)}s`;
+//     circleContainer.appendChild(circle);
+//   }
 
   
-  root.appendChild(circleContainer);
-}
+//   root.appendChild(circleContainer);
+// }
 
-generateCircles();
+// generateCircles();
 // active class 
 function onClickProduct(e){
 	removeProduct();

@@ -135,70 +135,79 @@
   
   
 
-@keyframes zoom {
-	0% {
-		transform: translate(-50%, -50%) scale(1);
-		opacity: 0;
-	  }
+// @keyframes zoom {
+// 	0% {
+// 		transform: translate(-50%, -50%) scale(1);
+// 		opacity: 0;
+// 	  }
 	
-	  15% {
-		opacity: 0.6;
-	  }
-	  55%{
-		  opacity: 0.3;
-	  }
-	  85% {
-		opacity: 0.1;
-	  }
+// 	  15% {
+// 		opacity: 0.6;
+// 	  }
+// 	  55%{
+// 		  opacity: 0.3;
+// 	  }
+// 	  85% {
+// 		opacity: 0.1;
+// 	  }
 	
-	  100% {
-		transform: translate(-50%, -50%) scale(4);
-		opacity: 0;
-	  }
-}
+// 	  100% {
+// 		transform: translate(-50%, -50%) scale(4);
+// 		opacity: 0;
+// 	  }
+// }
 
-.circle-container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  }
+// .circle-container {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: translate(-50%, -50%);
+//   }
   
-  .circle {
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transform-origin: center center;
-	width: 200px;
-	height: 200px;
-	background-color: transparent;
-	border: 10px solid $--circleColor;
-	border-radius: 50%;
-	box-shadow: inset $--shadowShift $--shadowShift $--shadowBlur
-		rgba(55, 84, 170 , 0.2),
-	  $--shadowShift $--shadowShift $--shadowBlur
-		rgba(55 ,84, 170 , 0.2),
-	  inset calc($--shadowShift* -1) calc($--shadowShift * -1)
-		$--shadowBlur rgba(255 ,255 ,255 , 1),
-	  calc($--shadowShift * -1) calc($--shadowShift * -1)
-		$--shadowBlur rgba(255 ,255 ,255 , 1);
-	filter: blur(6px);
+//   .circle {
+// 	opacity: 0;
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: translate(-50%, -50%);
+// 	transform-origin: center center;
+// 	width: 200px;
+// 	height: 200px;
+// 	background-color: transparent;
+// 	border: 10px solid $--circleColor;
+// 	border-radius: 50%;
+// 	box-shadow: inset $--shadowShift $--shadowShift $--shadowBlur
+// 		rgba(55, 84, 170 , 0.2),
+// 	  $--shadowShift $--shadowShift $--shadowBlur
+// 		rgba(55 ,84, 170 , 0.2),
+// 	  inset calc($--shadowShift* -1) calc($--shadowShift * -1)
+// 		$--shadowBlur rgba(255 ,255 ,255 , 1),
+// 	  calc($--shadowShift * -1) calc($--shadowShift * -1)
+// 		$--shadowBlur rgba(255 ,255 ,255 , 1);
+// 	filter: blur(6px);
   
-	animation-name: zoom;
-	animation-duration: 4s;
-	animation-timing-function: ease-in;
-	animation-iteration-count: infinite;
+// 	animation-name: zoom;
+// 	animation-duration: 4s;
+// 	animation-timing-function: ease-in;
+// 	animation-iteration-count: infinite;
+//   }
+@keyframes scaleIn {
+	from {
+	  transform: scale(.5, .5);
+	  opacity: .5;
+	}
+	to {
+	  transform: scale(2.5, 2.5);
+	  opacity: 0;
+	}
   }
-
 #home {
-	 display: flex;
- 	 flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     height: 100vh;
-	 background-image: linear-gradient(
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+	  background-image: linear-gradient(
 			206.34deg,
 			#b4e7e5 -22.46%,
 			#115567 5.55%,
@@ -213,6 +222,19 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		.circle {
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255,0.04);
+			width: 30rem;
+			height: 30rem;
+			position: absolute;
+			opacity: 0;
+			animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
+		  }
+		.home-icon{
+			z-index: 100;
+			text-align: center;
+		}
 		.mouse {
 			@include bgGradient;
 			position: absolute;
@@ -558,10 +580,14 @@
 			}
 		}
 	}
+	.product .image-test{
+		transform: translate(30%, -25%);
+	}
 }
 
 @media only screen and(max-width:768px) {
 	#intro{
+		
 		.info{
 			.info-detail{
 				position: relative;
@@ -637,11 +663,11 @@
 	}
 		
 	#intro{
-		padding-top: 9rem;
 		.info{
+			justify-content: flex-start;
 			.info-detail{
 				height: unset;
-				transform: translateY(-35%);
+				// transform: translateY(-66%);
 				.list-box-info{
 					transform: translate(0px, 70px);
 					padding: 0;
