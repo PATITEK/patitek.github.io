@@ -965,6 +965,9 @@
   #customer {
     padding-top: 4rem;
   }
+  #footer .container-footer .content-footer .location-parent .location .items .center-items {
+    padding-top: 15px;
+  }
   #customer .customer__all .customer__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;

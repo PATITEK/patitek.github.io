@@ -264,7 +264,6 @@ header {
 .menu-mobile {
 	width: 60vw;
 	transform: translate(-5px, -45px);
-}
 .menu-mobile .icon-menu {
 	color: black;
 	margin: 20px 20px;
@@ -275,6 +274,7 @@ header {
 }
 .menu-mobile .menu-content-mobile {
 	display: none;
+
 	background: #ffffff;
 	height: 100vh;
 	top: 0;
@@ -688,6 +688,11 @@ Intro
 	margin-left: 0;
 	background-color: #e5e5e5; 
 	max-width: none;
+}
+#intro .info{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 #intro .info{
 	display: flex;
@@ -1972,7 +1977,6 @@ iframe {
 	}
 	.contact_us .input-mess {
 		height: 50px;
-		width: 100%;
 	}
 }
 
