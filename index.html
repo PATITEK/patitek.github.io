@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image"  content="./img/logo2.svg" />
 	<link rel="shortcut icon" href="./img/logo2.svg" type="image/x-icon">
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -12,7 +13,7 @@
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 	<link rel="stylesheet" href="indexs.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	<title>Patitek</title>
+	<title>PATITEK</title>
 </head>
 
 <body>
@@ -35,27 +36,27 @@
 	<header class="header">
 		<div class="menu-content" id="menu">
 			<div class="logo">
-				<a href="#homemenu"><img src="./img/logo1.svg" alt="" srcset="" /></a>
+				<a href="#home." data-menuanchor="home."><img src="./img/logo1.svg" alt="" srcset="" /></a>
 			</div>
 			<ul class="menu-list">
-				<li class="menu-item" data-menuanchor="intromenu">
-					<a class="menu-link" href="#intromenu" onclick="removeProduct()">Về chúng tôi</a>
+				<li class="menu-item" data-menuanchor="aboutus">
+					<a class="menu-link" href="#aboutus" onclick="removeProduct()">Về chúng tôi</a>
 					<div class="line"></div>
 				</li>
-				<li class="menu-item" data-menuanchor="solutionmenu">
-					<a class="menu-link" href="#solutionmenu" onclick="removeProduct()">Giải pháp</a>
+				<li class="menu-item" data-menuanchor="solutions">
+					<a class="menu-link" href="#solutions" onclick="removeProduct()">Giải pháp</a>
 					<div class="line"></div>
 				</li>
-				<li class="menu-item" data-menuanchor="productmenu">
-					<a class="menu-link" href="#productmenu" onclick="onClickProduct(event)">Sản Phẩm</a>
+				<li class="menu-item" data-menuanchor="products">
+					<a class="menu-link" href="#products" onclick="onClickProduct(event)">Sản Phẩm</a>
 					<div class="line"></div>
 				</li>
-				<li class="menu-item" data-menuanchor="customermenu">
-					<a class="menu-link" href="#customermenu" onclick="removeProduct()">Khách hàng</a>
+				<li class="menu-item" data-menuanchor="clients">
+					<a class="menu-link" href="#clients" onclick="removeProduct()">Khách hàng</a>
 					<div class="line"></div>
 				</li>
-				<li class="menu-item" data-menuanchor="footermenu">
-					<a class="menu-link" href="#footermenu" onclick="removeProduct()">Liên hệ</a>
+				<li class="menu-item" data-menuanchor="contact">
+					<a class="menu-link" href="#contact" onclick="removeProduct()">Liên hệ</a>
 					<div class="line"></div>
 				</li>
 			</ul>
@@ -69,28 +70,28 @@
 				<i class="fal fa-bars icon-menu" onclick="clickMenuBar()"></i>
 				<div class="menu-content-mobile">
 					<ul class="list-menu" id="menu">
-						<li class="menu-item" data-menuanchor="homemenu" onclick="clickMenuBar()">
-							<a href="#homemenu">Trang chủ</a>
+						<li class="menu-item" data-menuanchor="home." onclick="clickMenuBar()">
+							<a href="#home.">Trang chủ</a>
 							<div class="line"></div>
 						</li>
-						<li class="menu-item" data-menuanchor="intromenu" onclick="clickMenuBar()">
-							<a href="#intromenu">Về chung tôi</a>
+						<li class="menu-item" data-menuanchor="aboutus" onclick="clickMenuBar()">
+							<a href="#aboutus">Về chung tôi</a>
 							<div class="line"></div>
 						</li>
-						<li class="menu-item" data-menuanchor="solutionmenu" onclick="clickMenuBar()">
-							<a href="#solutionmenu">Giải pháp</a>
+						<li class="menu-item" data-menuanchor="solutions" onclick="clickMenuBar()">
+							<a href="#solutions">Giải pháp</a>
 							<div class="line"></div>
 						</li>
-						<li class="menu-item" data-menuanchor="productmenu" onclick="clickMenuBar()">
-							<a href="#productmenu">Sản phẩm</a>
+						<li class="menu-item" data-menuanchor="products" onclick="clickMenuBar()">
+							<a href="#products">Sản phẩm</a>
 							<div class="line"></div>
 						</li>
-						<li class="menu-item" data-menuanchor="customermenu" onclick="clickMenuBar()">
-							<a href="#customermenu">Khách hàng</a>
+						<li class="menu-item" data-menuanchor="clients" onclick="clickMenuBar()">
+							<a href="#clients">Khách hàng</a>
 							<div class="line"></div>
 						</li>
-						<li class="menu-item" data-menuanchor="footermenu" onclick="clickMenuBar()">
-							<a href="#footermenu">Liên hệ</a>
+						<li class="menu-item" data-menuanchor="contact" onclick="clickMenuBar()">
+							<a href="#contact">Liên hệ</a>
 							<div class="line"></div>
 						</li>
 					</ul>
@@ -101,6 +102,10 @@
 	<div class="destop">
 		<div id="fullPage">
 			<section id="home" class="section">
+				<div class="home-logo">
+					<img class="logo-notext" src="./img/logo_white.svg" alt="" srcset="">
+					<img class="logo-text" src="./img/logo_textwhite.svg" alt="" sizes="" srcset="">
+				</div>
 				<div id="home-img" class="home-img">
 					<div class="home-icon">
 						<img class="img-home" src="./img/customer/image-home.svg" alt="" srcset="">
@@ -206,12 +211,8 @@
 							</h1>
 							<div class="list-language">
 								<div class="language-item">
-									<img src="./img/angular.png" alt="" />
+									<img src="./img/customer/solution1.svg" alt="" />
 								</div>
-								<div class="language-item">
-									<img src="./img/nodejs.png" alt="" />
-								</div>
-
 							</div>
 							<div class="text">
 								<p>Báo cáo doanh thu theo tháng/quý/năm, quản lý nhân sự, chấm công hay hệ quản
@@ -236,10 +237,7 @@
 							</h1>
 							<div class="list-language">
 								<div class="language-item">
-									<img src="./img/vue.png" alt="" />
-								</div>
-								<div class="language-item">
-									<img src="./img/react.png" alt="" />
+									<img src="./img/solution2.svg" alt="" />
 								</div>
 							</div>
 							<div class="text">
@@ -273,10 +271,7 @@
 							</h1>
 							<div class="list-language">
 								<div class="language-item">
-									<img src="./img/vue.png" alt="" />
-								</div>
-								<div class="language-item">
-									<img src="./img/react.png" alt="" />
+									<img src="./img/solution3.svg" alt="" />
 								</div>
 							</div>
 							<div class="text">
@@ -304,10 +299,7 @@
 							</h1>
 							<div class="list-language">
 								<div class="language-item">
-									<img src="./img/vue.png" alt="" />
-								</div>
-								<div class="language-item">
-									<img src="./img/react.png" alt="" />
+									<img src="./img/solution4.svg" alt="" />
 								</div>
 							</div>
 							<div class="text">
@@ -327,7 +319,7 @@
 						</div>
 					</div>
 					<!-- Add Pagination -->
-					<div class="swiper-pagination"></div>
+					<!-- <div class="swiper-pagination"></div> -->
 				</div>
 			</section>
 			<!-- Products -->
@@ -529,7 +521,7 @@
 					</div>
 					<div id="slider" class="customer__bottom">
 						<div class="owl-carousel owl-theme">
-							<div class=" customer__logo">
+							<div class="customer__logo">
 								<img class="silde_logo" src="./img/khachhang1.svg" alt="" sizes="" srcset="">
 							</div>
 							<div class="customer__logo">
@@ -674,11 +666,11 @@
 	$(document).ready(function () {
 		if (isPhoneDevice) {
 			$('#fullPage').fullpage({
-				anchors: ['homemenu', 'intromenu', 'solutionmenu', 'productmenu', 'customermenu',
-					'footermenu'
+				anchors: ['home.', 'aboutus', 'solutions', 'products', 'clients',
+					'contact'
 				],
 				menu: "#menu",
-				css3: true,
+				// css3: true,
 				scrollBar: false,
 				autoScrolling: true,
 				srollOverflow: false,
@@ -689,8 +681,8 @@
 			})
 		} else {
 			$('#fullPage').fullpage({
-				anchors: ['homemenu', 'intromenu', 'solutionmenu', 'productmenu', 'customermenu',
-					'footermenu'
+				anchors: ['home.', 'aboutus', 'solutions', 'products', 'clients',
+					'contact'
 				],
 				menu: "#menu",
 				scrollBar: false,

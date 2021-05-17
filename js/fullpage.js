@@ -4528,9 +4528,15 @@
 			if ((
 				VIEWING_PREFIX + "-" + text ===
 				"fp-viewing-3"
-			) || (VIEWING_PREFIX + "-" + text ==="fp-viewing-productmenu"))
+			) || (VIEWING_PREFIX + "-" + text ==="fp-viewing-products"))
 				addProduct();
 			else removeProduct();
+			if(VIEWING_PREFIX + "-" + text ==="fp-viewing-home."){
+				document.querySelector('#fullPage').style = "position:relative;  z-index: 901;";
+			}
+			else{
+				document.querySelector('#fullPage').style = "z-index: none";
+			}
 		}
 
 		/**
