@@ -13,7 +13,7 @@ $(document).ready(function () {
 			margin:10,
 			nav:false,
 			autoplay:true,
-			autoplayTimeout:2500,
+			autoplayTimeout:3000,
 			responsive:{
 				0:{
 					items:3
@@ -31,30 +31,20 @@ $(document).ready(function () {
 
 
 $('.text-bot').addClass('animated fadeIn');
-// function initMap() {
-//     // The location of Uluru
-//     const uluru = { lat: -25.344, lng: 131.036 };
-//     // The map, centered at Uluru
-//     const map = new google.maps.Map(document.getElementById("map"), {
-//         zoom: 4,
-//         center: uluru,
-//     });
-//     // The marker, positioned at Uluru
-//     const marker = new google.maps.Marker({
-//         position: uluru,
-//         map: map,
-//     });
-// }
+
 var menu = false;
 function clickMenuBar() {
 	if (menu == false) {
-		document.querySelector('.menu-content-mobile').style.opacity = 1;
+		document.querySelector('.menu-content-mobile').style= "display: block; opacity:1;";
+		document.querySelector('.menu-mobile').style ="transform: translate(-5px, -90px);"
 		document.querySelector('.icon-menu').style.color = 'white';
 		menu = true;
 	} else {
-		document.querySelector('.menu-content-mobile').style.opacity = 0;
-		menu = false;
+
+		document.querySelector('.menu-content-mobile').style= "display: none; opacity = 0;";
+		document.querySelector('.menu-mobile').style ="transform: translate(-5px, -45px);"; 
 		document.querySelector('.icon-menu').style.color = 'black';
+		menu = false;
 	}
 }
 // window.onscroll = function () {

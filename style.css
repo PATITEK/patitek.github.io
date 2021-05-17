@@ -262,8 +262,8 @@ header {
 	width: 35px;
 }
 .menu-mobile {
-	transform: translate(-5px, -90px);
-}
+	width: 60vw;
+	transform: translate(-5px, -45px);
 .menu-mobile .icon-menu {
 	color: black;
 	margin: 20px 20px;
@@ -273,14 +273,14 @@ header {
 	opacity: 0.2;
 }
 .menu-mobile .menu-content-mobile {
-	/* position: fixed; */
+	display: none;
+
 	background: #ffffff;
 	height: 100vh;
 	top: 0;
-	z-index: 6;
 	padding: 0 15px;
 	opacity: 0; 
-	z-index:7 ;
+	z-index:7;
 	transition: all 0.4s linear;
 }
 .menu-mobile .menu-content-mobile .list-menu {
@@ -693,6 +693,11 @@ Intro
 	display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+#intro .info{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 	max-width: none;
 
 }
@@ -866,24 +871,21 @@ Intro
 .swiper-container {
 	width: 100%;
 	position: absolute;
-	top: 5vh;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	height: 90vh;
 }
 
 .swiper-slide {
 	background-position: center;
 	background-size: cover;
-	width: 300px;
-	height: 300px;
-}
-.swiper-container-pointer-events {
-	height: 80vh;
-	width: 70vw;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-#solution .swiper-slide {
-	/* padding: 0 30px; */
-	/* overflow: hidden; */
-}
 #solution .swiper-slide .text-title {
 	color: #f7f1f1;
 	line-height: 15vh;
@@ -894,9 +896,10 @@ Intro
 
 #solution .swiper-slide .text {
 	width: 66.667%;
-	height: 40%;
-	margin: auto;
-	font-family: 'Lato', sans-serif;
+	height: 50%;
+	/* margin: auto; */
+	text-align: justify;
+	/* font-family: 'Lato', sans-serif; */
 	padding-top: 20px;
 	font-size: 10pt;
 	overflow: hidden;
@@ -904,22 +907,28 @@ Intro
 
 #solution .list-language {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 0 60px;
 }
 #solution .list-language .language-item {
-	width: 100px;
+	width: 70%;
 }
 #solution .list-language .language-item img {
-	height: 80px;
+	/* position: absolute;
+	height: 80vh; */
 }
 #solution .btn-contact {
+	position: relative;
+	width: 10%;
 	border: 1px solid red;
 	box-shadow: 0 -2px 37px rgb(255 0 0 / 50%);
 	border-radius: 20px;
 	background: #fe6e9a;
 	padding: 20px 40px;
 	transition: all 0.3s linear;
-	transform: translate(400px, 30px);
+	/* transform: translateY(40px); */
+	/* transform: translate(150%, 30px); */
 }
 #solution .btn-contact:hover {
 	background: #e00849;
@@ -1278,7 +1287,6 @@ Intro
 	/* width: 33.3333%; */
 }
 .contact_us .input-phone-email {
-	/* position: absolute; */
 	margin-top: 10px;
 	background: #ffffff;
 	border-radius: 15px;
@@ -1287,6 +1295,7 @@ Intro
 	width: 100%;
 	height: 50px;
 }
+
 .contact_us .input-mess {
 	/* position: absolute; */
 	background: #ffffff;
@@ -1299,7 +1308,6 @@ Intro
 	border-radius: 14px;
 }
 ::placeholder {
-	position: absolute;
 	font-family: SVN-Avo;
 	font-style: normal;
 	font-weight: normal;
@@ -1310,8 +1318,8 @@ Intro
 	color: #7a7a7a;
 }
 .contact_us .btn-submit {
-	position: relative;
-	
+	/* position: relative;
+	 */
 	margin-top: 10px;
 	background: #465f7a;
 	color: #fff;
@@ -1322,6 +1330,7 @@ Intro
 	font-size: 16px;
 	cursor: pointer;
 	display: inline-block;
+	top: 20px;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -1399,6 +1408,9 @@ Intro
 	padding-right: 55px;
 	color: #747474;
 }
+#footer .container-footer{
+	height: 100vh;
+}
 
 #footer .container-footer .content-footer .location-parent .location .items .center-items{
 	display: flex;
@@ -1440,9 +1452,7 @@ Intro
 		padding: 0;
 	}
 }
-
 /* Products */
-
 *,
 *::before,
 *::after {
@@ -1612,7 +1622,7 @@ a:hover {
      height: 100vh; 
     width: 100%;
     padding-top: 45px;
-    transform: translate(25%, -15%);
+    transform: translate(25%, -25%);
 
 }
 
@@ -1950,7 +1960,7 @@ iframe {
 		flex-basis: 50%;
 	}
 	#footer .footer-main .contact_us .btn-submit {
-		transform: translateY(30px);
+		/* transform: translateY(30px); */
 	}
 	.content-footer {
 		padding-top: 100px;
@@ -1966,8 +1976,7 @@ iframe {
 		flex-basis: 100%;
 	}
 	.contact_us .input-mess {
-		height: 55px;
-		width: 100%;
+		height: 50px;
 	}
 }
 
@@ -2093,7 +2102,7 @@ iframe {
 		top: 85%;
 		width: 75px;
 		font-size: 12px;
-		transform: translateY(75%);
+		/* transform: translateY(75%); */
 	}
 	.location .items p {
 		display: flex;
@@ -2108,7 +2117,7 @@ iframe {
 
 @media all and (max-width: 480px) {
 	#footer{
-		padding-top: 3.5rem;
+		padding-top: 3.8rem;
 	}
 	.location-text {
 		line-height: 20px;
@@ -2321,7 +2330,7 @@ iframe {
 	}
 
 	.content-inside .items p {
-		font-size: 11px;
+		font-size: 10px;
 		line-height: 22px;
 	}
 
@@ -2384,3 +2393,4 @@ iframe {
 		line-height: 40px;
 	}
 }
+
