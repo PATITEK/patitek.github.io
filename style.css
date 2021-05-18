@@ -918,10 +918,14 @@ Intro
 	background: #fe6e9a;
 	padding: 15px 15px;
 	transition: all 0.3s linear;
-	bottom: 2%;
+	bottom: 5%;
+	cursor: pointer;
 }
 #solution .btn-contact:hover {
 	background: #e00849;
+}
+#solution .swiper-pagination{
+	bottom: 0%;
 }
 
 /* REPONSIVE MENU MOBIE */
