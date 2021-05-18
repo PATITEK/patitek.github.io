@@ -788,6 +788,7 @@
 					}
 					.btn-contact{
 						width: 30%;
+						bottom: 12%;
 					}
 					.text{
 						width: 90%;
@@ -795,6 +796,9 @@
 						line-height: 24px;	
 					}
 				}
+			}
+		    .swiper-pagination{
+				bottom: 8%;
 			}
 		}
 	}
@@ -906,9 +910,6 @@
 			}
 		}
 	}	
-	#solution .btn-contact{
-		bottom: 10%;
-	}
    
 }
 
@@ -1087,8 +1088,12 @@
 			height: 100%;
 			.swiper-wrapper{
 				.swiper-slide{
+					.text{
+						line-height: 20px;
+					}
 					.btn-contact{
-						width: 30%;
+						width: 25%;
+						font-size: 10px;
 						padding: 10px 0;
 					}
 				}

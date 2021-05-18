@@ -987,11 +987,15 @@
   }
   #solution .swiper-container .swiper-wrapper .swiper-slide .btn-contact {
     width: 30%;
+    bottom: 12%;
   }
   #solution .swiper-container .swiper-wrapper .swiper-slide .text {
     width: 90%;
     font-size: 0.7rem;
     line-height: 24px;
+  }
+  #solution .swiper-container .swiper-pagination {
+    bottom: 8%;
   }
   #customer {
     padding-top: 4rem;
@@ -1090,9 +1094,6 @@
   }
   #footer .container-footer .content-footer .location-parent .location .items .center-items {
     padding-top: 5px;
-  }
-  #solution .btn-contact {
-    bottom: 10%;
   }
 }
 
@@ -1257,8 +1258,12 @@
   #solution .swiper-container {
     height: 100%;
   }
+  #solution .swiper-container .swiper-wrapper .swiper-slide .text {
+    line-height: 20px;
+  }
   #solution .swiper-container .swiper-wrapper .swiper-slide .btn-contact {
-    width: 30%;
+    width: 25%;
+    font-size: 10px;
     padding: 10px 0;
   }
   .product .content-inside {
