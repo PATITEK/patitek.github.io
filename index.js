@@ -13,13 +13,16 @@ $(document).ready(function () {
 			margin:10,
 			nav:false,
 			autoplay:true,
-			autoplayTimeout:3000,
+			autoplayTimeout:2800,
 			responsive:{
 				0:{
 					items:3
 				},
 				600:{
 					items:3
+				},
+				800:{
+					items:4
 				},
 				1036:{
 					items:6
