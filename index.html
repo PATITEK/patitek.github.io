@@ -204,9 +204,7 @@
 			<section id="solution" class="section">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide" style="
-									background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
-								">
+						<div class="swiper-slide" >
 							<h1 class="text-title"> Hệ quản trị doanh nghiệp (ERP)
 							</h1>
 							<div class="list-language">
@@ -229,9 +227,7 @@
 								Hệ
 							</button>
 						</div>
-						<div class="swiper-slide" style="
-									background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
-								">
+						<div class="swiper-slide" >
 							<h1 class="text-title"> Hệ quản trị khách hàng (CRM)
 							</h1>
 							<div class="list-language">
@@ -262,9 +258,7 @@
 								Hệ
 							</button>
 						</div>
-						<div class="swiper-slide" style="
-								background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
-							">
+						<div class="swiper-slide" >
 							<h1 class="text-title">
 								Hệ quản trị nội dung (CMS)
 							</h1>
@@ -290,9 +284,7 @@
 								Hệ
 							</button>
 						</div>
-						<div class="swiper-slide" style="
-								background-image: url('https://janeto.com/wp-content/uploads/2018/06/anh-tren-di-dong.jpg');
-							">
+						<div class="swiper-slide" >
 							<h1 class="text-title">
 								Hệ quản trị bán hàng
 							</h1>
@@ -696,22 +688,56 @@
 	});
 </script>
 <script>
-	var swiper = new Swiper(".swiper-container", {
-		effect: "coverflow",
-		grabCursor: true,
-		centeredSlides: true,
+	var isPhoneDevice = "ontouchstart" in document.documentElement;
+	$(document).ready(function () {
+		if(isPhoneDevice){var swiper = new Swiper(".swiper-container", {
+		// effect: "coverflow",
+		// grabCursor: true,
+		// centeredSlides: true,
+		// slidesPerView: "auto",
+		// spaceBetween: 30,
+		// coverflowEffect: {
+		// 	rotate: 50,
+		// 	stretch: 0,
+		// 	depth: 100,
+		// 	modifier: 1,
+		// 	slideShadows: true,
+		// },
+		// pagination: {
+		// 	el: ".swiper-pagination",
+		// 	clickable: true,
+		// },
+		speed:2000,
+		zoom:true,
+		loop:true,
+		  autoplay:{
+		 	delay:2000,
+		 },
 		slidesPerView: "auto",
-		coverflowEffect: {
-			rotate: 50,
-			stretch: 0,
-			depth: 100,
-			modifier: 1,
-			slideShadows: true,
-		},
-		pagination: {
-			el: ".swiper-pagination",
-		},
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+	});}
+	else{
+		var swiper = new Swiper(".swiper-container", {
+		speed:2000,
+		zoom:true,
+		loop:true,
+		  autoplay:{
+		 	delay:2000,
+		 },
+		slidesPerView: "auto",
+        spaceBetween: 25,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
 	});
+	}
+	})
+	
 </script>
 <script src="./index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
